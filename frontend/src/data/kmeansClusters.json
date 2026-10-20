@@ -1,0 +1,88 @@
+{
+  "selected_model": {
+    "k": 2,
+    "silhouette_score": 0.81115,
+    "analyzed_users": 3021434,
+    "notes": "Excludes 1 extreme browsing outlier user with 7,429 views and 0 purchases to prevent centroid distortion."
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "cluster_name": "Cluster 0 · High Activity Commercial Core",
+      "user_count": 250388,
+      "share_percent": 8.29,
+      "average_events": 85.43,
+      "average_views": 82,
+      "average_carts": 1.849,
+      "average_purchases": 1.58,
+      "average_revenue": 520.86,
+      "average_sessions": 12.26,
+      "unique_products": 42.04,
+      "behavior_summary": "High-intent commercial core accounting for recurring sessions and high purchasing activity across diverse products."
+    },
+    {
+      "cluster_id": 1,
+      "cluster_name": "Cluster 1 · Casual Browsers & Occasional Buyers",
+      "user_count": 2771046,
+      "share_percent": 91.71,
+      "average_events": 7.56,
+      "average_views": 7.28,
+      "average_carts": 0.157,
+      "average_purchases": 0.125,
+      "average_revenue": 35.91,
+      "average_sessions": 2.22,
+      "unique_products": 4.6,
+      "behavior_summary": "Dominant user majority characterized by low session counts, casual browsing, and infrequent purchasing."
+    }
+  ],
+  "sensitivity_experiments": [
+    {
+      "experiment_name": "K=2 (Outlier Excluded)",
+      "clusters_k": 2,
+      "outlier_excluded": true,
+      "population_size": 3021434,
+      "silhouette_score": 0.81115,
+      "is_selected": true
+    },
+    {
+      "experiment_name": "K=3 (Outlier Excluded)",
+      "clusters_k": 3,
+      "outlier_excluded": true,
+      "population_size": 3021434,
+      "silhouette_score": 0.51978,
+      "is_selected": false
+    },
+    {
+      "experiment_name": "K=4 (Outlier Excluded)",
+      "clusters_k": 4,
+      "outlier_excluded": true,
+      "population_size": 3021434,
+      "silhouette_score": 0.57195,
+      "is_selected": false
+    },
+    {
+      "experiment_name": "K=3 (Original Experiment)",
+      "clusters_k": 3,
+      "outlier_excluded": false,
+      "population_size": 3021435,
+      "silhouette_score": 0.8106,
+      "is_selected": false
+    },
+    {
+      "experiment_name": "K=4 (Original Experiment)",
+      "clusters_k": 4,
+      "outlier_excluded": false,
+      "population_size": 3021435,
+      "silhouette_score": 0.5197,
+      "is_selected": false
+    },
+    {
+      "experiment_name": "K=5 (Original Experiment)",
+      "clusters_k": 5,
+      "outlier_excluded": false,
+      "population_size": 3021435,
+      "silhouette_score": 0.57056,
+      "is_selected": false
+    }
+  ]
+}

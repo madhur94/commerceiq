@@ -1,0 +1,21 @@
+{
+  "raw_records": 42448764,
+  "cleaned_records": 42349874,
+  "net_records_removed": 98890,
+  "invalid_price_records_filtered": 68673,
+  "unsegregated_cleaning_difference": 30217,
+  "phase5_columns": 21,
+  "phase6_columns": 16,
+  "users": 3021435,
+  "sessions": 9239403,
+  "purchase_events": 742773,
+  "purchase_revenue": 229933212.63,
+  "view_events": 40708807,
+  "cart_events": 898294,
+  "price_mean": 290.7840088,
+  "price_median_purchase": 179.84,
+  "iqr_outlier_events": 3677875,
+  "zscore_outlier_events": 1158750,
+  "currency_unit": "monetary_units",
+  "dataset_period": "October 1, 2019 to November 1, 2019 (UTC)"
+}

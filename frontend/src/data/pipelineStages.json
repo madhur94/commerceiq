@@ -1,0 +1,153 @@
+[
+  {
+    "stage_id": 1,
+    "title": "Raw Telemetry Ingestion",
+    "short_name": "CSV Ingestion",
+    "phase": "Phase 1: Ingestion",
+    "technology": "Apache Hadoop HDFS",
+    "input_source": "raw_events_2019_oct.csv (External Clickstream Dump)",
+    "output_target": "hdfs:///ecommerce/raw/2019-Oct.csv",
+    "records_in": 42448764,
+    "records_out": 42448764,
+    "byte_size": "5.6 GB",
+    "partitions": 13,
+    "summary": "Distributed ingestion of 42.4M raw clickstream events across 13 HDFS partitions, recording user interactions across October 2019.",
+    "key_transformations": [
+      "Streamed multi-gigabyte CSV into distributed HDFS block storage",
+      "Enforced initial 9-column schema (event_time, event_type, product_id, category_id, category_code, brand, price, user_id, user_session)",
+      "Established 128 MB HDFS block replication (replication factor = 3)"
+    ],
+    "limitations": [
+      "Input data contained unsegregated formatting inconsistencies and zero/negative prices",
+      "Network latency overhead during multi-node distributed ingestion",
+      "Category and brand strings contained null/missing values in upstream telemetry"
+    ],
+    "related_view": "/data-explorer"
+  },
+  {
+    "stage_id": 2,
+    "title": "Distributed Storage & Block Allocation",
+    "short_name": "HDFS Storage",
+    "phase": "Phase 2: Storage Architecture",
+    "technology": "Hadoop Distributed File System (HDFS)",
+    "input_source": "hdfs:///ecommerce/raw/2019-Oct.csv",
+    "output_target": "HDFS DataNode Cluster (Replicated Blocks)",
+    "records_in": 42448764,
+    "records_out": 42448764,
+    "byte_size": "16.8 GB (with 3x replication)",
+    "partitions": 13,
+    "summary": "Distributed block allocation across cluster worker nodes, guaranteeing fault tolerance and data locality for PySpark workers.",
+    "key_transformations": [
+      "Partitioned continuous telemetry stream into 13 balanced distributed splits",
+      "Verified checksum integrity across all HDFS block replicas",
+      "Co-located compute nodes with storage blocks to minimize network shuffling"
+    ],
+    "limitations": [
+      "Raw CSV format lacks columnar metadata and predicate pushdown capabilities",
+      "Large text parsing overhead during initial Spark RDD execution"
+    ],
+    "related_view": "/data-pipeline"
+  },
+  {
+    "stage_id": 3,
+    "title": "PySpark Distributed Cleaning & Validation",
+    "short_name": "Spark Cleaning",
+    "phase": "Phase 3: Data Quality Hygiene",
+    "technology": "Apache Spark 3.x (PySpark DataFrame API)",
+    "input_source": "hdfs:///ecommerce/raw/2019-Oct.csv",
+    "output_target": "Cleaned In-Memory PySpark DataFrame",
+    "records_in": 42448764,
+    "records_out": 42349874,
+    "byte_size": "4.1 GB (in-memory)",
+    "partitions": 13,
+    "summary": "Distributed filtering of 68,673 non-positive prices and 30,217 unsegregated malformed records, retaining 42,349,874 verified events (99.77% retention).",
+    "key_transformations": [
+      "Filtered out 68,673 records with price <= 0.00",
+      "Quarantined 30,217 unsegregated multi-condition removal records",
+      "Sanitized ISO 8601 UTC timestamps into native Spark TimestampType",
+      "Enforced null-coalescing for missing category_code ('Unknown / Other') and brand ('Unknown')",
+      "Sample-based deduplication audit followed by full-table dropDuplicates() pass"
+    ],
+    "limitations": [
+      "30,217 records were filtered as an unsegregated cleaning remainder without granular per-rule tags",
+      "Missing category strings (31.91%) and brand strings (14.44%) were preserved as explicit categorical tokens rather than imputed"
+    ],
+    "related_view": "/data-pipeline"
+  },
+  {
+    "stage_id": 4,
+    "title": "Columnar Parquet Transformation",
+    "short_name": "Parquet Storage",
+    "phase": "Phase 4: Optimization & Compression",
+    "technology": "Apache Parquet + Snappy Compression",
+    "input_source": "Cleaned In-Memory PySpark DataFrame",
+    "output_target": "hdfs:///ecommerce/cleaned/2019-Oct.parquet",
+    "records_in": 42349874,
+    "records_out": 42349874,
+    "byte_size": "1.4 GB (compressed)",
+    "partitions": 13,
+    "summary": "Converted cleaned row-oriented telemetry into highly compressed columnar Parquet format, achieving a 4x reduction in storage footprint.",
+    "key_transformations": [
+      "Transformed row-based RDDs into columnar Parquet structure",
+      "Applied Snappy block compression to numeric and categorical columns",
+      "Generated dictionary encoding for repetitive event types and category labels",
+      "Embedded min/max column statistics for distributed predicate pushdown"
+    ],
+    "limitations": [
+      "Write operation required full cluster shuffle to re-partition data cleanly",
+      "Parquet files require Spark/Arrow readers and cannot be inspected with basic text editors"
+    ],
+    "related_view": "/data-explorer"
+  },
+  {
+    "stage_id": 5,
+    "title": "Distributed Aggregation & Feature Engineering",
+    "short_name": "Analytical Rollups",
+    "phase": "Phase 5: Aggregation & Feature Engineering",
+    "technology": "PySpark SQL & Window Functions",
+    "input_source": "hdfs:///ecommerce/cleaned/2019-Oct.parquet",
+    "output_target": "Precomputed Analytical CSV Summaries + User Feature Vectors",
+    "records_in": 42349874,
+    "records_out": 3021435,
+    "byte_size": "240 MB",
+    "partitions": 8,
+    "summary": "Executed distributed MapReduce group-by rollups to synthesize temporal, category, and brand summaries, plus 11 user-level behavioral metrics for 3,021,435 users.",
+    "key_transformations": [
+      "Synthesized 14 category revenue summaries and 24 hourly activity bins",
+      "Engineered 11 user-level features: total events, views, carts, purchases, revenue, sessions, catalog breadth",
+      "Applied log1p(x) transformation to right-skewed monetary metrics (skewness reduced from +2.54 to -0.27)",
+      "Standardized 11 feature dimensions using StandardScaler to zero mean and unit variance"
+    ],
+    "limitations": [
+      "User session boundaries rely on telemetry user_session UUID strings without sliding inactivity windows",
+      "November 1 boundary covers only partial UTC hours before log cutoff"
+    ],
+    "related_view": "/sales-intelligence"
+  },
+  {
+    "stage_id": 6,
+    "title": "Machine Learning & Visualization Outputs",
+    "short_name": "ML & Analytics",
+    "phase": "Phase 6 & 7: Intelligence Delivery",
+    "technology": "PySpark MLlib (PCA & KMeans) + Apache ECharts / Three.js",
+    "input_source": "user_features_corrected (3,021,435 user vectors)",
+    "output_target": "CommerceIQ Production Application & 29 Research Visualizations",
+    "records_in": 3021435,
+    "records_out": 3021434,
+    "byte_size": "85 MB",
+    "partitions": 4,
+    "summary": "Conducted 7-component PCA dimensionality reduction (95.97% variance retention) and K-Means clustering (K=2, Silhouette 0.81115), quarantining 1 extreme browsing outlier.",
+    "key_transformations": [
+      "Eigen-decomposed 11x11 covariance matrix into 7 principal components",
+      "Evaluated 6 K-Means sensitivity trials across K=2 through K=5",
+      "Quarantined 1 extreme browsing outlier (7,429 views, 0 purchases) to prevent centroid pull",
+      "Inverted PCA coordinates into business-interpretable centroid metrics (Cluster 0 Core vs Cluster 1 Browsers)",
+      "Published 25 static research plots and 4 interactive Plotly/ECharts visualizations"
+    ],
+    "limitations": [
+      "Unsupervised clustering reflects historical descriptive patterns, not future conversion intent",
+      "PCA component axes represent linear combinations of features, not physical behavioral laws"
+    ],
+    "related_view": "/customer-intelligence"
+  }
+]

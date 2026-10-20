@@ -1,0 +1,174 @@
+[
+  {
+    "step_number": 1,
+    "title": "Business Context & Analytics Objectives",
+    "phase_label": "Problem Formulation",
+    "summary": "Transforming high-velocity raw ecommerce clickstream logs into structured, explainable commercial intelligence without making unsupported predictive assumptions.",
+    "key_points": [
+      "Modern ecommerce platforms generate tens of millions of raw interaction logs monthly that overwhelm traditional relational databases.",
+      "The analytical objective was to analyze user engagement, temporal purchasing rhythms, catalog brand concentration, and customer segmentation on historical October 2019 data.",
+      "Enforced strict descriptive governance: avoiding synthetic recommender claims, speculative customer lifetime value calculations, or unsupported currency inferences."
+    ],
+    "technical_details": [
+      "Input data scope: October 1 to November 1, 2019 (UTC)",
+      "Target metrics: Total event volume, gross recorded revenue, unique users, session counts, and brand concentration",
+      "Governance policy: Every metric must trace directly to verified Spark/CSV outputs"
+    ],
+    "related_route": "/overview"
+  },
+  {
+    "step_number": 2,
+    "title": "Raw Telemetry Ingestion & HDFS Architecture",
+    "phase_label": "Phase 1 & 2: Ingestion & Storage",
+    "summary": "Ingesting 42,448,764 raw clickstream rows (~5.6 GB) into distributed Hadoop Distributed File System (HDFS) across 13 partitions.",
+    "key_points": [
+      "Raw event telemetry captures micro-actions: page views, shopping cart additions, and confirmed purchases.",
+      "Distributed across Hadoop DataNodes with a replication factor of 3 (16.8 GB total cluster footprint) ensuring zero data loss.",
+      "Established 128 MB block allocation for optimal MapReduce parallel task scheduling."
+    ],
+    "technical_details": [
+      "Source schema: event_time, event_type, product_id, category_id, category_code, brand, price, user_id, user_session",
+      "Storage path: hdfs:///ecommerce/raw/2019-Oct.csv",
+      "Initial record count: 42,448,764 rows"
+    ],
+    "related_route": "/data-pipeline"
+  },
+  {
+    "step_number": 3,
+    "title": "Distributed Big-Data Processing with Apache Spark",
+    "phase_label": "Phase 3: Cluster Computing",
+    "summary": "Leveraging PySpark's distributed in-memory computing engine to execute parallelized transformations across multi-node clusters.",
+    "key_points": [
+      "Single-node Python tools (Pandas) encounter out-of-memory crashes on multi-gigabyte event streams.",
+      "PySpark DataFrame API distributes execution DAGs across cluster workers with lazy evaluation and memory caching.",
+      "Optimized shuffle partitions and co-located compute tasks directly with HDFS storage blocks."
+    ],
+    "technical_details": [
+      "Engine: Apache Spark 3.x with Catalyst Query Optimizer",
+      "Partition count: 13 distributed RDD partitions aligned with HDFS block splits",
+      "Execution model: Resilient Distributed Datasets (RDD) with in-memory columnar caching"
+    ],
+    "related_route": "/data-pipeline"
+  },
+  {
+    "step_number": 4,
+    "title": "Data Quality Cleaning & Anomaly Hygiene",
+    "phase_label": "Phase 3 & 4: Data Quality Audit",
+    "summary": "Filtering 68,673 non-positive prices and 30,217 unsegregated malformed records, retaining 42,349,874 verified events (99.77% retention).",
+    "key_points": [
+      "Eliminated 68,673 records logged with price <= 0.00 to guarantee financial integrity.",
+      "Quarantined 30,217 unsegregated multi-condition removal records (unparseable formats, timestamp errors).",
+      "Preserved 13.5M unclassified categories and 6.1M unbranded products as explicit 'Unknown' tokens to protect GMV totals without artificial imputation.",
+      "Executed distributed dropDuplicates() pass to eliminate redundant network retries."
+    ],
+    "technical_details": [
+      "Net records removed: 98,890 (0.233% of raw volume)",
+      "Verified cleaned count: 42,349,874 records",
+      "Storage output: hdfs:///ecommerce/cleaned/2019-Oct.parquet (1.4 GB Snappy compressed)"
+    ],
+    "related_route": "/data-pipeline"
+  },
+  {
+    "step_number": 5,
+    "title": "Analytical Aggregations & Temporal Rollups",
+    "phase_label": "Phase 5: Descriptive Summaries",
+    "summary": "Executing distributed MapReduce group-by rollups to synthesize temporal, category, and brand summaries totaling 229,933,212.63 monetary units.",
+    "key_points": [
+      "Discovered 7-hour temporal decoupling: browsing peaks at 21:00 UTC (3.05M events) while purchasing peaks at 14:00 UTC (17.5M units).",
+      "Identified massive category concentration: Electronics (72.38%) and Appliances (17.92%) drive over 90.3% of platform GMV.",
+      "Quantified brand Pareto dynamics: top 10 commercial brands capture 81.65% of recorded brand revenue, led by Apple (47.57%) and Samsung (18.78%)."
+    ],
+    "technical_details": [
+      "Precomputed artifacts: 12 summary CSV tables published for dashboard visualization",
+      "Verified revenue invariant: Category sum = Weekday sum = Daily sum = 229,933,212.63 units",
+      "Total purchase transactions: 742,773 events"
+    ],
+    "related_route": "/sales-intelligence"
+  },
+  {
+    "step_number": 6,
+    "title": "User-Level Behavioral Feature Engineering",
+    "phase_label": "Phase 6: Feature Extraction",
+    "summary": "Aggregating 42.35M events into 11 behavioral feature vectors for 3,021,435 distinct users to characterize individual interaction intensity.",
+    "key_points": [
+      "Aggregated per-user metrics: total events, views, carts, purchases, gross spend, average price, session counts, and catalog breadth.",
+      "Applied log1p(x) transformation to right-skewed monetary metrics, successfully reducing price skewness from +2.54 to -0.27.",
+      "Normalized all 11 features using StandardScaler to zero mean and unit variance."
+    ],
+    "technical_details": [
+      "Analyzed user population: 3,021,435 initial user profiles",
+      "Feature matrix dimension: 3,021,435 rows x 11 standardized features",
+      "Output artifact: hdfs:///ecommerce/results/user_features_corrected"
+    ],
+    "related_route": "/customer-intelligence"
+  },
+  {
+    "step_number": 7,
+    "title": "PCA Dimensionality Reduction (95.97% Variance)",
+    "phase_label": "Phase 6: Dimensionality Reduction",
+    "summary": "Eigen-decomposing the 11x11 correlation matrix into 7 orthogonal principal components, retaining 95.967% of cumulative behavioral variance.",
+    "key_points": [
+      "Eliminated multicollinearity among highly correlated features (views, sessions, and events).",
+      "PC1 (40.71%) and PC2 (17.93%) capture 58.64% of total behavioral variance.",
+      "Pruned components 8 through 11, reducing dimensionality by 36.4% while preserving 95.97% of variance."
+    ],
+    "technical_details": [
+      "PCA model: PySpark MLlib PCA implementation",
+      "Cumulative variance progression: PC1 40.71% -> PC2 58.64% -> PC3 73.40% -> PC4 81.83% -> PC5 87.63% -> PC6 92.14% -> PC7 95.97%",
+      "Scientific disclaimer: Component axes represent linear algebraic factor weights, not physical or psychological laws"
+    ],
+    "related_route": "/customer-intelligence"
+  },
+  {
+    "step_number": 8,
+    "title": "K-Means Customer Segmentation (K=2, Silhouette 0.81115)",
+    "phase_label": "Phase 7: Unsupervised Clustering",
+    "summary": "Partitioning 3,021,434 users in 7D PCA space into an active commercial core (8.29%) and a casual browsing majority (91.71%), quarantining 1 extreme outlier.",
+    "key_points": [
+      "Tested 6 sensitivity trials (K=2 to K=5); K=2 achieved the optimal silhouette score of 0.81115 (exceeding the 0.80 literature reference heuristic).",
+      "Quarantined 1 extreme browsing outlier account (7,429 views, 0 purchases) to prevent centroid pull.",
+      "Cluster 0 Core (250,388 users) averages 520.86 units spend (14.5x higher) and 1.58 purchases (12.6x higher) compared to Cluster 1 Browsers (2,771,046 users, 35.91 units spend, 0.125 purchases)."
+    ],
+    "technical_details": [
+      "Selected model: K=2 Outlier Excluded (3,021,434 evaluated users)",
+      "Silhouette score: 0.81115 (vs 0.51978 for K=3, 0.57195 for K=4)",
+      "Centroid validation: Evaluated in original business units via inverse scaling"
+    ],
+    "related_route": "/customer-intelligence"
+  },
+  {
+    "step_number": 9,
+    "title": "Visualization & Dashboard Architecture",
+    "phase_label": "Frontend Modernization",
+    "summary": "Re-engineering the legacy Python Streamlit dashboard into a high-performance React + TypeScript web application with modular Apache ECharts and Three.js.",
+    "key_points": [
+      "Streamlit suffers from full-script re-executions on every user interaction, slow canvas resizing, and rigid layout constraints.",
+      "Modern React architecture delivers sub-16ms interactive renders, client-side route code splitting, and fully responsive layouts.",
+      "Reimplemented legacy Plotly charts natively in Apache ECharts, preserving exact analytical meaning with superior rendering performance."
+    ],
+    "technical_details": [
+      "Framework: React 18 + TypeScript + Vite 5 + Tailwind CSS",
+      "Visualization: Apache ECharts 5.5 + Three.js WebGL spatial anchor (sustained 60 FPS, avg 16.6ms)",
+      "State management: Modular React hooks with zero-dependency typed JSON data contracts"
+    ],
+    "related_route": "/overview"
+  },
+  {
+    "step_number": 10,
+    "title": "Research Boundaries & Reproducibility Disclosures",
+    "phase_label": "Scientific Governance",
+    "summary": "Documenting analytical boundaries, calendar anomalies, telemetry limitations, and currency neutrality to ensure full scientific transparency.",
+    "key_points": [
+      "Currency neutrality: Telemetry prices are reported in neutral monetary units; currency symbols ($, ₹) are strictly excluded.",
+      "Calendar caveat: November 1 record represents a partial logging day (8,065 orders) before dataset cutoff.",
+      "Clustering boundaries: Descriptive historical segmentation does not imply predictive customer lifetime value or real-time conversion propensity.",
+      "Deduplication caveat: 30,217 unsegregated remainder rows reflect multi-condition cleaning filters from historical PySpark execution."
+    ],
+    "technical_details": [
+      "Reproducibility: All 35 master data invariants validated via automated test scripts (npm run validate-data)",
+      "Unit testing: 41 automated Vitest unit tests verifying data integrity across all views",
+      "Documentation suite: Comprehensive architectural audit reports maintained in docs/commerceiq/"
+    ],
+    "related_route": "/data-pipeline"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "rank": 1,
+    "brand": "apple",
+    "total_revenue": 111199495.7,
+    "purchase_events": 142858,
+    "unique_buyers": 65593,
+    "revenue_share_percentage": 48.36165007572838
+  },
+  {
+    "rank": 2,
+    "brand": "samsung",
+    "total_revenue": 46402037.35,
+    "purchase_events": 172878,
+    "unique_buyers": 94073,
+    "revenue_share_percentage": 20.180658904925313
+  },
+  {
+    "rank": 3,
+    "brand": "xiaomi",
+    "total_revenue": 9192640.24,
+    "purchase_events": 56609,
+    "unique_buyers": 35063,
+    "revenue_share_percentage": 3.997961031750669
+  },
+  {
+    "rank": 4,
+    "brand": "Unknown",
+    "total_revenue": 8539747.08,
+    "purchase_events": 58210,
+    "unique_buyers": 38231,
+    "revenue_share_percentage": 3.7140119873599358
+  },
+  {
+    "rank": 5,
+    "brand": "huawei",
+    "total_revenue": 4883104.73,
+    "purchase_events": 23499,
+    "unique_buyers": 15378,
+    "revenue_share_percentage": 2.123705694426004
+  },
+  {
+    "rank": 6,
+    "brand": "acer",
+    "total_revenue": 3575715.69,
+    "purchase_events": 6880,
+    "unique_buyers": 4352,
+    "revenue_share_percentage": 1.555110568456222
+  },
+  {
+    "rank": 7,
+    "brand": "lg",
+    "total_revenue": 3387360.91,
+    "purchase_events": 8725,
+    "unique_buyers": 5970,
+    "revenue_share_percentage": 1.4731933987504437
+  },
+  {
+    "rank": 8,
+    "brand": "lucente",
+    "total_revenue": 3123438.96,
+    "purchase_events": 11576,
+    "unique_buyers": 6928,
+    "revenue_share_percentage": 1.358411394453973
+  },
+  {
+    "rank": 9,
+    "brand": "sony",
+    "total_revenue": 2478196.68,
+    "purchase_events": 6729,
+    "unique_buyers": 4406,
+    "revenue_share_percentage": 1.0777897858487349
+  },
+  {
+    "rank": 10,
+    "brand": "oppo",
+    "total_revenue": 2412033.98,
+    "purchase_events": 10887,
+    "unique_buyers": 7086,
+    "revenue_share_percentage": 1.049015038937132
+  },
+  {
+    "rank": 11,
+    "brand": "lenovo",
+    "total_revenue": 1752638.53,
+    "purchase_events": 4578,
+    "unique_buyers": 3233,
+    "revenue_share_percentage": 0.7622380907712863
+  },
+  {
+    "rank": 12,
+    "brand": "indesit",
+    "total_revenue": 1250060.95,
+    "purchase_events": 5024,
+    "unique_buyers": 3646,
+    "revenue_share_percentage": 0.5436626295530258
+  },
+  {
+    "rank": 13,
+    "brand": "bosch",
+    "total_revenue": 1248729.09,
+    "purchase_events": 5705,
+    "unique_buyers": 4175,
+    "revenue_share_percentage": 0.5430833917888191
+  },
+  {
+    "rank": 14,
+    "brand": "hp",
+    "total_revenue": 1227215.99,
+    "purchase_events": 3596,
+    "unique_buyers": 2654,
+    "revenue_share_percentage": 0.5337271531863403
+  },
+  {
+    "rank": 15,
+    "brand": "artel",
+    "total_revenue": 1033967.33,
+    "purchase_events": 6123,
+    "unique_buyers": 4487,
+    "revenue_share_percentage": 0.4496815915253704
+  },
+  {
+    "rank": 16,
+    "brand": "asus",
+    "total_revenue": 970019.39,
+    "purchase_events": 1850,
+    "unique_buyers": 1265,
+    "revenue_share_percentage": 0.4218700634435615
+  },
+  {
+    "rank": 17,
+    "brand": "beko",
+    "total_revenue": 963517.46,
+    "purchase_events": 3959,
+    "unique_buyers": 2770,
+    "revenue_share_percentage": 0.41904231623573596
+  },
+  {
+    "rank": 18,
+    "brand": "haier",
+    "total_revenue": 891854.66,
+    "purchase_events": 3071,
+    "unique_buyers": 2326,
+    "revenue_share_percentage": 0.3878755268970819
+  },
+  {
+    "rank": 19,
+    "brand": "dauscher",
+    "total_revenue": 608428.04,
+    "purchase_events": 3530,
+    "unique_buyers": 2780,
+    "revenue_share_percentage": 0.2646107680751026
+  },
+  {
+    "rank": 20,
+    "brand": "canon",
+    "total_revenue": 561658.19,
+    "purchase_events": 1091,
+    "unique_buyers": 603,
+    "revenue_share_percentage": 0.24427014417608245
+  },
+  {
+    "rank": 21,
+    "brand": "cordiant",
+    "total_revenue": 517641.21,
+    "purchase_events": 10551,
+    "unique_buyers": 7723,
+    "revenue_share_percentage": 0.22512676793368058
+  },
+  {
+    "rank": 22,
+    "brand": "philips",
+    "total_revenue": 514235.25,
+    "purchase_events": 4461,
+    "unique_buyers": 3603,
+    "revenue_share_percentage": 0.22364548562520625
+  },
+  {
+    "rank": 23,
+    "brand": "vivo",
+    "total_revenue": 495678.6,
+    "purchase_events": 2025,
+    "unique_buyers": 1287,
+    "revenue_share_percentage": 0.21557503343269774
+  },
+  {
+    "rank": 24,
+    "brand": "kivi",
+    "total_revenue": 404700.53,
+    "purchase_events": 1584,
+    "unique_buyers": 1172,
+    "revenue_share_percentage": 0.1760078613137243
+  },
+  {
+    "rank": 25,
+    "brand": "navien",
+    "total_revenue": 382956.86,
+    "purchase_events": 604,
+    "unique_buyers": 429,
+    "revenue_share_percentage": 0.16655134576675532
+  },
+  {
+    "rank": 26,
+    "brand": "nokian",
+    "total_revenue": 372997.64,
+    "purchase_events": 4907,
+    "unique_buyers": 3485,
+    "revenue_share_percentage": 0.16221999237675036
+  },
+  {
+    "rank": 27,
+    "brand": "oneplus",
+    "total_revenue": 351076.22,
+    "purchase_events": 509,
+    "unique_buyers": 286,
+    "revenue_share_percentage": 0.1526861717732527
+  },
+  {
+    "rank": 28,
+    "brand": "omabelle",
+    "total_revenue": 347730.87,
+    "purchase_events": 253,
+    "unique_buyers": 205,
+    "revenue_share_percentage": 0.15123124929305265
+  },
+  {
+    "rank": 29,
+    "brand": "janome",
+    "total_revenue": 333491.44,
+    "purchase_events": 1356,
+    "unique_buyers": 962,
+    "revenue_share_percentage": 0.1450383944909436
+  },
+  {
+    "rank": 30,
+    "brand": "tefal",
+    "total_revenue": 329980.6,
+    "purchase_events": 3353,
+    "unique_buyers": 2765,
+    "revenue_share_percentage": 0.1435114989373
+  },
+  {
+    "rank": 31,
+    "brand": "midea",
+    "total_revenue": 324207.73,
+    "purchase_events": 2334,
+    "unique_buyers": 1824,
+    "revenue_share_percentage": 0.1410008264102775
+  },
+  {
+    "rank": 32,
+    "brand": "epson",
+    "total_revenue": 302365.79,
+    "purchase_events": 1291,
+    "unique_buyers": 888,
+    "revenue_share_percentage": 0.1315015723659531
+  },
+  {
+    "rank": 33,
+    "brand": "pulser",
+    "total_revenue": 297562.53,
+    "purchase_events": 422,
+    "unique_buyers": 264,
+    "revenue_share_percentage": 0.12941259185502124
+  },
+  {
+    "rank": 34,
+    "brand": "triangle",
+    "total_revenue": 288550.38,
+    "purchase_events": 5835,
+    "unique_buyers": 4445,
+    "revenue_share_percentage": 0.12549312763455647
+  },
+  {
+    "rank": 35,
+    "brand": "force",
+    "total_revenue": 285816.83,
+    "purchase_events": 1956,
+    "unique_buyers": 1629,
+    "revenue_share_percentage": 0.12430428241783738
+  },
+  {
+    "rank": 36,
+    "brand": "stels",
+    "total_revenue": 282585.83,
+    "purchase_events": 3043,
+    "unique_buyers": 2423,
+    "revenue_share_percentage": 0.12289909177006289
+  },
+  {
+    "rank": 37,
+    "brand": "starline",
+    "total_revenue": 274563.95,
+    "purchase_events": 1954,
+    "unique_buyers": 1447,
+    "revenue_share_percentage": 0.11941030478351061
+  },
+  {
+    "rank": 38,
+    "brand": "redmond",
+    "total_revenue": 273112.38,
+    "purchase_events": 4002,
+    "unique_buyers": 3180,
+    "revenue_share_percentage": 0.11877900407518875
+  },
+  {
+    "rank": 39,
+    "brand": "elenberg",
+    "total_revenue": 259441.52,
+    "purchase_events": 6189,
+    "unique_buyers": 5064,
+    "revenue_share_percentage": 0.11283342542492418
+  },
+  {
+    "rank": 40,
+    "brand": "karcher",
+    "total_revenue": 254838.31,
+    "purchase_events": 993,
+    "unique_buyers": 761,
+    "revenue_share_percentage": 0.11083144843893267
+  },
+  {
+    "rank": 41,
+    "brand": "sv",
+    "total_revenue": 239938.81,
+    "purchase_events": 996,
+    "unique_buyers": 756,
+    "revenue_share_percentage": 0.10435152332086135
+  },
+  {
+    "rank": 42,
+    "brand": "atlant",
+    "total_revenue": 237760.92,
+    "purchase_events": 932,
+    "unique_buyers": 736,
+    "revenue_share_percentage": 0.10340433958211852
+  },
+  {
+    "rank": 43,
+    "brand": "yokohama",
+    "total_revenue": 237257.95,
+    "purchase_events": 2735,
+    "unique_buyers": 2048,
+    "revenue_share_percentage": 0.1031855934539505
+  },
+  {
+    "rank": 44,
+    "brand": "hansa",
+    "total_revenue": 228372.29,
+    "purchase_events": 836,
+    "unique_buyers": 605,
+    "revenue_share_percentage": 0.09932114085992806
+  },
+  {
+    "rank": 45,
+    "brand": "casio",
+    "total_revenue": 223266.26,
+    "purchase_events": 2687,
+    "unique_buyers": 1912,
+    "revenue_share_percentage": 0.09710048298210489
+  },
+  {
+    "rank": 46,
+    "brand": "hubert",
+    "total_revenue": 219706.36,
+    "purchase_events": 426,
+    "unique_buyers": 266,
+    "revenue_share_percentage": 0.09555225079794949
+  },
+  {
+    "rank": 47,
+    "brand": "peda",
+    "total_revenue": 219342.37,
+    "purchase_events": 149,
+    "unique_buyers": 120,
+    "revenue_share_percentage": 0.09539394830835408
+  },
+  {
+    "rank": 48,
+    "brand": "meizu",
+    "total_revenue": 214465.65,
+    "purchase_events": 1735,
+    "unique_buyers": 1260,
+    "revenue_share_percentage": 0.09327301938981285
+  },
+  {
+    "rank": 49,
+    "brand": "bts",
+    "total_revenue": 199313.32,
+    "purchase_events": 757,
+    "unique_buyers": 566,
+    "revenue_share_percentage": 0.08668313625519052
+  },
+  {
+    "rank": 50,
+    "brand": "tcl",
+    "total_revenue": 194837.51,
+    "purchase_events": 731,
+    "unique_buyers": 544,
+    "revenue_share_percentage": 0.08473656666274003
+  }
+]

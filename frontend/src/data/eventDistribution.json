@@ -1,0 +1,20 @@
+[
+  {
+    "event_type": "view",
+    "count": 40708807,
+    "percentage_of_total": 96.12497784527056,
+    "ratio_to_views": 100
+  },
+  {
+    "event_type": "cart",
+    "count": 898294,
+    "percentage_of_total": 2.1211255551787476,
+    "ratio_to_views": 2.2066330757371495
+  },
+  {
+    "event_type": "purchase",
+    "count": 742773,
+    "percentage_of_total": 1.7538965995506857,
+    "ratio_to_views": 1.82460026401658
+  }
+]

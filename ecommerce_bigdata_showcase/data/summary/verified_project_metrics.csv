@@ -1,0 +1,15 @@
+metric,value,unit,note
+raw_records,42448764,rows,recorded project result
+cleaned_records,42349874,rows,recorded project result
+phase5_columns,21,columns,transformed dataset
+phase6_columns,16,columns,reduced dataset
+users,3021435,users,Phase 7 aggregate
+sessions,9239403,sessions,Phase 7 aggregate
+purchase_events,742773,events,Phase 7 aggregate
+purchase_revenue,229933212.63,currency_units,sum of purchase event values
+view_events,40708807,events,Phase 7 aggregate
+cart_events,898294,events,Phase 7 aggregate
+price_mean,290.7840088,currency_units,Phase 3 baseline
+price_median_purchase,179.84,currency_units,purchase-only approximate median
+iqr_outlier_events,3677875,events,IQR upper fence 796.465
+zscore_outlier_events,1158750,events,|z| > 3

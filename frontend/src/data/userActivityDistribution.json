@@ -1,0 +1,32 @@
+[
+  {
+    "activity_group_raw": "1–5 events",
+    "activity_group_display": "1 – 5 events",
+    "user_count": 1668748,
+    "percentage_of_users": 55.23031274874356
+  },
+  {
+    "activity_group_raw": "6–10 events",
+    "activity_group_display": "6 – 10 events",
+    "user_count": 447969,
+    "percentage_of_users": 14.826365617661807
+  },
+  {
+    "activity_group_raw": "11–20 events",
+    "activity_group_display": "11 – 20 events",
+    "user_count": 386999,
+    "percentage_of_users": 12.808450289349265
+  },
+  {
+    "activity_group_raw": "21–50 events",
+    "activity_group_display": "21 – 50 events",
+    "user_count": 340039,
+    "percentage_of_users": 11.254221917731144
+  },
+  {
+    "activity_group_raw": "More than 50 events",
+    "activity_group_display": "More than 50 events",
+    "user_count": 177680,
+    "percentage_of_users": 5.880649426514223
+  }
+]

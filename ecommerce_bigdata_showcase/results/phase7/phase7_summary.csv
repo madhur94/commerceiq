@@ -1,0 +1,21 @@
+Metric,Value
+Dataset records,"42,349,874"
+Dataset columns used in Phase 6,16
+Users analyzed,"3,021,435"
+Total events,"42,349,874"
+View events,"40,708,807"
+Cart events,"898,294"
+Purchase events,"742,773"
+Total purchase revenue,"229,933,212.63"
+Peak activity hour,21:00
+Peak activity event count,"3,055,061"
+Peak revenue hour,14:00
+Peak hourly purchase revenue,"17,531,268.91"
+Highest-revenue category,electronics
+Highest-category revenue,"176,445,577.86"
+Highest-revenue brand,apple
+Highest-brand revenue,"111,199,495.70"
+Highest-revenue product ID,1005115
+Highest-product revenue,"12,404,835.95"
+Highest purchase-count product ID,1004856
+Highest product purchase-event count,"28,938"

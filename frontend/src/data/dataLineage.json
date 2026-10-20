@@ -1,0 +1,331 @@
+[
+  {
+    "artifact_id": "ART-01",
+    "display_name": "Raw Clickstream Telemetry CSV",
+    "source_filename": "2019-Oct.csv",
+    "storage_path": "hdfs:///ecommerce/raw/2019-Oct.csv",
+    "format": "CSV (UTF-8)",
+    "research_phase": "Phase 1: Ingestion",
+    "record_count": 42448764,
+    "byte_size": "5.6 GB",
+    "transformation_description": "Raw uncompressed streaming clickstream logs ingested into distributed HDFS cluster across 13 partitions.",
+    "input_dependencies": ["External eCommerce Web/Mobile Telemetry Stream"],
+    "output_dependencies": ["ART-02"],
+    "related_views": ["/data-pipeline"],
+    "verification_status": "baseline",
+    "known_caveats": [
+      "Contains 68,673 zero/negative prices",
+      "Contains 13.5M unclassified categories and 6.1M unbranded products",
+      "Contains 30,217 unsegregated malformed records"
+    ]
+  },
+  {
+    "artifact_id": "ART-02",
+    "display_name": "Cleaned Columnar Parquet Master",
+    "source_filename": "2019-Oct.parquet",
+    "storage_path": "hdfs:///ecommerce/cleaned/2019-Oct.parquet",
+    "format": "Apache Parquet (Snappy)",
+    "research_phase": "Phase 3 & 4: Cleaning & Optimization",
+    "record_count": 42349874,
+    "byte_size": "1.4 GB",
+    "transformation_description": "Cleaned Parquet dataset generated via distributed PySpark filtering of non-positive prices and unsegregated anomalies.",
+    "input_dependencies": ["ART-01"],
+    "output_dependencies": ["ART-03", "ART-04", "ART-05", "ART-06", "ART-07", "ART-08", "ART-09", "ART-10", "ART-11", "ART-12", "ART-13", "ART-14"],
+    "related_views": ["/data-explorer", "/data-pipeline"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Retains 99.767% of raw volume (98,890 rows removed)",
+      "Categories and brands coalesced to 'Unknown / Other' and 'Unknown'"
+    ]
+  },
+  {
+    "artifact_id": "ART-03",
+    "display_name": "Event Distribution Breakdown",
+    "source_filename": "event_distribution.csv",
+    "storage_path": "results/phase7/event_distribution.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 3,
+    "byte_size": "63 bytes",
+    "transformation_description": "PySpark group-by aggregation counting total occurrences of view (40,708,807), cart (898,294), and purchase (742,773) events.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["CommerceIQ Overview KPI", "Event Funnel Chart"],
+    "related_views": ["/overview", "/sales-intelligence", "/data-pipeline"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Reflects raw event counts, not session-level or user-level conversion probabilities"
+    ]
+  },
+  {
+    "artifact_id": "ART-04",
+    "display_name": "Hourly Activity Volume Matrix",
+    "source_filename": "hourly_activity.csv",
+    "storage_path": "results/phase7/hourly_activity.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 24,
+    "byte_size": "290 bytes",
+    "transformation_description": "Distributed hourly extraction from UTC timestamps summing all 42,349,874 cleaned events across hours 0 through 23.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Hourly Decoupling Chart", "Overview Activity Timeline"],
+    "related_views": ["/overview", "/sales-intelligence"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "All hours represent UTC timestamps; peak at 21:00 UTC corresponds to local evening peak in primary consumer timezones"
+    ]
+  },
+  {
+    "artifact_id": "ART-05",
+    "display_name": "Hourly Revenue Totals Matrix",
+    "source_filename": "hourly_revenue.csv",
+    "storage_path": "results/phase7/hourly_revenue.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 24,
+    "byte_size": "508 bytes",
+    "transformation_description": "Distributed aggregation filtering purchase events and summing gross revenue across 24 UTC hourly bins, totaling 229,933,212.63 units.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Hourly Decoupling Chart", "Sales Intelligence Hero"],
+    "related_views": ["/sales-intelligence"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Reveals temporal decoupling: peak revenue occurs at 14:00 UTC whereas peak browsing activity occurs at 21:00 UTC"
+    ]
+  },
+  {
+    "artifact_id": "ART-06",
+    "display_name": "Category Revenue & Order Distribution",
+    "source_filename": "category_revenue.csv",
+    "storage_path": "results/phase7/category_revenue.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 14,
+    "byte_size": "600 bytes",
+    "transformation_description": "Distributed group-by on primary taxonomy prefix summing purchase events and transaction value across 14 top-level categories.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Category Revenue Chart", "Category-Brand Treemap"],
+    "related_views": ["/sales-intelligence", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Electronics dominates platform GMV (166.4M units, 72.38% share)",
+      "Unclassified subcategories are grouped under 'Unknown / Other'"
+    ]
+  },
+  {
+    "artifact_id": "ART-07",
+    "display_name": "Brand Commercial Revenue Ranking",
+    "source_filename": "brand_revenue.csv",
+    "storage_path": "results/phase7/brand_revenue.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 1986,
+    "byte_size": "50.5 kB",
+    "transformation_description": "Full brand rollup across 1,985 named commercial brands plus 1 unbranded aggregation row, detailing purchases and total revenue.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Brand Pareto Chart", "Top Brands Table"],
+    "related_views": ["/sales-intelligence", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Contains 1,985 named commercial brands + 1 unbranded event aggregation row = 1,986 records total",
+      "Top 10 brands account for 81.65% of recorded brand revenue"
+    ]
+  },
+  {
+    "artifact_id": "ART-08",
+    "display_name": "Daily Purchase & Revenue Timeseries",
+    "source_filename": "daily_purchase_summary.csv",
+    "storage_path": "results/phase7/daily_purchase_summary.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 32,
+    "byte_size": "1.2 kB",
+    "transformation_description": "Aggregated daily purchase events and revenue for October 1 through November 1, 2019.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Daily Revenue Area Chart", "Sales Intelligence Timeseries"],
+    "related_views": ["/sales-intelligence"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "November 1 record represents a partial UTC logging day before dataset cutoff (8,065 purchases)"
+    ]
+  },
+  {
+    "artifact_id": "ART-09",
+    "display_name": "Weekday Purchase & Activity Profiles",
+    "source_filename": "weekday_purchase_summary.csv",
+    "storage_path": "results/phase7/weekday_purchase_summary.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 7,
+    "byte_size": "278 bytes",
+    "transformation_description": "Aggregated purchase counts and revenues rolled up by day-of-week (Monday through Sunday).",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Weekday Activity Chart"],
+    "related_views": ["/sales-intelligence"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "October 2019 calendar includes 5 Tuesdays, 5 Wednesdays, and 5 Thursdays vs 4 for other weekdays"
+    ]
+  },
+  {
+    "artifact_id": "ART-10",
+    "display_name": "User Activity Frequency Distribution",
+    "source_filename": "user_activity_distribution.csv",
+    "storage_path": "results/phase7/user_activity_distribution.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 5,
+    "byte_size": "145 bytes",
+    "transformation_description": "Binned user event counts across 5 activity brackets (1-5, 6-10, 11-20, 21-50, >50 events) covering all 3,021,435 distinct users.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Activity Tiers Panel", "Customer Intelligence Section D"],
+    "related_views": ["/customer-intelligence"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "55.23% of all users fall in the 1-5 events bracket, exhibiting massive long-tail casual browsing"
+    ]
+  },
+  {
+    "artifact_id": "ART-11",
+    "display_name": "Purchase Price Bracket Distribution",
+    "source_filename": "purchase_price_distribution.csv",
+    "storage_path": "results/phase7/purchase_price_distribution.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 7,
+    "byte_size": "272 bytes",
+    "transformation_description": "Categorization of purchase volume and gross revenue across 7 monetary price bands (0-50, 50-100, 100-250, 250-500, 500-1000, 1000-2000, >2000 units).",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Price Bracket Chart", "Data Explorer Price Distribution"],
+    "related_views": ["/sales-intelligence", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "The 500-1000 unit bracket captures the largest single share of revenue (70.1M units, 30.5%) driven by smartphones"
+    ]
+  },
+  {
+    "artifact_id": "ART-12",
+    "display_name": "Top Products by Commercial Revenue",
+    "source_filename": "top_products_revenue.csv",
+    "storage_path": "results/phase7/top_products_revenue.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 10,
+    "byte_size": "435 bytes",
+    "transformation_description": "Top 10 individual product IDs ranked by gross purchase revenue in October 2019.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Sales Intelligence Top Products", "Data Explorer Highlights"],
+    "related_views": ["/sales-intelligence", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Top product generated 12,404,835.95 units across 12,541 purchases"
+    ]
+  },
+  {
+    "artifact_id": "ART-13",
+    "display_name": "Top Products by Purchase Volume",
+    "source_filename": "top_products_purchase_count.csv",
+    "storage_path": "results/phase7/top_products_purchase_count.csv",
+    "format": "CSV Summary",
+    "research_phase": "Phase 5 & 7: Descriptive Analytics",
+    "record_count": 10,
+    "byte_size": "439 bytes",
+    "transformation_description": "Top 10 individual product IDs ranked by total units purchased.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["Sales Intelligence Top Products Volume"],
+    "related_views": ["/sales-intelligence", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Top product recorded 21,804 purchases generating 5,430,222.72 units"
+    ]
+  },
+  {
+    "artifact_id": "ART-14",
+    "display_name": "User-Level Feature Vectors",
+    "source_filename": "user_features_corrected",
+    "storage_path": "hdfs:///ecommerce/results/user_features_corrected",
+    "format": "PySpark DataFrame",
+    "research_phase": "Phase 6: Feature Engineering",
+    "record_count": 3021435,
+    "byte_size": "185 MB",
+    "transformation_description": "Synthesized 11 behavioral features per distinct user: total events, views, carts, purchases, revenue, sessions, catalog breadth.",
+    "input_dependencies": ["ART-02"],
+    "output_dependencies": ["ART-15", "ART-16"],
+    "related_views": ["/customer-intelligence", "/ml-insights"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Includes 1 extreme browsing outlier account (7,429 views, 0 purchases) quarantined in subsequent clustering"
+    ]
+  },
+  {
+    "artifact_id": "ART-15",
+    "display_name": "7-Component PCA Variance Matrix",
+    "source_filename": "pcaVariance.json",
+    "storage_path": "src/data/pcaVariance.json",
+    "format": "JSON Contract",
+    "research_phase": "Phase 6: Dimensionality Reduction",
+    "record_count": 7,
+    "byte_size": "1.3 kB",
+    "transformation_description": "Eigen-decomposition of 11x11 correlation matrix into 7 principal components retaining 95.967% cumulative variance.",
+    "input_dependencies": ["ART-14"],
+    "output_dependencies": ["PcaVarianceChart", "PCA Stepper"],
+    "related_views": ["/customer-intelligence", "/ml-insights"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "PC1 (40.71%) and PC2 (17.93%) capture 58.64% of variance; component meanings represent linear factor weights"
+    ]
+  },
+  {
+    "artifact_id": "ART-16",
+    "display_name": "K-Means Cluster Centroids (K=2)",
+    "source_filename": "kmeansClusters.json",
+    "storage_path": "src/data/kmeansClusters.json",
+    "format": "JSON Contract",
+    "research_phase": "Phase 7: Behavioral Clustering",
+    "record_count": 2,
+    "byte_size": "2.6 kB",
+    "transformation_description": "K-Means model centroids in business units: Cluster 0 High-Activity Core (250,388 users) vs Cluster 1 Casual Browsers (2,771,046 users).",
+    "input_dependencies": ["ART-14", "ART-15"],
+    "output_dependencies": ["Customer Segment Explorer", "Radar Chart", "Behavioral Lab"],
+    "related_views": ["/customer-intelligence"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Selected from 6 sensitivity trials (Silhouette 0.81115); excludes 1 extreme browsing outlier (usr_***849)"
+    ]
+  },
+  {
+    "artifact_id": "ART-17",
+    "display_name": "Hierarchical Category-Brand Taxonomy Tree",
+    "source_filename": "categoryBrandTreemap.json",
+    "storage_path": "src/data/categoryBrandTreemap.json",
+    "format": "JSON Tree",
+    "research_phase": "Phase 7: Interactive Exploration",
+    "record_count": 159,
+    "byte_size": "9.2 kB",
+    "transformation_description": "Extracted from 26_category_brand_treemap.html into a clean 159-node hierarchical tree of categories and underlying commercial brands.",
+    "input_dependencies": ["ART-06", "ART-07"],
+    "output_dependencies": ["CategoryBrandTreemapChart"],
+    "related_views": ["/data-pipeline", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Captures top brand contributors within major retail categories"
+    ]
+  },
+  {
+    "artifact_id": "ART-18",
+    "display_name": "Top 100 Products Multidimensional Bubble Matrix",
+    "source_filename": "productBubbleData.json",
+    "storage_path": "src/data/productBubbleData.json",
+    "format": "JSON Array",
+    "research_phase": "Phase 7: Interactive Exploration",
+    "record_count": 100,
+    "byte_size": "11.4 kB",
+    "transformation_description": "Extracted from 25_product_bubble_chart.html containing top 100 products with purchases, revenue, unique buyers, and average price.",
+    "input_dependencies": ["ART-12", "ART-13"],
+    "output_dependencies": ["ProductBubbleChart"],
+    "related_views": ["/data-pipeline", "/data-explorer"],
+    "verification_status": "verified",
+    "known_caveats": [
+      "Coordinates represent individual product metrics across October 2019"
+    ]
+  }
+]

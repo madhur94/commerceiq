@@ -1,0 +1,170 @@
+[
+  {
+    "event_hour": 0,
+    "event_count": 1725888,
+    "total_revenue": 7030765.7,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 1,
+    "event_count": 1000991,
+    "total_revenue": 4509209.72,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 2,
+    "event_count": 567477,
+    "total_revenue": 2857196.58,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 3,
+    "event_count": 338594,
+    "total_revenue": 1805636.44,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 4,
+    "event_count": 234839,
+    "total_revenue": 1176310.22,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 5,
+    "event_count": 240683,
+    "total_revenue": 940186.06,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 6,
+    "event_count": 407994,
+    "total_revenue": 1126627.32,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 7,
+    "event_count": 791158,
+    "total_revenue": 2476336.11,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 8,
+    "event_count": 1322511,
+    "total_revenue": 6331614.3,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 9,
+    "event_count": 1745167,
+    "total_revenue": 10350851.5,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 10,
+    "event_count": 2020043,
+    "total_revenue": 13312227.56,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 11,
+    "event_count": 2212495,
+    "total_revenue": 15314372.6,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 12,
+    "event_count": 2283619,
+    "total_revenue": 16074263.14,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 13,
+    "event_count": 2384678,
+    "total_revenue": 16768286.83,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 14,
+    "event_count": 2383201,
+    "total_revenue": 17531268.91,
+    "peak_activity": false,
+    "peak_revenue": true
+  },
+  {
+    "event_hour": 15,
+    "event_count": 2306385,
+    "total_revenue": 16836076.02,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 16,
+    "event_count": 2238365,
+    "total_revenue": 15816546.17,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 17,
+    "event_count": 2136965,
+    "total_revenue": 14150814.56,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 18,
+    "event_count": 2212684,
+    "total_revenue": 12745742.27,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 19,
+    "event_count": 2509502,
+    "total_revenue": 11830182.22,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 20,
+    "event_count": 2838470,
+    "total_revenue": 11217639.62,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 21,
+    "event_count": 3055061,
+    "total_revenue": 11100141.91,
+    "peak_activity": true,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 22,
+    "event_count": 2942161,
+    "total_revenue": 10045431.11,
+    "peak_activity": false,
+    "peak_revenue": false
+  },
+  {
+    "event_hour": 23,
+    "event_count": 2450943,
+    "total_revenue": 8585485.76,
+    "peak_activity": false,
+    "peak_revenue": false
+  }
+]

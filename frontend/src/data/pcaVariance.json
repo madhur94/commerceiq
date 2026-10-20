@@ -1,0 +1,44 @@
+[
+  {
+    "component": "PC1",
+    "explained_variance_percent": 40.7123,
+    "cumulative_variance_percent": 40.7123,
+    "primary_interpretation": "Overall behavioral volume and engagement intensity"
+  },
+  {
+    "component": "PC2",
+    "explained_variance_percent": 17.9277,
+    "cumulative_variance_percent": 58.64,
+    "primary_interpretation": "Catalog exploration breadth and price sensitivity"
+  },
+  {
+    "component": "PC3",
+    "explained_variance_percent": 14.7635,
+    "cumulative_variance_percent": 73.4035,
+    "primary_interpretation": "Session density and cart-to-purchase propensity"
+  },
+  {
+    "component": "PC4",
+    "explained_variance_percent": 8.4269,
+    "cumulative_variance_percent": 81.8305,
+    "primary_interpretation": "Temporal engagement variability"
+  },
+  {
+    "component": "PC5",
+    "explained_variance_percent": 5.8033,
+    "cumulative_variance_percent": 87.6338,
+    "primary_interpretation": "Category switching behavior"
+  },
+  {
+    "component": "PC6",
+    "explained_variance_percent": 4.5092,
+    "cumulative_variance_percent": 92.143,
+    "primary_interpretation": "Basket size dispersion"
+  },
+  {
+    "component": "PC7",
+    "explained_variance_percent": 3.824,
+    "cumulative_variance_percent": 95.967,
+    "primary_interpretation": "High-value product interaction variance"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "weekday": "Sunday",
+    "purchase_events": 100218,
+    "total_revenue": 29651952.74
+  },
+  {
+    "weekday": "Monday",
+    "purchase_events": 96799,
+    "total_revenue": 30535188.83
+  },
+  {
+    "weekday": "Tuesday",
+    "purchase_events": 113088,
+    "total_revenue": 35494459.79
+  },
+  {
+    "weekday": "Wednesday",
+    "purchase_events": 119197,
+    "total_revenue": 37129880.02
+  },
+  {
+    "weekday": "Thursday",
+    "purchase_events": 112606,
+    "total_revenue": 35497897.13
+  },
+  {
+    "weekday": "Friday",
+    "purchase_events": 104855,
+    "total_revenue": 32552473.1
+  },
+  {
+    "weekday": "Saturday",
+    "purchase_events": 96010,
+    "total_revenue": 29071361.02
+  }
+]

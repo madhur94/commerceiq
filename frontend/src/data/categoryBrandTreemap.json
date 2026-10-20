@@ -1,0 +1,956 @@
+[
+  {
+    "id": "electronics/apple",
+    "label": "apple",
+    "parent": "electronics",
+    "value": 109372259.42
+  },
+  {
+    "id": "electronics/samsung",
+    "label": "samsung",
+    "parent": "electronics",
+    "value": 43188709.17
+  },
+  {
+    "id": "electronics/xiaomi",
+    "label": "xiaomi",
+    "parent": "electronics",
+    "value": 8333024.77
+  },
+  {
+    "id": "Unknown/Unknown",
+    "label": "Unknown",
+    "parent": "Unknown",
+    "value": 5375229.31
+  },
+  {
+    "id": "electronics/huawei",
+    "label": "huawei",
+    "parent": "electronics",
+    "value": 4869419.79
+  },
+  {
+    "id": "computers/acer",
+    "label": "acer",
+    "parent": "computers",
+    "value": 3569779.12
+  },
+  {
+    "id": "Unknown/lucente",
+    "label": "lucente",
+    "parent": "Unknown",
+    "value": 3123438.96
+  },
+  {
+    "id": "appliances/samsung",
+    "label": "samsung",
+    "parent": "appliances",
+    "value": 3055420.5
+  },
+  {
+    "id": "electronics/oppo",
+    "label": "oppo",
+    "parent": "electronics",
+    "value": 2412033.98
+  },
+  {
+    "id": "appliances/lg",
+    "label": "lg",
+    "parent": "appliances",
+    "value": 1877503.23
+  },
+  {
+    "id": "computers/apple",
+    "label": "apple",
+    "parent": "computers",
+    "value": 1807261.74
+  },
+  {
+    "id": "Unknown/sony",
+    "label": "sony",
+    "parent": "Unknown",
+    "value": 1746637
+  },
+  {
+    "id": "computers/lenovo",
+    "label": "lenovo",
+    "parent": "computers",
+    "value": 1701878.17
+  },
+  {
+    "id": "electronics/lg",
+    "label": "lg",
+    "parent": "electronics",
+    "value": 1328109.57
+  },
+  {
+    "id": "appliances/indesit",
+    "label": "indesit",
+    "parent": "appliances",
+    "value": 1249809.18
+  },
+  {
+    "id": "computers/hp",
+    "label": "hp",
+    "parent": "computers",
+    "value": 1208581.63
+  },
+  {
+    "id": "furniture/Unknown",
+    "label": "Unknown",
+    "parent": "furniture",
+    "value": 1071364.66
+  },
+  {
+    "id": "computers/asus",
+    "label": "asus",
+    "parent": "computers",
+    "value": 963252.18
+  },
+  {
+    "id": "appliances/beko",
+    "label": "beko",
+    "parent": "appliances",
+    "value": 925567.23
+  },
+  {
+    "id": "appliances/bosch",
+    "label": "bosch",
+    "parent": "appliances",
+    "value": 794649.47
+  },
+  {
+    "id": "electronics/sony",
+    "label": "sony",
+    "parent": "electronics",
+    "value": 721868.72
+  },
+  {
+    "id": "appliances/Unknown",
+    "label": "Unknown",
+    "parent": "appliances",
+    "value": 662957.8
+  },
+  {
+    "id": "electronics/artel",
+    "label": "artel",
+    "parent": "electronics",
+    "value": 579581.32
+  },
+  {
+    "id": "electronics/Unknown",
+    "label": "Unknown",
+    "parent": "electronics",
+    "value": 576453.46
+  },
+  {
+    "id": "Unknown/cordiant",
+    "label": "cordiant",
+    "parent": "Unknown",
+    "value": 517641.21
+  },
+  {
+    "id": "electronics/haier",
+    "label": "haier",
+    "parent": "electronics",
+    "value": 514700
+  },
+  {
+    "id": "electronics/vivo",
+    "label": "vivo",
+    "parent": "electronics",
+    "value": 495678.6
+  },
+  {
+    "id": "Unknown/canon",
+    "label": "canon",
+    "parent": "Unknown",
+    "value": 433503.96
+  },
+  {
+    "id": "electronics/kivi",
+    "label": "kivi",
+    "parent": "electronics",
+    "value": 404700.53
+  },
+  {
+    "id": "Unknown/navien",
+    "label": "navien",
+    "parent": "Unknown",
+    "value": 382956.86
+  },
+  {
+    "id": "Unknown/bosch",
+    "label": "bosch",
+    "parent": "Unknown",
+    "value": 378002.48
+  },
+  {
+    "id": "Unknown/nokian",
+    "label": "nokian",
+    "parent": "Unknown",
+    "value": 372997.64
+  },
+  {
+    "id": "Unknown/dauscher",
+    "label": "dauscher",
+    "parent": "Unknown",
+    "value": 370838.26
+  },
+  {
+    "id": "appliances/haier",
+    "label": "haier",
+    "parent": "appliances",
+    "value": 364413.88
+  },
+  {
+    "id": "electronics/oneplus",
+    "label": "oneplus",
+    "parent": "electronics",
+    "value": 351076.22
+  },
+  {
+    "id": "Unknown/omabelle",
+    "label": "omabelle",
+    "parent": "Unknown",
+    "value": 347730.87
+  },
+  {
+    "id": "Unknown/xiaomi",
+    "label": "xiaomi",
+    "parent": "Unknown",
+    "value": 324641.63
+  },
+  {
+    "id": "appliances/midea",
+    "label": "midea",
+    "parent": "appliances",
+    "value": 319414.42
+  },
+  {
+    "id": "computers/pulser",
+    "label": "pulser",
+    "parent": "computers",
+    "value": 297562.53
+  },
+  {
+    "id": "appliances/janome",
+    "label": "janome",
+    "parent": "appliances",
+    "value": 290512.07
+  },
+  {
+    "id": "Unknown/triangle",
+    "label": "triangle",
+    "parent": "Unknown",
+    "value": 288550.38
+  },
+  {
+    "id": "Unknown/force",
+    "label": "force",
+    "parent": "Unknown",
+    "value": 285816.83
+  },
+  {
+    "id": "computers/epson",
+    "label": "epson",
+    "parent": "computers",
+    "value": 283413.1
+  },
+  {
+    "id": "auto/Unknown",
+    "label": "Unknown",
+    "parent": "auto",
+    "value": 282506.78
+  },
+  {
+    "id": "Unknown/stels",
+    "label": "stels",
+    "parent": "Unknown",
+    "value": 279741.83
+  },
+  {
+    "id": "auto/starline",
+    "label": "starline",
+    "parent": "auto",
+    "value": 274563.95
+  },
+  {
+    "id": "appliances/xiaomi",
+    "label": "xiaomi",
+    "parent": "appliances",
+    "value": 255113.01
+  },
+  {
+    "id": "appliances/atlant",
+    "label": "atlant",
+    "parent": "appliances",
+    "value": 237696.57
+  },
+  {
+    "id": "Unknown/yokohama",
+    "label": "yokohama",
+    "parent": "Unknown",
+    "value": 237257.95
+  },
+  {
+    "id": "appliances/dauscher",
+    "label": "dauscher",
+    "parent": "appliances",
+    "value": 236187.05
+  },
+  {
+    "id": "appliances/artel",
+    "label": "artel",
+    "parent": "appliances",
+    "value": 228218.29
+  },
+  {
+    "id": "appliances/tefal",
+    "label": "tefal",
+    "parent": "appliances",
+    "value": 227441.52
+  },
+  {
+    "id": "Unknown/artel",
+    "label": "artel",
+    "parent": "Unknown",
+    "value": 226167.72
+  },
+  {
+    "id": "Unknown/hubert",
+    "label": "hubert",
+    "parent": "Unknown",
+    "value": 219706.36
+  },
+  {
+    "id": "Unknown/peda",
+    "label": "peda",
+    "parent": "Unknown",
+    "value": 219342.37
+  },
+  {
+    "id": "construction/Unknown",
+    "label": "Unknown",
+    "parent": "construction",
+    "value": 216087.55
+  },
+  {
+    "id": "appliances/philips",
+    "label": "philips",
+    "parent": "appliances",
+    "value": 215708.58
+  },
+  {
+    "id": "electronics/meizu",
+    "label": "meizu",
+    "parent": "electronics",
+    "value": 213823.51
+  },
+  {
+    "id": "electronics/casio",
+    "label": "casio",
+    "parent": "electronics",
+    "value": 199267.12
+  },
+  {
+    "id": "appliances/elenberg",
+    "label": "elenberg",
+    "parent": "appliances",
+    "value": 198250.73
+  },
+  {
+    "id": "electronics/tcl",
+    "label": "tcl",
+    "parent": "electronics",
+    "value": 189910.62
+  },
+  {
+    "id": "Unknown/skad",
+    "label": "skad",
+    "parent": "Unknown",
+    "value": 189851.02
+  },
+  {
+    "id": "appliances/ariston",
+    "label": "ariston",
+    "parent": "appliances",
+    "value": 181160.26
+  },
+  {
+    "id": "computers/msi",
+    "label": "msi",
+    "parent": "computers",
+    "value": 176389.77
+  },
+  {
+    "id": "Unknown/lider",
+    "label": "lider",
+    "parent": "Unknown",
+    "value": 167913.5
+  },
+  {
+    "id": "electronics/nokia",
+    "label": "nokia",
+    "parent": "electronics",
+    "value": 164328.17
+  },
+  {
+    "id": "Unknown/lg",
+    "label": "lg",
+    "parent": "Unknown",
+    "value": 162103.42
+  },
+  {
+    "id": "Unknown/bts",
+    "label": "bts",
+    "parent": "Unknown",
+    "value": 162010.21
+  },
+  {
+    "id": "Unknown/sokolov",
+    "label": "sokolov",
+    "parent": "Unknown",
+    "value": 159264.38
+  },
+  {
+    "id": "computers/xiaomi",
+    "label": "xiaomi",
+    "parent": "computers",
+    "value": 154420.87
+  },
+  {
+    "id": "apparel/Unknown",
+    "label": "Unknown",
+    "parent": "apparel",
+    "value": 153718.77
+  },
+  {
+    "id": "auto/pioneer",
+    "label": "pioneer",
+    "parent": "auto",
+    "value": 152445.27
+  },
+  {
+    "id": "Unknown/redmond",
+    "label": "redmond",
+    "parent": "Unknown",
+    "value": 150083.41
+  },
+  {
+    "id": "electronics/garmin",
+    "label": "garmin",
+    "parent": "electronics",
+    "value": 149995.07
+  },
+  {
+    "id": "computers/dell",
+    "label": "dell",
+    "parent": "computers",
+    "value": 149526.76
+  },
+  {
+    "id": "Unknown/philips",
+    "label": "philips",
+    "parent": "Unknown",
+    "value": 148163.09
+  },
+  {
+    "id": "electronics/yasin",
+    "label": "yasin",
+    "parent": "electronics",
+    "value": 144728.17
+  },
+  {
+    "id": "electronics/honor",
+    "label": "honor",
+    "parent": "electronics",
+    "value": 142009.88
+  },
+  {
+    "id": "appliances/thomas",
+    "label": "thomas",
+    "parent": "appliances",
+    "value": 133672.07
+  },
+  {
+    "id": "electronics/philips",
+    "label": "philips",
+    "parent": "electronics",
+    "value": 133285.14
+  },
+  {
+    "id": "appliances/hansa",
+    "label": "hansa",
+    "parent": "appliances",
+    "value": 128001.82
+  },
+  {
+    "id": "Unknown/michelin",
+    "label": "michelin",
+    "parent": "Unknown",
+    "value": 126849.36
+  },
+  {
+    "id": "apparel/respect",
+    "label": "respect",
+    "parent": "apparel",
+    "value": 126845.48
+  },
+  {
+    "id": "appliances/delonghi",
+    "label": "delonghi",
+    "parent": "appliances",
+    "value": 125126.22
+  },
+  {
+    "id": "appliances/redmond",
+    "label": "redmond",
+    "parent": "appliances",
+    "value": 123028.97
+  },
+  {
+    "id": "appliances/karcher",
+    "label": "karcher",
+    "parent": "appliances",
+    "value": 122422.05
+  },
+  {
+    "id": "Unknown/dji",
+    "label": "dji",
+    "parent": "Unknown",
+    "value": 119556.61
+  },
+  {
+    "id": "appliances/vitek",
+    "label": "vitek",
+    "parent": "appliances",
+    "value": 117004.48
+  },
+  {
+    "id": "construction/huter",
+    "label": "huter",
+    "parent": "construction",
+    "value": 116215.84
+  },
+  {
+    "id": "furniture/sv",
+    "label": "sv",
+    "parent": "furniture",
+    "value": 115641.76
+  },
+  {
+    "id": "Unknown/sv",
+    "label": "sv",
+    "parent": "Unknown",
+    "value": 115185.42
+  },
+  {
+    "id": "Unknown/nikon",
+    "label": "nikon",
+    "parent": "Unknown",
+    "value": 115065.21
+  },
+  {
+    "id": "appliances/electrolux",
+    "label": "electrolux",
+    "parent": "appliances",
+    "value": 109639.45
+  },
+  {
+    "id": "Unknown/karcher",
+    "label": "karcher",
+    "parent": "Unknown",
+    "value": 104860.81
+  },
+  {
+    "id": "Unknown/goodyear",
+    "label": "goodyear",
+    "parent": "Unknown",
+    "value": 104125.08
+  },
+  {
+    "id": "Unknown/bridgestone",
+    "label": "bridgestone",
+    "parent": "Unknown",
+    "value": 102583.35
+  },
+  {
+    "id": "computers/samsung",
+    "label": "samsung",
+    "parent": "computers",
+    "value": 101064.57
+  },
+  {
+    "id": "Unknown/hansa",
+    "label": "hansa",
+    "parent": "Unknown",
+    "value": 100370.47
+  },
+  {
+    "id": "appliances/braun",
+    "label": "braun",
+    "parent": "appliances",
+    "value": 98541.7
+  },
+  {
+    "id": "auto/sho-me",
+    "label": "sho-me",
+    "parent": "auto",
+    "value": 98488.63
+  },
+  {
+    "id": "furniture/brw",
+    "label": "brw",
+    "parent": "furniture",
+    "value": 97628.83
+  },
+  {
+    "id": "Unknown/matador",
+    "label": "matador",
+    "parent": "Unknown",
+    "value": 96796.84
+  },
+  {
+    "id": "Unknown/viatti",
+    "label": "viatti",
+    "parent": "Unknown",
+    "value": 96701.8
+  },
+  {
+    "id": "electronics/tissot",
+    "label": "tissot",
+    "parent": "electronics",
+    "value": 95821.24
+  },
+  {
+    "id": "kids/xiaomi",
+    "label": "xiaomi",
+    "parent": "kids",
+    "value": 95609.92
+  },
+  {
+    "id": "computers/netechnics",
+    "label": "netechnics",
+    "parent": "computers",
+    "value": 94683.83
+  },
+  {
+    "id": "Unknown/rowenta",
+    "label": "rowenta",
+    "parent": "Unknown",
+    "value": 93344.94
+  },
+  {
+    "id": "appliances/candy",
+    "label": "candy",
+    "parent": "appliances",
+    "value": 91680.98
+  },
+  {
+    "id": "Unknown/kipardo",
+    "label": "kipardo",
+    "parent": "Unknown",
+    "value": 91041.43
+  },
+  {
+    "id": "Unknown/brw",
+    "label": "brw",
+    "parent": "Unknown",
+    "value": 87707.54
+  },
+  {
+    "id": "kids/Unknown",
+    "label": "Unknown",
+    "parent": "kids",
+    "value": 84537.12
+  },
+  {
+    "id": "auto/neoline",
+    "label": "neoline",
+    "parent": "auto",
+    "value": 83936.37
+  },
+  {
+    "id": "Unknown/rinnai",
+    "label": "rinnai",
+    "parent": "Unknown",
+    "value": 83714.54
+  },
+  {
+    "id": "furniture/rals",
+    "label": "rals",
+    "parent": "furniture",
+    "value": 79667.04
+  },
+  {
+    "id": "appliances/arg",
+    "label": "arg",
+    "parent": "appliances",
+    "value": 78835.65
+  },
+  {
+    "id": "electronics/jbl",
+    "label": "jbl",
+    "parent": "electronics",
+    "value": 78469.6
+  },
+  {
+    "id": "Unknown/genau",
+    "label": "genau",
+    "parent": "Unknown",
+    "value": 78271.11
+  },
+  {
+    "id": "computers/canon",
+    "label": "canon",
+    "parent": "computers",
+    "value": 78265.12
+  },
+  {
+    "id": "computers/gigabyte",
+    "label": "gigabyte",
+    "parent": "computers",
+    "value": 75269.96
+  },
+  {
+    "id": "Unknown/jbl",
+    "label": "jbl",
+    "parent": "Unknown",
+    "value": 75244.57
+  },
+  {
+    "id": "electronics/yamaha",
+    "label": "yamaha",
+    "parent": "electronics",
+    "value": 73450.9
+  },
+  {
+    "id": "construction/bosch",
+    "label": "bosch",
+    "parent": "construction",
+    "value": 73431.52
+  },
+  {
+    "id": "kids/belecoo",
+    "label": "belecoo",
+    "parent": "kids",
+    "value": 70372.19
+  },
+  {
+    "id": "Unknown/omron",
+    "label": "omron",
+    "parent": "Unknown",
+    "value": 70032.07
+  },
+  {
+    "id": "computers/Unknown",
+    "label": "Unknown",
+    "parent": "computers",
+    "value": 69534.48
+  },
+  {
+    "id": "Unknown/yamaha",
+    "label": "yamaha",
+    "parent": "Unknown",
+    "value": 69497.23
+  },
+  {
+    "id": "construction/dewalt",
+    "label": "dewalt",
+    "parent": "construction",
+    "value": 67658.06
+  },
+  {
+    "id": "Unknown/fly",
+    "label": "fly",
+    "parent": "Unknown",
+    "value": 67107.49
+  },
+  {
+    "id": "Unknown/maxxis",
+    "label": "maxxis",
+    "parent": "Unknown",
+    "value": 65717.49
+  },
+  {
+    "id": "Unknown/microsoft",
+    "label": "microsoft",
+    "parent": "Unknown",
+    "value": 64050.9
+  },
+  {
+    "id": "Unknown/vegas",
+    "label": "vegas",
+    "parent": "Unknown",
+    "value": 63040.73
+  },
+  {
+    "id": "Unknown/erlit",
+    "label": "erlit",
+    "parent": "Unknown",
+    "value": 62981.49
+  },
+  {
+    "id": "Unknown/continental",
+    "label": "continental",
+    "parent": "Unknown",
+    "value": 61504.08
+  },
+  {
+    "id": "Unknown/gf",
+    "label": "gf",
+    "parent": "Unknown",
+    "value": 61327.33
+  },
+  {
+    "id": "computers/palit",
+    "label": "palit",
+    "parent": "computers",
+    "value": 60054.98
+  },
+  {
+    "id": "Unknown/kenwood",
+    "label": "kenwood",
+    "parent": "Unknown",
+    "value": 59452.87
+  },
+  {
+    "id": "electronics/elari",
+    "label": "elari",
+    "parent": "electronics",
+    "value": 58943.42
+  },
+  {
+    "id": "computers/zeta",
+    "label": "zeta",
+    "parent": "computers",
+    "value": 58769.89
+  },
+  {
+    "id": "Unknown/pirelli",
+    "label": "pirelli",
+    "parent": "Unknown",
+    "value": 57336.44
+  },
+  {
+    "id": "appliances/polaris",
+    "label": "polaris",
+    "parent": "appliances",
+    "value": 56714.55
+  },
+  {
+    "id": "Unknown/samsung",
+    "label": "samsung",
+    "parent": "Unknown",
+    "value": 56706.69
+  },
+  {
+    "id": "Unknown/nintendo",
+    "label": "nintendo",
+    "parent": "Unknown",
+    "value": 56646.84
+  },
+  {
+    "id": "electronics/changhong",
+    "label": "changhong",
+    "parent": "electronics",
+    "value": 56453.77
+  },
+  {
+    "id": "construction/tefal",
+    "label": "tefal",
+    "parent": "construction",
+    "value": 55626.79
+  },
+  {
+    "id": "construction/stihl",
+    "label": "stihl",
+    "parent": "construction",
+    "value": 55460.46
+  },
+  {
+    "id": "electronics/hisense",
+    "label": "hisense",
+    "parent": "electronics",
+    "value": 55251.49
+  },
+  {
+    "id": "electronics/gopro",
+    "label": "gopro",
+    "parent": "electronics",
+    "value": 54598.61
+  },
+  {
+    "id": "appliances/arnica",
+    "label": "arnica",
+    "parent": "appliances",
+    "value": 54125.36
+  },
+  {
+    "id": "Unknown/imperial",
+    "label": "imperial",
+    "parent": "Unknown",
+    "value": 53909.05
+  },
+  {
+    "id": "Unknown/panasonic",
+    "label": "panasonic",
+    "parent": "Unknown",
+    "value": 52452.69
+  },
+  {
+    "id": "electronics",
+    "label": "electronics",
+    "parent": "",
+    "value": 174957952.26
+  },
+  {
+    "id": "Unknown",
+    "label": "Unknown",
+    "parent": "",
+    "value": 18782773.12
+  },
+  {
+    "id": "computers",
+    "label": "computers",
+    "parent": "",
+    "value": 10849708.7
+  },
+  {
+    "id": "appliances",
+    "label": "appliances",
+    "parent": "",
+    "value": 12558817.09
+  },
+  {
+    "id": "furniture",
+    "label": "furniture",
+    "parent": "",
+    "value": 1364302.29
+  },
+  {
+    "id": "auto",
+    "label": "auto",
+    "parent": "",
+    "value": 891941
+  },
+  {
+    "id": "construction",
+    "label": "construction",
+    "parent": "",
+    "value": 584480.22
+  },
+  {
+    "id": "apparel",
+    "label": "apparel",
+    "parent": "",
+    "value": 280564.25
+  },
+  {
+    "id": "kids",
+    "label": "kids",
+    "parent": "",
+    "value": 250519.23
+  }
+]

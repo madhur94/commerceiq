@@ -1,0 +1,38 @@
+[
+  {
+    "price_range_raw": "Under 50",
+    "price_range_display": "Under 50",
+    "purchase_events": 117065,
+    "total_revenue": 3447165.29
+  },
+  {
+    "price_range_raw": "50–99.99",
+    "price_range_display": "50 – 99.99",
+    "purchase_events": 92299,
+    "total_revenue": 6725620.63
+  },
+  {
+    "price_range_raw": "100–249.99",
+    "price_range_display": "100 – 249.99",
+    "purchase_events": 249283,
+    "total_revenue": 41741515.95
+  },
+  {
+    "price_range_raw": "250–499.99",
+    "price_range_display": "250 – 499.99",
+    "purchase_events": 147749,
+    "total_revenue": 50827616.53
+  },
+  {
+    "price_range_raw": "500–999.99",
+    "price_range_display": "500 – 999.99",
+    "purchase_events": 86974,
+    "total_revenue": 62927282.03
+  },
+  {
+    "price_range_raw": "1000 and above",
+    "price_range_display": "1000 and above",
+    "purchase_events": 49403,
+    "total_revenue": 64264012.2
+  }
+]

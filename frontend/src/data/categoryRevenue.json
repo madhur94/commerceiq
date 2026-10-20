@@ -1,0 +1,100 @@
+[
+  {
+    "main_category": "electronics",
+    "total_revenue": 176445577.86,
+    "purchase_events": 422979,
+    "unique_buyers": 200031,
+    "revenue_share_percentage": 76.73775173312623
+  },
+  {
+    "main_category": "Unknown",
+    "total_revenue": 22922165.08,
+    "purchase_events": 173411,
+    "unique_buyers": 104897,
+    "revenue_share_percentage": 9.969053542902106
+  },
+  {
+    "main_category": "appliances",
+    "total_revenue": 13581760.58,
+    "purchase_events": 74988,
+    "unique_buyers": 49280,
+    "revenue_share_percentage": 5.906828519747137
+  },
+  {
+    "main_category": "computers",
+    "total_revenue": 11377870.82,
+    "purchase_events": 27853,
+    "unique_buyers": 16200,
+    "revenue_share_percentage": 4.948337254048147
+  },
+  {
+    "main_category": "furniture",
+    "total_revenue": 1673243.01,
+    "purchase_events": 8299,
+    "unique_buyers": 5644,
+    "revenue_share_percentage": 0.7277082727028759
+  },
+  {
+    "main_category": "auto",
+    "total_revenue": 1273955.71,
+    "purchase_events": 10619,
+    "unique_buyers": 7382,
+    "revenue_share_percentage": 0.5540546732802815
+  },
+  {
+    "main_category": "construction",
+    "total_revenue": 932995.02,
+    "purchase_events": 7801,
+    "unique_buyers": 5353,
+    "revenue_share_percentage": 0.40576783550680134
+  },
+  {
+    "main_category": "kids",
+    "total_revenue": 678140.67,
+    "purchase_events": 5482,
+    "unique_buyers": 3689,
+    "revenue_share_percentage": 0.2949294111291521
+  },
+  {
+    "main_category": "apparel",
+    "total_revenue": 624937.75,
+    "purchase_events": 8002,
+    "unique_buyers": 5186,
+    "revenue_share_percentage": 0.2717909878489909
+  },
+  {
+    "main_category": "sport",
+    "total_revenue": 322559,
+    "purchase_events": 1236,
+    "unique_buyers": 861,
+    "revenue_share_percentage": 0.14028377906372733
+  },
+  {
+    "main_category": "accessories",
+    "total_revenue": 68783.88,
+    "purchase_events": 1587,
+    "unique_buyers": 1134,
+    "revenue_share_percentage": 0.029914721415511377
+  },
+  {
+    "main_category": "country_yard",
+    "total_revenue": 15695.45,
+    "purchase_events": 72,
+    "unique_buyers": 59,
+    "revenue_share_percentage": 0.006826090855024296
+  },
+  {
+    "main_category": "medicine",
+    "total_revenue": 13500.42,
+    "purchase_events": 310,
+    "unique_buyers": 264,
+    "revenue_share_percentage": 0.005871452777778724
+  },
+  {
+    "main_category": "stationery",
+    "total_revenue": 2027.38,
+    "purchase_events": 134,
+    "unique_buyers": 91,
+    "revenue_share_percentage": 0.0008817256005822808
+  }
+]

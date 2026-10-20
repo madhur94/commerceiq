@@ -1,0 +1,195 @@
+[
+  {
+    "event_date": "2019-10-01",
+    "purchase_events": 18018,
+    "total_revenue": 5811161.11,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-02",
+    "purchase_events": 19599,
+    "total_revenue": 6264453.44,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-03",
+    "purchase_events": 18780,
+    "total_revenue": 6057844.23,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-04",
+    "purchase_events": 26962,
+    "total_revenue": 8659547.83,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-05",
+    "purchase_events": 23506,
+    "total_revenue": 7330467.91,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-06",
+    "purchase_events": 22459,
+    "total_revenue": 6825608.52,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-07",
+    "purchase_events": 21444,
+    "total_revenue": 6372978.83,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-08",
+    "purchase_events": 22949,
+    "total_revenue": 6754057.62,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-09",
+    "purchase_events": 22805,
+    "total_revenue": 6876575.7,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-10",
+    "purchase_events": 21534,
+    "total_revenue": 6531304.26,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-11",
+    "purchase_events": 26380,
+    "total_revenue": 7788436.28,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-12",
+    "purchase_events": 25377,
+    "total_revenue": 7305593.2,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-13",
+    "purchase_events": 29175,
+    "total_revenue": 8193613.95,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-14",
+    "purchase_events": 28756,
+    "total_revenue": 9532674.9,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-15",
+    "purchase_events": 26145,
+    "total_revenue": 8552107.66,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-16",
+    "purchase_events": 31457,
+    "total_revenue": 9810197.33,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-17",
+    "purchase_events": 28264,
+    "total_revenue": 9000381.06,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-18",
+    "purchase_events": 26026,
+    "total_revenue": 8238432.01,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-19",
+    "purchase_events": 24607,
+    "total_revenue": 7616781.15,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-20",
+    "purchase_events": 25074,
+    "total_revenue": 7432727.53,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-21",
+    "purchase_events": 25373,
+    "total_revenue": 7955212.04,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-22",
+    "purchase_events": 25427,
+    "total_revenue": 7903507.31,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-23",
+    "purchase_events": 24663,
+    "total_revenue": 7614277.17,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-24",
+    "purchase_events": 23897,
+    "total_revenue": 7441063.65,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-25",
+    "purchase_events": 24000,
+    "total_revenue": 7328111.32,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-26",
+    "purchase_events": 22520,
+    "total_revenue": 6818518.76,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-27",
+    "purchase_events": 23510,
+    "total_revenue": 7200002.74,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-28",
+    "purchase_events": 21226,
+    "total_revenue": 6674323.06,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-29",
+    "purchase_events": 20549,
+    "total_revenue": 6473626.09,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-30",
+    "purchase_events": 20673,
+    "total_revenue": 6564376.38,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-10-31",
+    "purchase_events": 20131,
+    "total_revenue": 6467303.93,
+    "is_partial_day": false
+  },
+  {
+    "event_date": "2019-11-01",
+    "purchase_events": 1487,
+    "total_revenue": 537945.66,
+    "is_partial_day": true,
+    "note": "Partial UTC boundary capture"
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "raw_records": 42448764,
+    "cleaned_records": 42349874,
+    "net_removed_records": 98890,
+    "retention_rate_percent": 99.767,
+    "removal_rate_percent": 0.233,
+    "audit_period": "October 1, 2019 – November 1, 2019 (UTC)",
+    "cleaning_engine": "Apache Spark 3.x (Distributed Cluster Execution)"
+  },
+  "removals_breakdown": [
+    {
+      "cause": "Invalid / Non-Positive Price (price <= 0.00)",
+      "records_removed": 68673,
+      "share_of_removals_percent": 69.444,
+      "share_of_raw_dataset_percent": 0.1618,
+      "rule_type": "Deterministic Data Hygiene",
+      "description": "Products logged with zero or negative price values (promotional anomalies, system zero-fills, or checkout recording errors) were eliminated to safeguard revenue calculations."
+    },
+    {
+      "cause": "Unsegregated Cleaning Remainder (Multi-Condition)",
+      "records_removed": 30217,
+      "share_of_removals_percent": 30.556,
+      "share_of_raw_dataset_percent": 0.0712,
+      "rule_type": "Multi-Condition Compound Filtering",
+      "description": "Records filtered due to combined conditions including malformed timestamp parsing, unparseable event strings, or duplicate drop passes in historical PySpark scripts without granular per-condition tags."
+    }
+  ],
+  "categorical_missingness": [
+    {
+      "field": "category_code",
+      "missing_count": 13515601,
+      "missing_percent": 31.914,
+      "handling_strategy": "Preserved as Explicit 'Unknown / Other' Category",
+      "impact": "No records deleted. Missing taxonomy strings were retained to preserve exact transaction volume and platform GMV without introducing artificial taxonomy classifications."
+    },
+    {
+      "field": "brand",
+      "missing_count": 6117080,
+      "missing_percent": 14.444,
+      "handling_strategy": "Preserved as Explicit 'Unknown' Commercial Brand",
+      "impact": "No records deleted. Unbranded products (white-label electronics, generic accessories) were tracked as an explicit aggregate to prevent skewing branded market share metrics."
+    }
+  ],
+  "deduplication_audit": {
+    "sample_audit_size": 1000000,
+    "sample_duplicates_found": 28,
+    "sample_duplicate_rate_percent": 0.0028,
+    "random_1pct_sample_size": 424129,
+    "random_1pct_duplicates_found": 0,
+    "random_1pct_duplicate_rate_percent": 0.0,
+    "full_data_action": "Executed distributed PySpark dropDuplicates() across all 9 schema columns",
+    "methodological_caveat": "Reconciliation of sample audits: Historical 1% random sample audit (424,129 records) observed 0 duplicates. Secondary 1M-event contiguous block audit identified 28 duplicates (0.0028% collision rate). Full-corpus deduplication via PySpark dropDuplicates() is mathematically bounded within the 98,890 net filtered rows (together with 68,673 price <= 0 rows and 30,217 unsegregated remainder)."
+  },
+  "cleaning_pipeline_stages": [
+    {
+      "step": 1,
+      "name": "Schema Enforcement & Typing",
+      "input_count": 42448764,
+      "output_count": 42448764,
+      "delta": 0,
+      "notes": "Coerced CSV string columns into explicit PySpark datatypes: TimestampType, LongType, DoubleType, and StringType."
+    },
+    {
+      "step": 2,
+      "name": "Non-Positive Price Elimination",
+      "input_count": 42448764,
+      "output_count": 42380091,
+      "delta": -68673,
+      "notes": "Eliminated 68,673 records where price <= 0.00 to guarantee financial integrity across all sales and revenue views."
+    },
+    {
+      "step": 3,
+      "name": "Multi-Condition & Anomaly Cleansing",
+      "input_count": 42380091,
+      "output_count": 42349874,
+      "delta": -30217,
+      "notes": "Quarantined 30,217 records with unparseable telemetry formats, invalid session boundaries, or duplicate collisions."
+    },
+    {
+      "step": 4,
+      "name": "Categorical Null Preservation",
+      "input_count": 42349874,
+      "output_count": 42349874,
+      "delta": 0,
+      "notes": "Preserved 13.5M unclassified categories and 6.1M unbranded products as explicit tokens without row loss."
+    },
+    {
+      "step": 5,
+      "name": "Verified Cleaned Baseline Landing",
+      "input_count": 42349874,
+      "output_count": 42349874,
+      "delta": 0,
+      "notes": "Persisted 42,349,874 verified records to Snappy-compressed Parquet on HDFS for downstream analytical processing."
+    }
+  ]
+}

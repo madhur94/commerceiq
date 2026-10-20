@@ -1,0 +1,44 @@
+# Node / Vite
+**/node_modules/
+**/dist/
+**/.vite/
+**/coverage/
+**/.vercel/
+
+# Python
+**/__pycache__/
+**/.venv/
+**/*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+
+# Large raw/processed datasets
+*.parquet
+*.snappy
+*.arrow
+*.feather
+*.csv.gz
+*.csv.zip
+*.h5
+*.hdf5
+
+# Temporary files
+*.log
+*.tmp
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+__MACOSX/
+**/._*
+
+# TypeScript generated caches
+*.tsbuildinfo

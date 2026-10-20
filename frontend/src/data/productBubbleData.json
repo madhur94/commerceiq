@@ -1,0 +1,802 @@
+[
+  {
+    "product_rank": 1,
+    "product_label": "Product #1",
+    "purchases": 12541,
+    "revenue": 12404835.95,
+    "unique_buyers": 8352,
+    "average_price": 989.14
+  },
+  {
+    "product_rank": 2,
+    "product_label": "Product #2",
+    "purchases": 7293,
+    "revenue": 10239248.68,
+    "unique_buyers": 4794,
+    "average_price": 1403.98
+  },
+  {
+    "product_rank": 3,
+    "product_label": "Product #3",
+    "purchases": 9089,
+    "revenue": 6729380.83,
+    "unique_buyers": 5538,
+    "average_price": 740.39
+  },
+  {
+    "product_rank": 4,
+    "product_label": "Product #4",
+    "purchases": 3218,
+    "revenue": 5567806.64,
+    "unique_buyers": 2163,
+    "average_price": 1730.21
+  },
+  {
+    "product_rank": 5,
+    "product_label": "Product #5",
+    "purchases": 21804,
+    "revenue": 5430222.72,
+    "unique_buyers": 14410,
+    "average_price": 249.05
+  },
+  {
+    "product_rank": 6,
+    "product_label": "Product #6",
+    "purchases": 10547,
+    "revenue": 4854785.55,
+    "unique_buyers": 6781,
+    "average_price": 460.3
+  },
+  {
+    "product_rank": 7,
+    "product_label": "Product #7",
+    "purchases": 28938,
+    "revenue": 3798168.71,
+    "unique_buyers": 19228,
+    "average_price": 131.25
+  },
+  {
+    "product_rank": 8,
+    "product_label": "Product #8",
+    "purchases": 6633,
+    "revenue": 3538299.12,
+    "unique_buyers": 4132,
+    "average_price": 533.44
+  },
+  {
+    "product_rank": 9,
+    "product_label": "Product #9",
+    "purchases": 3220,
+    "revenue": 3051294.26,
+    "unique_buyers": 2179,
+    "average_price": 947.61
+  },
+  {
+    "product_rank": 10,
+    "product_label": "Product #10",
+    "purchases": 10615,
+    "revenue": 3027098.05,
+    "unique_buyers": 7331,
+    "average_price": 285.17
+  },
+  {
+    "product_rank": 11,
+    "product_label": "Product #11",
+    "purchases": 4375,
+    "revenue": 2552587.18,
+    "unique_buyers": 2946,
+    "average_price": 583.45
+  },
+  {
+    "product_rank": 12,
+    "product_label": "Product #12",
+    "purchases": 2249,
+    "revenue": 2449741.88,
+    "unique_buyers": 1383,
+    "average_price": 1089.26
+  },
+  {
+    "product_rank": 13,
+    "product_label": "Product #13",
+    "purchases": 3152,
+    "revenue": 2332809.71,
+    "unique_buyers": 2020,
+    "average_price": 740.1
+  },
+  {
+    "product_rank": 14,
+    "product_label": "Product #14",
+    "purchases": 6053,
+    "revenue": 2269184.63,
+    "unique_buyers": 4135,
+    "average_price": 374.89
+  },
+  {
+    "product_rank": 15,
+    "product_label": "Product #15",
+    "purchases": 12697,
+    "revenue": 2184501.96,
+    "unique_buyers": 8340,
+    "average_price": 172.05
+  },
+  {
+    "product_rank": 16,
+    "product_label": "Product #16",
+    "purchases": 1316,
+    "revenue": 2000494.05,
+    "unique_buyers": 751,
+    "average_price": 1520.13
+  },
+  {
+    "product_rank": 17,
+    "product_label": "Product #17",
+    "purchases": 12379,
+    "revenue": 1989706.86,
+    "unique_buyers": 7563,
+    "average_price": 160.73
+  },
+  {
+    "product_rank": 18,
+    "product_label": "Product #18",
+    "purchases": 1862,
+    "revenue": 1975750.52,
+    "unique_buyers": 1291,
+    "average_price": 1061.09
+  },
+  {
+    "product_rank": 19,
+    "product_label": "Product #19",
+    "purchases": 5301,
+    "revenue": 1902768.52,
+    "unique_buyers": 3539,
+    "average_price": 358.95
+  },
+  {
+    "product_rank": 20,
+    "product_label": "Product #20",
+    "purchases": 2582,
+    "revenue": 1885744.73,
+    "unique_buyers": 1793,
+    "average_price": 730.34
+  },
+  {
+    "product_rank": 21,
+    "product_label": "Product #21",
+    "purchases": 1299,
+    "revenue": 1836163.71,
+    "unique_buyers": 881,
+    "average_price": 1413.52
+  },
+  {
+    "product_rank": 22,
+    "product_label": "Product #22",
+    "purchases": 7689,
+    "revenue": 1761002.5,
+    "unique_buyers": 5271,
+    "average_price": 229.03
+  },
+  {
+    "product_rank": 23,
+    "product_label": "Product #23",
+    "purchases": 1018,
+    "revenue": 1754712.07,
+    "unique_buyers": 585,
+    "average_price": 1723.69
+  },
+  {
+    "product_rank": 24,
+    "product_label": "Product #24",
+    "purchases": 1042,
+    "revenue": 1704978.98,
+    "unique_buyers": 712,
+    "average_price": 1636.26
+  },
+  {
+    "product_rank": 25,
+    "product_label": "Product #25",
+    "purchases": 1811,
+    "revenue": 1691141.35,
+    "unique_buyers": 1236,
+    "average_price": 933.82
+  },
+  {
+    "product_rank": 26,
+    "product_label": "Product #26",
+    "purchases": 2248,
+    "revenue": 1688139.7,
+    "unique_buyers": 1375,
+    "average_price": 750.95
+  },
+  {
+    "product_rank": 27,
+    "product_label": "Product #27",
+    "purchases": 1180,
+    "revenue": 1658496,
+    "unique_buyers": 797,
+    "average_price": 1405.51
+  },
+  {
+    "product_rank": 28,
+    "product_label": "Product #28",
+    "purchases": 1631,
+    "revenue": 1624921.54,
+    "unique_buyers": 1042,
+    "average_price": 996.27
+  },
+  {
+    "product_rank": 29,
+    "product_label": "Product #29",
+    "purchases": 1501,
+    "revenue": 1508143.21,
+    "unique_buyers": 937,
+    "average_price": 1004.76
+  },
+  {
+    "product_rank": 30,
+    "product_label": "Product #30",
+    "purchases": 1383,
+    "revenue": 1376526.3,
+    "unique_buyers": 906,
+    "average_price": 995.32
+  },
+  {
+    "product_rank": 31,
+    "product_label": "Product #31",
+    "purchases": 1702,
+    "revenue": 1359366.36,
+    "unique_buyers": 1177,
+    "average_price": 798.69
+  },
+  {
+    "product_rank": 32,
+    "product_label": "Product #32",
+    "purchases": 1226,
+    "revenue": 1220840.67,
+    "unique_buyers": 785,
+    "average_price": 995.79
+  },
+  {
+    "product_rank": 33,
+    "product_label": "Product #33",
+    "purchases": 1690,
+    "revenue": 1183156.32,
+    "unique_buyers": 1152,
+    "average_price": 700.09
+  },
+  {
+    "product_rank": 34,
+    "product_label": "Product #34",
+    "purchases": 1156,
+    "revenue": 1154912.01,
+    "unique_buyers": 706,
+    "average_price": 999.06
+  },
+  {
+    "product_rank": 35,
+    "product_label": "Product #35",
+    "purchases": 1758,
+    "revenue": 1018994.91,
+    "unique_buyers": 1249,
+    "average_price": 579.63
+  },
+  {
+    "product_rank": 36,
+    "product_label": "Product #36",
+    "purchases": 839,
+    "revenue": 1017743.23,
+    "unique_buyers": 513,
+    "average_price": 1213.04
+  },
+  {
+    "product_rank": 37,
+    "product_label": "Product #37",
+    "purchases": 2744,
+    "revenue": 1014130.86,
+    "unique_buyers": 2007,
+    "average_price": 369.58
+  },
+  {
+    "product_rank": 38,
+    "product_label": "Product #38",
+    "purchases": 5275,
+    "revenue": 1004031.97,
+    "unique_buyers": 3732,
+    "average_price": 190.34
+  },
+  {
+    "product_rank": 39,
+    "product_label": "Product #39",
+    "purchases": 1413,
+    "revenue": 989834.29,
+    "unique_buyers": 977,
+    "average_price": 700.52
+  },
+  {
+    "product_rank": 40,
+    "product_label": "Product #40",
+    "purchases": 3506,
+    "revenue": 948467.5,
+    "unique_buyers": 2532,
+    "average_price": 270.53
+  },
+  {
+    "product_rank": 41,
+    "product_label": "Product #41",
+    "purchases": 1109,
+    "revenue": 933905.3,
+    "unique_buyers": 756,
+    "average_price": 842.11
+  },
+  {
+    "product_rank": 42,
+    "product_label": "Product #42",
+    "purchases": 4597,
+    "revenue": 903626.06,
+    "unique_buyers": 3255,
+    "average_price": 196.57
+  },
+  {
+    "product_rank": 43,
+    "product_label": "Product #43",
+    "purchases": 824,
+    "revenue": 825240.5,
+    "unique_buyers": 475,
+    "average_price": 1001.51
+  },
+  {
+    "product_rank": 44,
+    "product_label": "Product #44",
+    "purchases": 4243,
+    "revenue": 813739.2,
+    "unique_buyers": 3015,
+    "average_price": 191.78
+  },
+  {
+    "product_rank": 45,
+    "product_label": "Product #45",
+    "purchases": 466,
+    "revenue": 801731.4,
+    "unique_buyers": 292,
+    "average_price": 1720.45
+  },
+  {
+    "product_rank": 46,
+    "product_label": "Product #46",
+    "purchases": 688,
+    "revenue": 791068.5,
+    "unique_buyers": 486,
+    "average_price": 1149.81
+  },
+  {
+    "product_rank": 47,
+    "product_label": "Product #47",
+    "purchases": 1420,
+    "revenue": 788779.79,
+    "unique_buyers": 1034,
+    "average_price": 555.48
+  },
+  {
+    "product_rank": 48,
+    "product_label": "Product #48",
+    "purchases": 460,
+    "revenue": 741072.9,
+    "unique_buyers": 314,
+    "average_price": 1611.03
+  },
+  {
+    "product_rank": 49,
+    "product_label": "Product #49",
+    "purchases": 937,
+    "revenue": 723305.96,
+    "unique_buyers": 655,
+    "average_price": 771.94
+  },
+  {
+    "product_rank": 50,
+    "product_label": "Product #50",
+    "purchases": 469,
+    "revenue": 715291.77,
+    "unique_buyers": 231,
+    "average_price": 1525.14
+  },
+  {
+    "product_rank": 51,
+    "product_label": "Product #51",
+    "purchases": 1499,
+    "revenue": 701412.47,
+    "unique_buyers": 1083,
+    "average_price": 467.92
+  },
+  {
+    "product_rank": 52,
+    "product_label": "Product #52",
+    "purchases": 3976,
+    "revenue": 681186.15,
+    "unique_buyers": 2940,
+    "average_price": 171.32
+  },
+  {
+    "product_rank": 53,
+    "product_label": "Product #53",
+    "purchases": 4637,
+    "revenue": 670291.57,
+    "unique_buyers": 3391,
+    "average_price": 144.55
+  },
+  {
+    "product_rank": 54,
+    "product_label": "Product #54",
+    "purchases": 426,
+    "revenue": 659101.87,
+    "unique_buyers": 264,
+    "average_price": 1547.19
+  },
+  {
+    "product_rank": 55,
+    "product_label": "Product #55",
+    "purchases": 404,
+    "revenue": 654454.15,
+    "unique_buyers": 250,
+    "average_price": 1619.94
+  },
+  {
+    "product_rank": 56,
+    "product_label": "Product #56",
+    "purchases": 2607,
+    "revenue": 650166.71,
+    "unique_buyers": 2053,
+    "average_price": 249.39
+  },
+  {
+    "product_rank": 57,
+    "product_label": "Product #57",
+    "purchases": 3410,
+    "revenue": 649853.3,
+    "unique_buyers": 2339,
+    "average_price": 190.57
+  },
+  {
+    "product_rank": 58,
+    "product_label": "Product #58",
+    "purchases": 1264,
+    "revenue": 626580.08,
+    "unique_buyers": 976,
+    "average_price": 495.71
+  },
+  {
+    "product_rank": 59,
+    "product_label": "Product #59",
+    "purchases": 3612,
+    "revenue": 608367.44,
+    "unique_buyers": 2581,
+    "average_price": 168.43
+  },
+  {
+    "product_rank": 60,
+    "product_label": "Product #60",
+    "purchases": 864,
+    "revenue": 600484,
+    "unique_buyers": 583,
+    "average_price": 695
+  },
+  {
+    "product_rank": 61,
+    "product_label": "Product #61",
+    "purchases": 739,
+    "revenue": 592928.98,
+    "unique_buyers": 490,
+    "average_price": 802.34
+  },
+  {
+    "product_rank": 62,
+    "product_label": "Product #62",
+    "purchases": 1003,
+    "revenue": 588181.91,
+    "unique_buyers": 709,
+    "average_price": 586.42
+  },
+  {
+    "product_rank": 63,
+    "product_label": "Product #63",
+    "purchases": 402,
+    "revenue": 572630.3,
+    "unique_buyers": 256,
+    "average_price": 1424.45
+  },
+  {
+    "product_rank": 64,
+    "product_label": "Product #64",
+    "purchases": 2433,
+    "revenue": 542927.06,
+    "unique_buyers": 1756,
+    "average_price": 223.15
+  },
+  {
+    "product_rank": 65,
+    "product_label": "Product #65",
+    "purchases": 1451,
+    "revenue": 527161.05,
+    "unique_buyers": 1049,
+    "average_price": 363.31
+  },
+  {
+    "product_rank": 66,
+    "product_label": "Product #66",
+    "purchases": 1849,
+    "revenue": 496134.96,
+    "unique_buyers": 1363,
+    "average_price": 268.33
+  },
+  {
+    "product_rank": 67,
+    "product_label": "Product #67",
+    "purchases": 460,
+    "revenue": 489714.21,
+    "unique_buyers": 265,
+    "average_price": 1064.6
+  },
+  {
+    "product_rank": 68,
+    "product_label": "Product #68",
+    "purchases": 236,
+    "revenue": 484218.83,
+    "unique_buyers": 170,
+    "average_price": 2051.77
+  },
+  {
+    "product_rank": 69,
+    "product_label": "Product #69",
+    "purchases": 594,
+    "revenue": 481496.72,
+    "unique_buyers": 380,
+    "average_price": 810.6
+  },
+  {
+    "product_rank": 70,
+    "product_label": "Product #70",
+    "purchases": 1200,
+    "revenue": 471169.63,
+    "unique_buyers": 802,
+    "average_price": 392.64
+  },
+  {
+    "product_rank": 71,
+    "product_label": "Product #71",
+    "purchases": 3534,
+    "revenue": 465454.72,
+    "unique_buyers": 2794,
+    "average_price": 131.71
+  },
+  {
+    "product_rank": 72,
+    "product_label": "Product #72",
+    "purchases": 393,
+    "revenue": 460335.36,
+    "unique_buyers": 233,
+    "average_price": 1171.34
+  },
+  {
+    "product_rank": 73,
+    "product_label": "Product #73",
+    "purchases": 1170,
+    "revenue": 438820.75,
+    "unique_buyers": 912,
+    "average_price": 375.06
+  },
+  {
+    "product_rank": 74,
+    "product_label": "Product #74",
+    "purchases": 1482,
+    "revenue": 438737.06,
+    "unique_buyers": 1102,
+    "average_price": 296.04
+  },
+  {
+    "product_rank": 75,
+    "product_label": "Product #75",
+    "purchases": 413,
+    "revenue": 437612.32,
+    "unique_buyers": 235,
+    "average_price": 1059.59
+  },
+  {
+    "product_rank": 76,
+    "product_label": "Product #76",
+    "purchases": 950,
+    "revenue": 432418.83,
+    "unique_buyers": 575,
+    "average_price": 455.18
+  },
+  {
+    "product_rank": 77,
+    "product_label": "Product #77",
+    "purchases": 667,
+    "revenue": 429034.41,
+    "unique_buyers": 490,
+    "average_price": 643.23
+  },
+  {
+    "product_rank": 78,
+    "product_label": "Product #78",
+    "purchases": 1310,
+    "revenue": 421630.51,
+    "unique_buyers": 927,
+    "average_price": 321.86
+  },
+  {
+    "product_rank": 79,
+    "product_label": "Product #79",
+    "purchases": 706,
+    "revenue": 420001.3,
+    "unique_buyers": 483,
+    "average_price": 594.9
+  },
+  {
+    "product_rank": 80,
+    "product_label": "Product #80",
+    "purchases": 414,
+    "revenue": 418525.14,
+    "unique_buyers": 267,
+    "average_price": 1010.93
+  },
+  {
+    "product_rank": 81,
+    "product_label": "Product #81",
+    "purchases": 250,
+    "revenue": 413470.37,
+    "unique_buyers": 129,
+    "average_price": 1653.88
+  },
+  {
+    "product_rank": 82,
+    "product_label": "Product #82",
+    "purchases": 378,
+    "revenue": 407091.15,
+    "unique_buyers": 210,
+    "average_price": 1076.96
+  },
+  {
+    "product_rank": 83,
+    "product_label": "Product #83",
+    "purchases": 386,
+    "revenue": 405257.34,
+    "unique_buyers": 253,
+    "average_price": 1049.89
+  },
+  {
+    "product_rank": 84,
+    "product_label": "Product #84",
+    "purchases": 657,
+    "revenue": 403341.97,
+    "unique_buyers": 483,
+    "average_price": 613.91
+  },
+  {
+    "product_rank": 85,
+    "product_label": "Product #85",
+    "purchases": 1594,
+    "revenue": 397109.24,
+    "unique_buyers": 1280,
+    "average_price": 249.13
+  },
+  {
+    "product_rank": 86,
+    "product_label": "Product #86",
+    "purchases": 334,
+    "revenue": 396408.43,
+    "unique_buyers": 193,
+    "average_price": 1186.85
+  },
+  {
+    "product_rank": 87,
+    "product_label": "Product #87",
+    "purchases": 388,
+    "revenue": 389720.53,
+    "unique_buyers": 200,
+    "average_price": 1004.43
+  },
+  {
+    "product_rank": 88,
+    "product_label": "Product #88",
+    "purchases": 1359,
+    "revenue": 387162.38,
+    "unique_buyers": 1085,
+    "average_price": 284.89
+  },
+  {
+    "product_rank": 89,
+    "product_label": "Product #89",
+    "purchases": 219,
+    "revenue": 382044.51,
+    "unique_buyers": 130,
+    "average_price": 1744.5
+  },
+  {
+    "product_rank": 90,
+    "product_label": "Product #90",
+    "purchases": 351,
+    "revenue": 377583.95,
+    "unique_buyers": 208,
+    "average_price": 1075.74
+  },
+  {
+    "product_rank": 91,
+    "product_label": "Product #91",
+    "purchases": 662,
+    "revenue": 369896.19,
+    "unique_buyers": 543,
+    "average_price": 558.76
+  },
+  {
+    "product_rank": 92,
+    "product_label": "Product #92",
+    "purchases": 305,
+    "revenue": 357440.96,
+    "unique_buyers": 177,
+    "average_price": 1171.94
+  },
+  {
+    "product_rank": 93,
+    "product_label": "Product #93",
+    "purchases": 612,
+    "revenue": 354570.05,
+    "unique_buyers": 415,
+    "average_price": 579.36
+  },
+  {
+    "product_rank": 94,
+    "product_label": "Product #94",
+    "purchases": 303,
+    "revenue": 341009.18,
+    "unique_buyers": 196,
+    "average_price": 1125.44
+  },
+  {
+    "product_rank": 95,
+    "product_label": "Product #95",
+    "purchases": 789,
+    "revenue": 338060.95,
+    "unique_buyers": 490,
+    "average_price": 428.47
+  },
+  {
+    "product_rank": 96,
+    "product_label": "Product #96",
+    "purchases": 976,
+    "revenue": 334502.19,
+    "unique_buyers": 589,
+    "average_price": 342.73
+  },
+  {
+    "product_rank": 97,
+    "product_label": "Product #97",
+    "purchases": 678,
+    "revenue": 323319.38,
+    "unique_buyers": 514,
+    "average_price": 476.87
+  },
+  {
+    "product_rank": 98,
+    "product_label": "Product #98",
+    "purchases": 416,
+    "revenue": 313191.21,
+    "unique_buyers": 292,
+    "average_price": 752.86
+  },
+  {
+    "product_rank": 99,
+    "product_label": "Product #99",
+    "purchases": 292,
+    "revenue": 310481.06,
+    "unique_buyers": 202,
+    "average_price": 1063.29
+  },
+  {
+    "product_rank": 100,
+    "product_label": "Product #100",
+    "purchases": 213,
+    "revenue": 309057.15,
+    "unique_buyers": 164,
+    "average_price": 1450.97
+  }
+]
