@@ -39,11 +39,11 @@ export const TopNav: React.FC<TopNavProps> = ({
         </div>
       </div>
 
-      {/* Dataset & Provenance Badges (Authentic & Verified only, no fake controls) */}
+      {/* Dataset & Provenance Badges in Forest & Brass Styling */}
       <div className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
         {/* Period badge */}
-        <div className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-surface border border-hairline text-text-muted">
-          <Calendar className="w-3.5 h-3.5 text-brand-cyan" />
+        <div className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-surface-subtle border border-hairline text-text-muted">
+          <Calendar className="w-3.5 h-3.5 text-brass" />
           <span>Oct 1 – Nov 1, 2019 (UTC)</span>
         </div>
 

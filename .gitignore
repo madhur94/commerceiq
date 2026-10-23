@@ -42,3 +42,4 @@ __MACOSX/
 
 # TypeScript generated caches
 *.tsbuildinfo
+frontend/ml_continue_chat.txt

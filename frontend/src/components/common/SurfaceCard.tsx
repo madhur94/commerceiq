@@ -6,7 +6,7 @@ export interface SurfaceCardProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   variant?: 'default' | 'elevated' | 'glass' | 'subtle';
   hoverable?: boolean;
-  glow?: 'none' | 'violet' | 'cyan';
+  glow?: 'none' | 'violet' | 'cyan' | 'brass';
 }
 
 export const SurfaceCard: React.FC<SurfaceCardProps> = ({
@@ -28,6 +28,7 @@ export const SurfaceCard: React.FC<SurfaceCardProps> = ({
     none: '',
     violet: 'hover:shadow-glow hover:border-brand-violet/40',
     cyan: 'hover:shadow-glow-cyan hover:border-brand-cyan/40',
+    brass: 'hover:shadow-glow-brass hover:border-brass/40',
   };
 
   return (
@@ -35,7 +36,7 @@ export const SurfaceCard: React.FC<SurfaceCardProps> = ({
       className={cn(
         'rounded-xl p-5 transition-all duration-300 relative overflow-hidden',
         variantStyles[variant],
-        hoverable && 'hover:border-border-prominent hover:-translate-y-0.5 shadow-card',
+        hoverable && 'hover:border-brass/30 hover:-translate-y-0.5 shadow-card',
         glowStyles[glow],
         className
       )}

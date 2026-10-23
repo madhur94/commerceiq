@@ -115,19 +115,19 @@ export const OutlierCaseStudyPanel: React.FC = () => {
                   <td className="py-2 px-3 font-sans text-text-primary">View Count</td>
                   <td className="py-2 px-3 text-right font-bold text-accent-amber">7,429</td>
                   <td className="py-2 px-3 text-right text-text-muted">2</td>
-                  <td className="py-2 px-3 text-right text-brand-cyan">82.00</td>
+                  <td className="py-2 px-3 text-right text-brass">82.00</td>
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-sans text-text-primary">Session Count</td>
                   <td className="py-2 px-3 text-right font-bold text-accent-amber">7,393</td>
                   <td className="py-2 px-3 text-right text-text-muted">1</td>
-                  <td className="py-2 px-3 text-right text-brand-cyan">12.26</td>
+                  <td className="py-2 px-3 text-right text-brass">12.26</td>
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-sans text-text-primary">Purchases</td>
                   <td className="py-2 px-3 text-right font-bold text-text-subtle">0</td>
                   <td className="py-2 px-3 text-right text-text-muted">0</td>
-                  <td className="py-2 px-3 text-right text-brand-cyan">1.58</td>
+                  <td className="py-2 px-3 text-right text-brass">1.58</td>
                 </tr>
               </tbody>
             </table>
@@ -137,7 +137,7 @@ export const OutlierCaseStudyPanel: React.FC = () => {
         {/* Methodological Rationale & Model Impact (Right 6 Cols) */}
         <div className="lg:col-span-6 p-5 rounded-xl bg-surface-subtle/60 border border-hairline space-y-4">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-mono uppercase text-brand-cyan">
+            <span className="text-xs font-mono uppercase text-brass">
               Impact on Clustering Mathematics
             </span>
             <span className="text-xs font-mono text-text-subtle">

@@ -31,7 +31,7 @@ export const AppShell: React.FC = () => {
   const pageTitle = currentNav ? currentNav.label : 'CommerceIQ Analytics';
 
   return (
-    <div className="min-h-screen bg-canvas text-text-primary flex flex-col font-sans relative selection:bg-brand-violet/30 selection:text-brand-cyan">
+    <div className="min-h-screen bg-canvas text-text-primary flex flex-col font-sans relative selection:bg-brass/25 selection:text-brass-hover">
       {/* Background ambient lighting */}
       <div className="fixed inset-0 pointer-events-none radial-glow z-0" aria-hidden="true" />
       <div className="fixed inset-0 pointer-events-none bg-grid-pattern opacity-40 z-0" aria-hidden="true" />

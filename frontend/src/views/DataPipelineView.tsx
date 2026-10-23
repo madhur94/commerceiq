@@ -36,7 +36,7 @@ export const DataPipelineView: React.FC = () => {
         <div className="p-4 rounded-xl bg-surface-subtle border border-hairline flex flex-col justify-between">
           <div className="flex items-center justify-between text-text-subtle mb-1">
             <span className="text-[11px] font-mono uppercase font-semibold">Raw Telemetry</span>
-            <Database className="w-3.5 h-3.5 text-brand-cyan" />
+            <Database className="w-3.5 h-3.5 text-brass" />
           </div>
           <div>
             <div className="font-mono text-lg font-bold text-text-primary">
@@ -62,7 +62,7 @@ export const DataPipelineView: React.FC = () => {
         <div className="p-4 rounded-xl bg-surface-subtle border border-hairline flex flex-col justify-between">
           <div className="flex items-center justify-between text-text-subtle mb-1">
             <span className="text-[11px] font-mono uppercase font-semibold">Row Retention</span>
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-violet-light" />
+            <ShieldCheck className="w-3.5 h-3.5 text-brass" />
           </div>
           <div>
             <div className="font-mono text-lg font-bold text-text-primary">99.77%</div>
@@ -73,10 +73,10 @@ export const DataPipelineView: React.FC = () => {
         <div className="p-4 rounded-xl bg-surface-subtle border border-hairline flex flex-col justify-between">
           <div className="flex items-center justify-between text-text-subtle mb-1">
             <span className="text-[11px] font-mono uppercase font-semibold">Typed Artifacts</span>
-            <GitBranch className="w-3.5 h-3.5 text-brand-cyan" />
+            <GitBranch className="w-3.5 h-3.5 text-brass" />
           </div>
           <div>
-            <div className="font-mono text-lg font-bold text-brand-cyan">18 Files</div>
+            <div className="font-mono text-lg font-bold text-brass">18 Files</div>
             <div className="text-[11px] text-text-subtle mt-0.5">Full schema registry</div>
           </div>
         </div>
@@ -97,43 +97,43 @@ export const DataPipelineView: React.FC = () => {
       <SurfaceCard variant="subtle" className="mb-8 p-3">
         <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
           <div className="flex items-center gap-1.5 text-text-subtle font-mono text-[11px]">
-            <Sparkles className="w-3.5 h-3.5 text-brand-cyan" />
+            <Sparkles className="w-3.5 h-3.5 text-brass" />
             <span>M04 Quick Navigation:</span>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <a
               href="#pipeline-flow"
-              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brand-cyan border border-hairline text-[11px] transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brass hover:border-brass/40 border border-hairline text-[11px] transition-colors"
             >
               01. Architecture
             </a>
             <a
               href="#cleaning-audit"
-              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brand-cyan border border-hairline text-[11px] transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brass hover:border-brass/40 border border-hairline text-[11px] transition-colors"
             >
               02. Cleaning Audit
             </a>
             <a
               href="#lineage-explorer"
-              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brand-cyan border border-hairline text-[11px] transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brass hover:border-brass/40 border border-hairline text-[11px] transition-colors"
             >
               03. Lineage Registry
             </a>
             <a
               href="#research-gallery"
-              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brand-cyan border border-hairline text-[11px] transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brass hover:border-brass/40 border border-hairline text-[11px] transition-colors"
             >
               04. Research Gallery
             </a>
             <a
               href="#chart-studio"
-              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brand-cyan border border-hairline text-[11px] transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brass hover:border-brass/40 border border-hairline text-[11px] transition-colors"
             >
               05. Chart Studio
             </a>
             <a
               href="#methodology-walkthrough"
-              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brand-cyan border border-hairline text-[11px] transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-surface-subtle text-text-muted hover:text-brass hover:border-brass/40 border border-hairline text-[11px] transition-colors"
             >
               06. Methodology
             </a>

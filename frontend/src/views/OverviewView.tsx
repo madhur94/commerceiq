@@ -60,7 +60,7 @@ export const OverviewView: React.FC = () => {
           value={formatInteger(verifiedMetrics.cleaned_records)}
           icon={Activity}
           contextPill="96.1% Views"
-          contextVariant="violet"
+          contextVariant="brass"
           footnote="Filtered 98,890 rows (68,673 price ≤ 0 & cleaning adjustments)"
         />
 
@@ -69,7 +69,7 @@ export const OverviewView: React.FC = () => {
           value={formatInteger(verifiedMetrics.users)}
           icon={Users}
           contextPill="8.29% High Activity"
-          contextVariant="cyan"
+          contextVariant="brass"
           footnote="3,021,435 users in user-level feature aggregation"
         />
 
@@ -88,20 +88,20 @@ export const OverviewView: React.FC = () => {
         {/* 3D Hardware-Accelerated Commerce Nexus Spatial Anchor */}
         <SurfaceCard
           variant="elevated"
-          className="lg:col-span-5 flex flex-col justify-between p-5 border-hairline bg-surface-subtle/40 relative overflow-hidden"
+          className="lg:col-span-5 flex flex-col justify-between p-5 border-hairline bg-surface-subtle/50 relative overflow-hidden"
         >
           <div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-text-muted flex items-center gap-1.5">
-                <Layers className="w-4 h-4 text-brand-violet-light" />
+                <Layers className="w-4 h-4 text-brass" />
                 <span>Commerce Nexus · 3D Spatial Telemetry</span>
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                 Interactive 3D
               </span>
             </div>
 
-            {/* Three.js WebGL Spatial Canvas */}
+            {/* Three.js WebGL Spatial Canvas (Protected internals unchanged) */}
             <div className="rounded-xl bg-canvas-deep/80 border border-hairline relative overflow-hidden">
               <CommerceNexusScene />
             </div>
@@ -111,7 +111,7 @@ export const OverviewView: React.FC = () => {
             <span>≤3 Draw Calls · 42.3M Events</span>
             <Link
               to="/sales-intelligence"
-              className="inline-flex items-center gap-1 text-xs font-medium text-brand-violet-light hover:text-white transition-colors"
+              className="inline-flex items-center gap-1 text-xs font-medium text-brass hover:text-brass-hover transition-colors"
             >
               <span>Sales Dynamics</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ export const OverviewView: React.FC = () => {
                 subtitle="Day-by-day progression from October 1 to November 1, 2019 (UTC)."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/15 text-brand-violet-light border border-brand-violet/20 flex-shrink-0">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30 flex-shrink-0">
                 Interactive ECharts
               </span>
             </div>
@@ -152,13 +152,13 @@ export const OverviewView: React.FC = () => {
               </div>
             </div>
 
-            {/* Active ECharts Area Canvas */}
+            {/* Active ECharts Area Canvas (Protected internals unchanged) */}
             <DailyRevenueAreaChart height={280} />
           </div>
 
           <div className="mt-4 pt-3 border-t border-hairline/60 text-[11px] text-text-subtle flex items-center justify-between">
             <span>Source: daily_purchase_summary.csv (32 daily intervals)</span>
-            <span className="font-mono text-brand-cyan">Hover data points for full breakdown</span>
+            <span className="font-mono text-brass">Hover data points for full breakdown</span>
           </div>
         </SurfaceCard>
       </div>
@@ -177,12 +177,12 @@ export const OverviewView: React.FC = () => {
                 subtitle="Stage distribution across recorded behavior event types."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/20 flex-shrink-0">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30 flex-shrink-0">
                 Event Ratios
               </span>
             </div>
 
-            {/* Active ECharts Funnel Component */}
+            {/* Active ECharts Funnel Component (Protected internals unchanged) */}
             <EventFunnelChart height={220} />
           </div>
 
@@ -201,12 +201,12 @@ export const OverviewView: React.FC = () => {
                 subtitle="Electronics accounts for 76.74% of all platform purchase-event value."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                 14 Total
               </span>
             </div>
 
-            {/* ECharts Horizontal Category Bar Chart */}
+            {/* ECharts Horizontal Category Bar Chart (Protected internals unchanged) */}
             <div className="mt-2">
               <CategoryRevenueChart height={240} limit={6} />
             </div>
@@ -214,7 +214,7 @@ export const OverviewView: React.FC = () => {
 
           <Link
             to="/data-explorer"
-            className="mt-4 pt-3 border-t border-hairline/60 flex items-center justify-between text-xs text-brand-violet-light hover:text-white font-medium transition-colors"
+            className="mt-4 pt-3 border-t border-hairline/60 flex items-center justify-between text-xs text-brass hover:text-brass-hover font-medium transition-colors"
           >
             <span>Explore all 14 categories in Data Explorer</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -232,7 +232,7 @@ export const OverviewView: React.FC = () => {
                 subtitle="Sensitivity experiment evaluating 3,021,434 users (Silhouette: 0.81115)."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                 K-Means
               </span>
             </div>
@@ -245,10 +245,10 @@ export const OverviewView: React.FC = () => {
 
               <div className="sm:col-span-7 lg:col-span-8 flex flex-col justify-center space-y-4">
                 {/* Cluster 0 Card */}
-                <div className="p-4 rounded-xl bg-brand-violet/10 border border-brand-violet/30">
+                <div className="p-4 rounded-xl bg-surface-subtle border border-hairline hover:border-brass/30 transition-colors">
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold text-brand-cyan uppercase tracking-wide">Cluster 0 · High-Activity Core</span>
-                    <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan">
+                    <span className="text-xs font-bold text-brass uppercase tracking-wide">Cluster 0 · High-Activity Core</span>
+                    <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-brass/20 text-brass border border-brass/30">
                       8.29%
                     </span>
                   </div>
@@ -260,10 +260,10 @@ export const OverviewView: React.FC = () => {
                 </div>
 
                 {/* Cluster 1 Card */}
-                <div className="p-4 rounded-xl bg-surface-subtle border border-hairline">
+                <div className="p-4 rounded-xl bg-surface-subtle border border-hairline hover:border-hairline/80 transition-colors">
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-xs font-bold text-text-muted uppercase tracking-wide">Cluster 1 · Casual Browsers</span>
-                    <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-slate-800 text-text-muted">
+                    <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-surface-elevated text-text-muted border border-hairline">
                       91.71%
                     </span>
                   </div>
@@ -279,7 +279,7 @@ export const OverviewView: React.FC = () => {
 
           <Link
             to="/customer-intelligence"
-            className="mt-6 pt-3 border-t border-hairline/60 flex items-center justify-between text-xs text-brand-cyan hover:text-white font-medium transition-colors"
+            className="mt-6 pt-3 border-t border-hairline/60 flex items-center justify-between text-xs text-brass hover:text-brass-hover font-medium transition-colors"
           >
             <span>Inspect full cluster profiles & outlier study</span>
             <ArrowUpRight className="w-4 h-4" />

@@ -44,7 +44,7 @@ export const DataLineageExplorer: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-cyan">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brass">
             Section C · Data Lineage & Provenance Explorer
           </span>
           <SectionHeading
@@ -61,7 +61,7 @@ export const DataLineageExplorer: React.FC = () => {
             className={cn(
               'px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
               viewLayout === 'grid'
-                ? 'bg-brand-cyan/20 text-brand-cyan font-bold border border-brand-cyan/30 shadow-sm'
+                ? 'bg-brass/20 text-brass font-bold border border-brass/40 shadow-sm'
                 : 'text-text-muted hover:text-text-primary'
             )}
             aria-label="Grid view"
@@ -74,7 +74,7 @@ export const DataLineageExplorer: React.FC = () => {
             className={cn(
               'px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
               viewLayout === 'table'
-                ? 'bg-brand-cyan/20 text-brand-cyan font-bold border border-brand-cyan/30 shadow-sm'
+                ? 'bg-brass/20 text-brass font-bold border border-brass/40 shadow-sm'
                 : 'text-text-muted hover:text-text-primary'
             )}
             aria-label="Table view"
@@ -94,7 +94,7 @@ export const DataLineageExplorer: React.FC = () => {
             placeholder="Search artifacts by ID, name, or filename..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 rounded-xl bg-surface-subtle border border-hairline text-xs text-text-primary placeholder:text-text-subtle focus:outline-none focus:border-brand-cyan/50"
+            className="w-full pl-9 pr-3 py-2 rounded-xl bg-surface-subtle border border-hairline text-xs text-text-primary placeholder:text-text-subtle focus:outline-none focus:border-brass"
           />
         </div>
 
@@ -107,7 +107,7 @@ export const DataLineageExplorer: React.FC = () => {
               className={cn(
                 'px-2.5 py-1 rounded-lg text-[11px] font-mono transition-all flex-shrink-0',
                 selectedPhase === ph
-                  ? 'bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 font-bold'
+                  ? 'bg-brass/20 text-brass border border-brass/40 font-bold'
                   : 'bg-surface-subtle text-text-muted hover:text-text-primary border border-hairline'
               )}
             >
@@ -133,13 +133,13 @@ export const DataLineageExplorer: React.FC = () => {
                     className={cn(
                       'p-3.5 rounded-xl border text-left transition-all flex flex-col justify-between group',
                       isSelected
-                        ? 'bg-brand-cyan/15 border-brand-cyan/50 shadow-md shadow-brand-cyan/10 ring-1 ring-brand-cyan/40'
+                        ? 'bg-brass/15 border-brass/50 shadow-md shadow-brass/10 ring-1 ring-brass/40'
                         : 'bg-surface-subtle/70 border-hairline hover:border-white/20'
                     )}
                   >
                     <div>
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface border border-hairline text-brand-cyan font-bold">
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface border border-hairline text-brass font-bold">
                           {art.artifact_id}
                         </span>
                         <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface-subtle text-text-subtle">
@@ -149,7 +149,7 @@ export const DataLineageExplorer: React.FC = () => {
                       <h4
                         className={cn(
                           'text-xs font-bold mb-1 transition-colors line-clamp-1',
-                          isSelected ? 'text-white' : 'text-text-primary group-hover:text-brand-cyan'
+                          isSelected ? 'text-brass font-bold' : 'text-text-primary group-hover:text-brass'
                         )}
                       >
                         {art.display_name}
@@ -191,11 +191,11 @@ export const DataLineageExplorer: React.FC = () => {
                       className={cn(
                         'cursor-pointer transition-colors',
                         art.artifact_id === selectedArtifactId
-                          ? 'bg-brand-cyan/20 text-white font-bold'
+                          ? 'bg-brass/20 text-brass font-bold'
                           : 'hover:bg-surface-subtle/50 text-text-secondary'
                       )}
                     >
-                      <td className="py-2 px-3 text-brand-cyan font-bold">{art.artifact_id}</td>
+                      <td className="py-2 px-3 text-brass font-bold">{art.artifact_id}</td>
                       <td className="py-2 px-3 font-sans">{art.display_name}</td>
                       <td className="py-2 px-3 text-text-muted">{art.source_filename}</td>
                       <td className="py-2 px-3 text-text-subtle">{art.format}</td>
@@ -221,7 +221,7 @@ export const DataLineageExplorer: React.FC = () => {
           <div className="p-5 rounded-xl bg-surface-subtle/80 border border-hairline space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-hairline">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono px-2 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan font-bold border border-brand-cyan/30">
+                <span className="text-xs font-mono px-2 py-0.5 rounded bg-brass/20 text-brass font-bold border border-brass/40">
                   {selectedArtifact.artifact_id}
                 </span>
                 <span className="text-xs font-mono text-accent-emerald flex items-center gap-1">
@@ -241,7 +241,7 @@ export const DataLineageExplorer: React.FC = () => {
               <div className="p-2.5 rounded-lg bg-surface border border-hairline/60 font-mono text-[11px] text-text-muted space-y-1">
                 <div>
                   <span className="text-text-subtle block text-[10px] font-sans">Storage Path:</span>
-                  <span className="text-brand-cyan break-all">{selectedArtifact.storage_path}</span>
+                  <span className="text-brass break-all">{selectedArtifact.storage_path}</span>
                 </div>
                 <div className="flex justify-between pt-1 border-t border-hairline/40">
                   <span>Format: {selectedArtifact.format}</span>
@@ -280,7 +280,7 @@ export const DataLineageExplorer: React.FC = () => {
                 </span>
                 <ul className="space-y-1 font-mono text-[11px]">
                   {selectedArtifact.output_dependencies.map((dep, i) => (
-                    <li key={i} className="text-brand-cyan truncate" title={dep}>
+                    <li key={i} className="text-brass truncate" title={dep}>
                       → {dep}
                     </li>
                   ))}
@@ -313,7 +313,7 @@ export const DataLineageExplorer: React.FC = () => {
                 <Link
                   key={v}
                   to={v}
-                  className="text-[11px] font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan hover:bg-brand-cyan/20 border border-brand-cyan/30 flex items-center gap-1 transition-colors"
+                  className="text-[11px] font-mono px-2 py-0.5 rounded bg-brass/10 text-brass hover:bg-brass/20 border border-brass/30 flex items-center gap-1 transition-colors"
                 >
                   <span>{v}</span>
                   <ExternalLink className="w-3 h-3" />
