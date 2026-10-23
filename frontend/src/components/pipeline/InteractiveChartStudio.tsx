@@ -115,7 +115,7 @@ export const InteractiveChartStudio: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-hairline/60">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-brass/10 text-brass border border-brass/30">
               <Sparkles className="w-3 h-3" />
               Section E · Interactive Chart Studio
             </span>
@@ -138,7 +138,7 @@ export const InteractiveChartStudio: React.FC = () => {
             disabled={!activeConfig.nativeAvailable}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
               viewMode === 'native' && activeConfig.nativeAvailable
-                ? 'bg-brand-cyan text-slate-950 shadow-sm'
+                ? 'bg-brass text-forest-sidebar font-bold shadow-sm'
                 : 'text-text-muted hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed'
             }`}
           >
@@ -150,7 +150,7 @@ export const InteractiveChartStudio: React.FC = () => {
             onClick={() => setViewMode('legacy')}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
               viewMode === 'legacy' || !activeConfig.nativeAvailable
-                ? 'bg-brand-violet text-white shadow-sm'
+                ? 'bg-forest-elevated text-brass border border-brass/40 shadow-sm'
                 : 'text-text-muted hover:text-text-primary'
             }`}
           >
@@ -177,13 +177,13 @@ export const InteractiveChartStudio: React.FC = () => {
               }}
               className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all flex items-center gap-2 border ${
                 isSelected
-                  ? 'bg-slate-800 text-brand-cyan border-brand-cyan/40 shadow-sm'
+                  ? 'bg-forest-elevated text-brass border-brass/50 shadow-sm font-bold'
                   : 'bg-surface-subtle text-text-muted border-hairline/60 hover:text-text-primary hover:border-hairline'
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
               <span>{item.title}</span>
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-900/60 font-mono text-text-subtle">
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-forest-sidebar font-mono text-text-subtle">
                 {item.badge}
               </span>
             </button>
@@ -216,7 +216,7 @@ export const InteractiveChartStudio: React.FC = () => {
         </div>
 
         {/* Dynamic Chart Rendering Area */}
-        <div className="rounded-xl border border-hairline bg-slate-950/60 overflow-hidden relative min-h-[460px] flex items-center justify-center p-2">
+        <div className="rounded-xl border border-hairline bg-forest-canvas/80 overflow-hidden relative min-h-[460px] flex items-center justify-center p-2">
           {canShowNative ? (
             <div className="w-full h-full min-h-[440px] flex flex-col justify-center">
               {activeTab === 'funnel' && <EventFunnelChart height={380} />}
@@ -226,7 +226,7 @@ export const InteractiveChartStudio: React.FC = () => {
             </div>
           ) : (
             <div className="w-full h-full min-h-[460px] flex flex-col">
-              <div className="px-3 py-1.5 bg-slate-900 border-b border-hairline flex items-center justify-between text-[11px] text-text-muted">
+              <div className="px-3 py-1.5 bg-forest-sidebar border-b border-hairline flex items-center justify-between text-[11px] text-text-muted">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-accent-amber animate-pulse"></span>
                   Sandboxed Legacy Plotly Runtime ({activeConfig.legacyHtml})
@@ -247,7 +247,7 @@ export const InteractiveChartStudio: React.FC = () => {
       {/* Analytical Takeaway & Architectural Specs Panel */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-4 border-t border-hairline/60">
         <div className="lg:col-span-2 p-4 rounded-xl bg-surface-subtle border border-hairline">
-          <div className="flex items-center gap-2 mb-2 text-xs font-semibold text-brand-cyan">
+          <div className="flex items-center gap-2 mb-2 text-xs font-semibold text-brass">
             <Info className="w-4 h-4" />
             Key Research Insight
           </div>
@@ -267,7 +267,7 @@ export const InteractiveChartStudio: React.FC = () => {
           </div>
           <div className="flex justify-between text-[11px] py-0.5 border-b border-hairline/40">
             <span className="text-text-muted">Engine:</span>
-            <span className="font-mono text-brand-violet-light text-right">{activeConfig.specs.rendering}</span>
+            <span className="font-mono text-brass text-right">{activeConfig.specs.rendering}</span>
           </div>
           <div className="flex justify-between text-[11px] py-0.5">
             <span className="text-text-muted">Efficiency:</span>

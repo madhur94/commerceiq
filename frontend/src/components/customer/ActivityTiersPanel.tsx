@@ -52,7 +52,7 @@ export const ActivityTiersPanel: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-cyan">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brass">
             Section D · Engagement Frequency Spectrum
           </span>
           <SectionHeading
@@ -73,7 +73,7 @@ export const ActivityTiersPanel: React.FC = () => {
             <span className="text-xs font-semibold uppercase text-text-muted">
               Population Count by Activity Tier
             </span>
-            <span className="text-[10px] font-mono text-brand-cyan">
+            <span className="text-[10px] font-mono text-brass">
               Click bar to inspect tier
             </span>
           </div>
@@ -86,7 +86,7 @@ export const ActivityTiersPanel: React.FC = () => {
 
           <div className="text-[11px] text-text-subtle border-t border-hairline/60 pt-2.5 mt-2 flex items-center justify-between font-mono">
             <span>55.2% have 1–5 events</span>
-            <span className="text-brand-cyan">Source: user_activity_distribution.csv</span>
+            <span className="text-brass">Source: user_activity_distribution.csv</span>
           </div>
         </div>
 
@@ -94,11 +94,11 @@ export const ActivityTiersPanel: React.FC = () => {
         <div className="lg:col-span-5 space-y-4">
           <div className="p-5 rounded-xl bg-surface-subtle border border-hairline">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-brand-cyan uppercase tracking-wider flex items-center gap-1.5">
-                <Activity className="w-4 h-4 text-brand-violet-light" />
+              <span className="text-xs font-bold text-brass uppercase tracking-wider flex items-center gap-1.5">
+                <Activity className="w-4 h-4 text-brass" />
                 <span>Tier Analysis</span>
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan font-bold">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/20 text-brass border border-brass/40 font-bold">
                 {currentTier.activity_group_display}
               </span>
             </div>
@@ -118,7 +118,7 @@ export const ActivityTiersPanel: React.FC = () => {
               </div>
               <div className="p-2.5 rounded-lg bg-surface/60 border border-hairline/60">
                 <span className="text-[10px] text-text-subtle font-sans block">Tier Share</span>
-                <span className="text-sm font-bold text-brand-cyan">{formatPercent(currentTier.percentage_of_users)}</span>
+                <span className="text-sm font-bold text-brass">{formatPercent(currentTier.percentage_of_users)}</span>
               </div>
               <div className="p-2.5 rounded-lg bg-surface/60 border border-hairline/60 col-span-2">
                 <span className="text-[10px] text-text-subtle font-sans block">Cumulative Share</span>
@@ -139,7 +139,7 @@ export const ActivityTiersPanel: React.FC = () => {
                 className={cn(
                   'px-2.5 py-1 rounded-lg text-[11px] font-mono transition-all',
                   selectedTier === t.activity_group_raw
-                    ? 'bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 font-bold'
+                    ? 'bg-brass/20 text-brass border border-brass/50 font-bold'
                     : 'bg-surface-subtle text-text-muted hover:text-text-primary border border-hairline'
                 )}
               >

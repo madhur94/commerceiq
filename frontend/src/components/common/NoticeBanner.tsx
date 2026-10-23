@@ -25,10 +25,10 @@ export const NoticeBanner: React.FC<NoticeBannerProps> = ({
   > = {
     info: {
       icon: Info,
-      border: 'border-brand-violet/25',
-      bg: 'bg-brand-violet/5',
-      iconColor: 'text-brand-violet-light',
-      titleColor: 'text-brand-violet-light',
+      border: 'border-brass/30',
+      bg: 'bg-brass/5',
+      iconColor: 'text-brass',
+      titleColor: 'text-brass',
     },
     warning: {
       icon: AlertTriangle,

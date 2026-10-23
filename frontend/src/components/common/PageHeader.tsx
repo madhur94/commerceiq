@@ -23,7 +23,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           {category && (
-            <div className="text-xs font-semibold tracking-wider uppercase text-brand-violet-light mb-1.5 flex items-center gap-2">
+            <div className="text-xs font-semibold tracking-wider uppercase text-brass mb-1.5 flex items-center gap-2">
               <span>{category}</span>
               <span className="text-text-subtle">•</span>
               <span className="text-text-subtle font-normal">October 2019 Dataset</span>

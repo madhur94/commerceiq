@@ -29,22 +29,22 @@ export const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
         cn(
           'group relative flex items-center gap-3.5 px-3 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 outline-none select-none',
           isActive
-            ? 'bg-brand-violet/15 text-brand-cyan border border-brand-violet/30 shadow-sm'
-            : 'text-text-muted hover:text-text-primary hover:bg-surface-elevated/70 border border-transparent'
+            ? 'bg-brass/15 text-text-primary border border-brass/30 shadow-sm font-semibold'
+            : 'text-text-muted hover:text-text-primary hover:bg-forest-elevated/70 border border-transparent'
         )
       }
     >
       {({ isActive }) => (
         <>
-          {/* Active left indicator bar */}
+          {/* Active left indicator bar in warm architectural brass */}
           {isActive && (
-            <span className="absolute left-0 top-2 bottom-2 w-1 bg-brand-cyan rounded-r-full shadow-glow-cyan" />
+            <span className="absolute left-0 top-2 bottom-2 w-1 bg-brass rounded-r-full shadow-glow-brass" />
           )}
 
           <Icon
             className={cn(
               'w-5 h-5 flex-shrink-0 transition-colors duration-200',
-              isActive ? 'text-brand-cyan' : 'text-text-muted group-hover:text-text-primary'
+              isActive ? 'text-brass' : 'text-text-muted group-hover:text-brass-hover'
             )}
           />
 
@@ -60,7 +60,7 @@ export const SidebarNavItem: React.FC<SidebarNavItemProps> = ({
           {badge && (
             <span
               className={cn(
-                'ml-auto text-[10px] uppercase font-semibold px-1.5 py-0.5 rounded-full bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30',
+                'ml-auto text-[10px] uppercase font-semibold px-1.5 py-0.5 rounded-full bg-brass/20 text-brass border border-brass/30',
                 collapsed ? 'hidden max-lg:inline' : 'inline'
               )}
             >

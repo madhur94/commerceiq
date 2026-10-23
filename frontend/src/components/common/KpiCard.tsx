@@ -9,7 +9,7 @@ export interface KpiCardProps {
   unitLabel?: string;
   icon?: LucideIcon;
   contextPill?: string;
-  contextVariant?: 'emerald' | 'cyan' | 'violet' | 'amber' | 'neutral';
+  contextVariant?: 'emerald' | 'cyan' | 'violet' | 'amber' | 'neutral' | 'brass';
   footnote?: string;
   className?: string;
 }
@@ -20,27 +20,28 @@ export const KpiCard: React.FC<KpiCardProps> = ({
   unitLabel,
   icon: Icon,
   contextPill,
-  contextVariant = 'violet',
+  contextVariant = 'brass',
   footnote,
   className,
 }) => {
   const pillVariants = {
+    brass: 'bg-brass/10 text-brass border-brass/25',
     emerald: 'bg-accent-emerald/10 text-accent-emerald border-accent-emerald/20',
     cyan: 'bg-brand-cyan/10 text-brand-cyan border-brand-cyan/20',
     violet: 'bg-brand-violet/10 text-brand-violet-light border-brand-violet/20',
     amber: 'bg-accent-amber/10 text-accent-amber border-accent-amber/20',
-    neutral: 'bg-slate-800/40 text-text-muted border-white/5',
+    neutral: 'bg-surface-subtle text-text-muted border-hairline',
   };
 
   return (
     <SurfaceCard
       variant="default"
-      className={cn('flex flex-col justify-between p-5 group hover:border-brand-violet/30', className)}
+      className={cn('flex flex-col justify-between p-5 group hover:border-brass/35 transition-all', className)}
     >
       <div>
         <div className="flex items-center justify-between gap-2 mb-3">
           <span className="text-xs font-semibold uppercase tracking-wider text-text-muted font-sans flex items-center gap-1.5">
-            {Icon && <Icon className="w-4 h-4 text-brand-violet-light/80 group-hover:text-brand-cyan transition-colors" />}
+            {Icon && <Icon className="w-4 h-4 text-brass/80 group-hover:text-brass transition-colors" />}
             {label}
           </span>
           {contextPill && (

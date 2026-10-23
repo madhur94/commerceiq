@@ -50,11 +50,11 @@ export const MLInsightsView: React.FC = () => {
             <tbody className="divide-y divide-hairline/60">
               {pcaVariance.map((p) => (
                 <tr key={p.component} className="hover:bg-surface-elevated/40 transition-colors">
-                  <td className="py-3 px-4 font-mono font-bold text-xs text-brand-cyan">{p.component}</td>
+                  <td className="py-3 px-4 font-mono font-bold text-xs text-brass">{p.component}</td>
                   <td className="py-3 px-4 text-right font-mono font-semibold text-text-primary">
                     {p.explained_variance_percent.toFixed(4)}%
                   </td>
-                  <td className="py-3 px-4 text-right font-mono text-brand-violet-light font-semibold">
+                  <td className="py-3 px-4 text-right font-mono text-brass font-semibold">
                     {p.cumulative_variance_percent.toFixed(4)}%
                   </td>
                   <td className="py-3 px-4 text-xs text-text-muted">
@@ -68,7 +68,7 @@ export const MLInsightsView: React.FC = () => {
 
         <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <span>Dimensionality reduction target: retaining ≥95% variance with minimal orthogonal dimensions. Interpretations reflect mathematical feature loadings, not causal psychological intent.</span>
-          <span className="font-mono text-brand-cyan whitespace-nowrap">7 of 11 user features retained</span>
+          <span className="font-mono text-brass whitespace-nowrap">7 of 11 user features retained</span>
         </div>
       </SurfaceCard>
 
@@ -78,7 +78,7 @@ export const MLInsightsView: React.FC = () => {
         <SurfaceCard variant="default" className="flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <Sliders className="w-4 h-4 text-brand-violet-light" />
+              <Sliders className="w-4 h-4 text-brass" />
               <SectionHeading
                 title="Feature Normalization: Skewness Reduction"
                 subtitle="Impact of log-transformation on price distribution."
@@ -111,7 +111,7 @@ export const MLInsightsView: React.FC = () => {
         <SurfaceCard variant="default" className="flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <BarChart3 className="w-4 h-4 text-brand-cyan" />
+              <BarChart3 className="w-4 h-4 text-brass" />
               <SectionHeading
                 title="K-Means Silhouette Score Evaluation"
                 subtitle="Comparison across sensitivity and baseline clustering trials."
@@ -130,7 +130,7 @@ export const MLInsightsView: React.FC = () => {
                     <span className="font-medium text-text-primary">{exp.experiment_name}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-mono font-bold text-brand-cyan">
+                    <span className="font-mono font-bold text-brass">
                       {exp.silhouette_score.toFixed(5)}
                     </span>
                     {exp.is_selected && (

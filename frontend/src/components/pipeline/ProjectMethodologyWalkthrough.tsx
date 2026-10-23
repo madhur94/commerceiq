@@ -29,7 +29,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-hairline/60">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-brand-violet/10 text-brand-violet-light border border-brand-violet/20">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-brass/10 text-brass border border-brass/30">
               <BookOpen className="w-3 h-3" />
               Section F · 10-Stage Methodology
             </span>
@@ -73,7 +73,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
               key={step.step_number}
               className={`rounded-xl border transition-all duration-200 overflow-hidden ${
                 isExpanded
-                  ? 'bg-slate-900/70 border-brand-cyan/40 shadow-sm'
+                  ? 'bg-forest-sidebar/70 border-brass/40 shadow-sm'
                   : 'bg-surface-subtle/50 border-hairline/60 hover:border-hairline hover:bg-surface-subtle'
               }`}
             >
@@ -81,15 +81,15 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
               <button
                 type="button"
                 onClick={() => toggleStep(step.step_number)}
-                className="w-full text-left p-4 flex items-center justify-between gap-4 transition-colors focus:outline-none focus:ring-1 focus:ring-brand-cyan/40 rounded-xl"
+                className="w-full text-left p-4 flex items-center justify-between gap-4 transition-colors focus:outline-none focus:ring-1 focus:ring-brass/40 rounded-xl"
                 aria-expanded={isExpanded}
               >
                 <div className="flex items-center gap-3.5 min-w-0">
                   <div
                     className={`w-9 h-9 rounded-xl flex items-center justify-center font-mono text-xs font-bold shrink-0 transition-colors ${
                       isExpanded
-                        ? 'bg-brand-cyan text-slate-950'
-                        : 'bg-slate-800 text-text-subtle border border-hairline'
+                        ? 'bg-brass text-forest-sidebar font-bold'
+                        : 'bg-forest-surface text-text-subtle border border-hairline'
                     }`}
                   >
                     {String(step.step_number).padStart(2, '0')}
@@ -97,7 +97,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
 
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-mono text-[11px] text-brand-cyan uppercase tracking-wider font-semibold">
+                      <span className="font-mono text-[11px] text-brass uppercase tracking-wider font-semibold">
                         {step.phase_label}
                       </span>
                     </div>
@@ -112,7 +112,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
                     {isExpanded ? 'Hide Details' : 'View Details'}
                   </span>
                   {isExpanded ? (
-                    <ChevronUp className="w-4 h-4 text-brand-cyan" />
+                    <ChevronUp className="w-4 h-4 text-brass" />
                   ) : (
                     <ChevronDown className="w-4 h-4 text-text-muted" />
                   )}
@@ -137,7 +137,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
                   {/* Dual Column: Key Takeaways & Technical Details */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Key Findings / Takeaways */}
-                    <div className="p-4 rounded-xl bg-slate-950/40 border border-hairline space-y-2.5">
+                    <div className="p-4 rounded-xl bg-forest-surface/50 border border-hairline space-y-2.5">
                       <div className="flex items-center gap-2 font-semibold text-text-primary text-xs">
                         <CheckCircle2 className="w-4 h-4 text-accent-emerald shrink-0" />
                         Key Analytical Takeaways
@@ -145,7 +145,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
                       <ul className="space-y-2 text-text-muted text-[11px] leading-relaxed">
                         {step.key_points.map((point: string, idx: number) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <span className="text-brand-cyan mt-0.5">•</span>
+                            <span className="text-brass mt-0.5">•</span>
                             <span>{point}</span>
                           </li>
                         ))}
@@ -153,15 +153,15 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
                     </div>
 
                     {/* Technical Parameters / Architecture */}
-                    <div className="p-4 rounded-xl bg-slate-950/40 border border-hairline space-y-2.5">
+                    <div className="p-4 rounded-xl bg-forest-surface/50 border border-hairline space-y-2.5">
                       <div className="flex items-center gap-2 font-semibold text-text-primary text-xs">
-                        <Terminal className="w-4 h-4 text-brand-violet-light shrink-0" />
+                        <Terminal className="w-4 h-4 text-brass shrink-0" />
                         Engineering & Execution Specifications
                       </div>
                       <ul className="space-y-2 text-text-muted text-[11px] leading-relaxed">
                         {step.technical_details.map((detail: string, idx: number) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <span className="text-brand-violet-light mt-0.5 font-mono">›</span>
+                            <span className="text-brass mt-0.5 font-mono">›</span>
                             <span className="font-mono text-text-secondary">{detail}</span>
                           </li>
                         ))}
@@ -175,7 +175,7 @@ export const ProjectMethodologyWalkthrough: React.FC = () => {
                       <span className="text-text-subtle">Explore related analytical visualizer:</span>
                       <Link
                         to={step.related_route}
-                        className="inline-flex items-center gap-1.5 font-medium text-brand-cyan hover:underline text-xs"
+                        className="inline-flex items-center gap-1.5 font-medium text-brass hover:underline text-xs"
                       >
                         Navigate to {step.related_route}
                         <ArrowRight className="w-3.5 h-3.5" />

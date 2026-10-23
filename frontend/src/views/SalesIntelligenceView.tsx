@@ -173,9 +173,9 @@ export const SalesIntelligenceView: React.FC = () => {
 
       {/* CONNECTED EXPLORATION BAR (Shows when an entity is focused) */}
       {hasActiveFilter && (
-        <div className="mb-8 p-4 rounded-xl bg-slate-900/80 border border-brand-violet/40 backdrop-blur-md shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="mb-8 p-4 rounded-xl bg-surface-elevated/90 border border-brass/40 backdrop-blur-md shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-brand-violet/20 text-brand-cyan border border-brand-violet/30">
+            <div className="p-2 rounded-lg bg-brass/15 text-brass border border-brass/30">
               <Compass className="w-5 h-5" />
             </div>
             <div>
@@ -183,7 +183,7 @@ export const SalesIntelligenceView: React.FC = () => {
                 <span className="text-xs uppercase tracking-wider font-semibold text-text-muted">
                   Connected Exploration Focus:
                 </span>
-                <span className="text-xs font-mono font-bold text-brand-cyan">
+                <span className="text-xs font-mono font-bold text-brass">
                   {selectedDate && `Day: ${selectedDate}`}
                   {selectedBrand && ` · Brand: ${selectedBrand}`}
                   {selectedCategory && ` · Category: ${selectedCategory}`}
@@ -201,7 +201,7 @@ export const SalesIntelligenceView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate(`/data-explorer?brand=${encodeURIComponent(selectedBrand)}`)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-violet/30 hover:bg-brand-violet/50 text-brand-violet-light border border-brand-violet/40 text-xs font-semibold transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brass text-brass-dark hover:bg-brass-hover border border-brass text-xs font-semibold transition-colors shadow-sm"
               >
                 <span>Explore {selectedBrand} in Catalog</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -211,7 +211,7 @@ export const SalesIntelligenceView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => navigate(`/data-explorer?tab=categories&category=${encodeURIComponent(selectedCategory)}`)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-violet/30 hover:bg-brand-violet/50 text-brand-violet-light border border-brand-violet/40 text-xs font-semibold transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brass text-brass-dark hover:bg-brass-hover border border-brass text-xs font-semibold transition-colors shadow-sm"
               >
                 <span>Explore {selectedCategory} in Catalog</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -220,7 +220,7 @@ export const SalesIntelligenceView: React.FC = () => {
             <button
               type="button"
               onClick={resetAllFilters}
-              className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-text-subtle hover:text-text-primary text-xs transition-colors"
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-elevated text-text-muted hover:text-text-primary border border-hairline text-xs transition-colors"
               title="Reset selection filters"
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -239,7 +239,7 @@ export const SalesIntelligenceView: React.FC = () => {
             className="mb-0"
           />
           <div className="flex items-center gap-2 self-start sm:self-auto">
-            <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30">
+            <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-brass/20 text-brass border border-brass/30">
               32 Days Captured
             </span>
           </div>
@@ -252,8 +252,8 @@ export const SalesIntelligenceView: React.FC = () => {
               <span className="text-[10px] uppercase font-semibold text-text-muted tracking-wider block">
                 Focused Date
               </span>
-              <span className="text-base font-bold font-mono text-brand-cyan flex items-center gap-1.5 mt-0.5">
-                <Calendar className="w-4 h-4 text-brand-cyan" />
+              <span className="text-base font-bold font-mono text-brass flex items-center gap-1.5 mt-0.5">
+                <Calendar className="w-4 h-4 text-brass" />
                 {selectedDayData.event_date}
               </span>
               {selectedDayData.is_partial_day && (
@@ -281,7 +281,7 @@ export const SalesIntelligenceView: React.FC = () => {
               <span className="text-[10px] uppercase font-semibold text-text-muted tracking-wider block">
                 Purchase Orders
               </span>
-              <span className="text-base font-bold font-mono text-brand-violet-light mt-0.5 block">
+              <span className="text-base font-bold font-mono text-brass mt-0.5 block">
                 {formatInteger(selectedDayData.purchase_events)} orders
               </span>
               <span className="text-[11px] text-text-subtle font-mono">
@@ -324,7 +324,7 @@ export const SalesIntelligenceView: React.FC = () => {
             <button
               type="button"
               onClick={() => setShowDailyTable((prev) => !prev)}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-cyan hover:text-brand-cyan-light transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-brass hover:text-brass-hover transition-colors"
             >
               <span>{showDailyTable ? 'Hide Complete Daily Table' : 'Show Complete 32-Day Table Breakdown'}</span>
               {showDailyTable ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -351,12 +351,12 @@ export const SalesIntelligenceView: React.FC = () => {
                       onClick={() => setSelectedDate(d.event_date)}
                       className={`cursor-pointer transition-colors ${
                         selectedDate === d.event_date
-                          ? 'bg-brand-violet/20 text-white font-semibold'
+                          ? 'bg-brass/20 text-brass font-bold'
                           : 'hover:bg-surface-elevated/40 text-text-muted'
                       }`}
                     >
                       <td className="py-2 px-3 text-text-primary">{d.event_date}</td>
-                      <td className="py-2 px-3 text-right text-brand-cyan font-bold">
+                      <td className="py-2 px-3 text-right text-brass font-bold">
                         {formatMonetaryUnits(d.total_revenue, 'full')}
                       </td>
                       <td className="py-2 px-3 text-right">{formatInteger(d.purchase_events)}</td>
@@ -369,7 +369,7 @@ export const SalesIntelligenceView: React.FC = () => {
                             Partial Day
                           </span>
                         ) : d.event_date === '2019-10-16' ? (
-                          <span className="text-[10px] text-brand-violet-light font-sans px-1.5 py-0.5 rounded bg-brand-violet/20 border border-brand-violet/30">
+                          <span className="text-[10px] text-brass font-sans px-1.5 py-0.5 rounded bg-brass/20 border border-brass/30">
                             Peak Day
                           </span>
                         ) : (
@@ -393,8 +393,8 @@ export const SalesIntelligenceView: React.FC = () => {
             subtitle="Comparing hourly event activity (views + carts + purchases) against recorded purchase-event value across 24 UTC hours."
             className="mb-0"
           />
-          <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30 self-start sm:self-auto flex items-center gap-1.5">
-            <Clock className="w-3 h-3 text-accent-amber" />
+          <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-brass/15 text-brass border border-brass/30 self-start sm:self-auto flex items-center gap-1.5">
+            <Clock className="w-3 h-3 text-brass" />
             <span>7-Hour Peak Lag</span>
           </span>
         </div>
@@ -405,17 +405,17 @@ export const SalesIntelligenceView: React.FC = () => {
             onClick={() => setSelectedHour(21)}
             className={`p-4 rounded-xl border transition-all cursor-pointer ${
               selectedHour === 21
-                ? 'bg-brand-cyan/10 border-brand-cyan shadow-lg'
-                : 'bg-surface-subtle border-hairline hover:border-brand-cyan/40'
+                ? 'bg-brass/15 border-brass shadow-lg'
+                : 'bg-surface-subtle border-hairline hover:border-brass/40'
             } flex items-start gap-3`}
           >
-            <Clock className="w-5 h-5 text-brand-cyan flex-shrink-0 mt-0.5" />
+            <Clock className="w-5 h-5 text-brass flex-shrink-0 mt-0.5" />
             <div className="flex-1">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-text-muted uppercase tracking-wider font-semibold block">
                   Peak Browsing Activity Hour
                 </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan">
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brass/20 text-brass border border-brass/30">
                   Macro Peak
                 </span>
               </div>
@@ -435,17 +435,17 @@ export const SalesIntelligenceView: React.FC = () => {
             onClick={() => setSelectedHour(14)}
             className={`p-4 rounded-xl border transition-all cursor-pointer ${
               selectedHour === 14
-                ? 'bg-brand-violet/10 border-brand-violet shadow-lg'
-                : 'bg-surface-subtle border-hairline hover:border-brand-violet/40'
+                ? 'bg-brass/15 border-brass shadow-lg'
+                : 'bg-surface-subtle border-hairline hover:border-brass/40'
             } flex items-start gap-3`}
           >
-            <DollarSign className="w-5 h-5 text-brand-violet-light flex-shrink-0 mt-0.5" />
+            <DollarSign className="w-5 h-5 text-brass flex-shrink-0 mt-0.5" />
             <div className="flex-1">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-text-muted uppercase tracking-wider font-semibold block">
                   Peak Purchase Revenue Hour
                 </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brand-violet/20 text-brand-violet-light">
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brass/20 text-brass border border-brass/30">
                   Monetary Peak
                 </span>
               </div>
@@ -464,10 +464,10 @@ export const SalesIntelligenceView: React.FC = () => {
 
         {/* Selected Hour Details Readout */}
         {selectedHourData && (
-          <div className="mb-4 p-3 rounded-lg bg-slate-900/60 border border-hairline flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+          <div className="mb-4 p-3 rounded-lg bg-surface-subtle border border-hairline flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
             <div className="flex items-center gap-2">
               <span className="text-text-muted">Focused Hour:</span>
-              <strong className="text-brand-cyan">{formatHourUTC(selectedHourData.event_hour)}</strong>
+              <strong className="text-brass">{formatHourUTC(selectedHourData.event_hour)}</strong>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-text-muted">Event Activity:</span>
@@ -475,7 +475,7 @@ export const SalesIntelligenceView: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-text-muted">Revenue:</span>
-              <strong className="text-brand-violet-light">{formatMonetaryUnits(selectedHourData.total_revenue, 'compact')}</strong>
+              <strong className="text-brass">{formatMonetaryUnits(selectedHourData.total_revenue, 'compact')}</strong>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-text-muted">Monetization Velocity:</span>
@@ -497,7 +497,7 @@ export const SalesIntelligenceView: React.FC = () => {
           <span>
             Marketing Takeaway: Promotional bids and paid acquisition should align with transactional velocity (14:00 UTC) rather than raw browsing traffic (21:00 UTC).
           </span>
-          <span className="font-mono text-brand-cyan">Source: hourly_purchase_dynamics.csv</span>
+          <span className="font-mono text-brass">Source: hourly_purchase_dynamics.csv</span>
         </div>
       </SurfaceCard>
 
@@ -512,7 +512,7 @@ export const SalesIntelligenceView: React.FC = () => {
                 subtitle="Electronics generates 76.74% of revenue, followed by unclassified items (9.97%)."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/20 text-brand-cyan border border-brand-violet/30">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                 14 Sectors
               </span>
             </div>
@@ -524,7 +524,7 @@ export const SalesIntelligenceView: React.FC = () => {
                   <span className="text-[10px] uppercase font-semibold text-text-muted tracking-wider block">
                     Focused Category
                   </span>
-                  <span className="text-sm font-bold capitalize text-brand-cyan block">
+                  <span className="text-sm font-bold capitalize text-brass block">
                     {selectedCategoryData.main_category}
                   </span>
                   <span className="text-xs text-text-subtle font-mono mt-0.5 block">
@@ -538,7 +538,7 @@ export const SalesIntelligenceView: React.FC = () => {
                       `/data-explorer?tab=categories&category=${encodeURIComponent(selectedCategoryData.main_category)}`
                     )
                   }
-                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-brand-violet/20 hover:bg-brand-violet/40 text-brand-cyan border border-brand-violet/30 text-xs font-semibold transition-colors"
+                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-brass text-brass-dark hover:bg-brass-hover border border-brass text-xs font-semibold transition-colors shadow-sm"
                 >
                   <span>Catalog Explorer</span>
                   <ArrowRight className="w-3 h-3" />
@@ -558,7 +558,7 @@ export const SalesIntelligenceView: React.FC = () => {
 
           <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex items-center justify-between">
             <span>Unknown category (22.92M units) preserved without fabrication.</span>
-            <span className="font-mono text-brand-cyan">Source: category_revenue.csv</span>
+            <span className="font-mono text-brass">Source: category_revenue.csv</span>
           </div>
         </SurfaceCard>
 
@@ -571,7 +571,7 @@ export const SalesIntelligenceView: React.FC = () => {
                 subtitle="Apple (36.72%) and Samsung (31.82%) control 68.54% of gross recorded value."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 flex items-center gap-1">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30 flex items-center gap-1">
                 <Award className="w-3 h-3" />
                 <span>Top 5 = 78.39%</span>
               </span>
@@ -584,7 +584,7 @@ export const SalesIntelligenceView: React.FC = () => {
                   <span className="text-[10px] uppercase font-semibold text-text-muted tracking-wider block">
                     Focused Brand
                   </span>
-                  <span className="text-sm font-bold capitalize text-brand-cyan block">
+                  <span className="text-sm font-bold capitalize text-brass block">
                     {selectedBrandData.brand} (#{selectedBrandData.rank})
                   </span>
                   <span className="text-xs text-text-subtle font-mono mt-0.5 block">
@@ -596,7 +596,7 @@ export const SalesIntelligenceView: React.FC = () => {
                   onClick={() =>
                     navigate(`/data-explorer?brand=${encodeURIComponent(selectedBrandData.brand)}`)
                   }
-                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-brand-violet/20 hover:bg-brand-violet/40 text-brand-cyan border border-brand-violet/30 text-xs font-semibold transition-colors"
+                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-brass text-brass-dark hover:bg-brass-hover border border-brass text-xs font-semibold transition-colors shadow-sm"
                 >
                   <span>Filter Brand</span>
                   <ArrowRight className="w-3 h-3" />
@@ -616,7 +616,7 @@ export const SalesIntelligenceView: React.FC = () => {
 
           <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex items-center justify-between">
             <span>Extreme concentration: 1,980 other brands share remaining 21.6%.</span>
-            <span className="font-mono text-brand-cyan">Source: brand_revenue_top50.csv</span>
+            <span className="font-mono text-brass">Source: brand_revenue_top50.csv</span>
           </div>
         </SurfaceCard>
       </div>
@@ -632,7 +632,7 @@ export const SalesIntelligenceView: React.FC = () => {
                 subtitle="Comparing order volume against recorded revenue across 6 price tiers."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent-emerald/20 text-accent-emerald border border-accent-emerald/30">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                 6 Tiers
               </span>
             </div>
@@ -644,7 +644,7 @@ export const SalesIntelligenceView: React.FC = () => {
                   <span className="text-[10px] uppercase font-semibold text-text-muted tracking-wider block">
                     Focused Price Tier
                   </span>
-                  <span className="text-sm font-bold text-accent-emerald block">
+                  <span className="text-sm font-bold text-brass block">
                     {selectedBracketData.price_range_display} monetary units
                   </span>
                   <span className="text-xs text-text-subtle font-mono mt-0.5 block">
@@ -662,7 +662,7 @@ export const SalesIntelligenceView: React.FC = () => {
                         : 'all';
                     navigate(`/data-explorer?tier=${tierParam}`);
                   }}
-                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-accent-emerald border border-emerald-500/30 text-xs font-semibold transition-colors"
+                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-brass text-brass-dark hover:bg-brass-hover border border-brass text-xs font-semibold transition-colors shadow-sm"
                 >
                   <span>Inspect in Catalog</span>
                   <ArrowRight className="w-3 h-3" />
@@ -681,7 +681,7 @@ export const SalesIntelligenceView: React.FC = () => {
 
           <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex items-center justify-between">
             <span>Tiers ≥ 500 units deliver 75.54% of revenue from only 11.26% of orders.</span>
-            <span className="font-mono text-brand-cyan">Source: price_distribution.csv</span>
+            <span className="font-mono text-brass">Source: price_distribution.csv</span>
           </div>
         </SurfaceCard>
 
@@ -694,7 +694,7 @@ export const SalesIntelligenceView: React.FC = () => {
                 subtitle="Wednesday drove peak order volume (119,197) and revenue (37.13M units)."
                 className="mb-0"
               />
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                 Weekly Cycle
               </span>
             </div>
@@ -706,7 +706,7 @@ export const SalesIntelligenceView: React.FC = () => {
                   <span className="text-[10px] uppercase font-semibold text-text-muted tracking-wider block">
                     Focused Weekday
                   </span>
-                  <span className="text-sm font-bold text-brand-cyan block">
+                  <span className="text-sm font-bold text-brass block">
                     {selectedWeekdayData.weekday}
                   </span>
                   <span className="text-xs text-text-subtle font-mono mt-0.5 block">
@@ -715,7 +715,7 @@ export const SalesIntelligenceView: React.FC = () => {
                 </div>
                 <div className="text-right">
                   <span className="text-[10px] font-mono uppercase text-text-muted block">Platform Share</span>
-                  <span className="text-xs font-mono font-bold text-brand-violet-light">
+                  <span className="text-xs font-mono font-bold text-brass">
                     {formatPercent((selectedWeekdayData.total_revenue / verifiedMetrics.purchase_revenue) * 100)}
                   </span>
                 </div>
@@ -733,7 +733,7 @@ export const SalesIntelligenceView: React.FC = () => {
 
           <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex items-center justify-between">
             <span>Peak on Wednesday (37.13M units) vs Saturday trough (29.07M units).</span>
-            <span className="font-mono text-brand-cyan">Source: weekday_purchase_summary.csv</span>
+            <span className="font-mono text-brass">Source: weekday_purchase_summary.csv</span>
           </div>
         </SurfaceCard>
       </div>

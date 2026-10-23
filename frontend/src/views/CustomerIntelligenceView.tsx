@@ -39,7 +39,7 @@ export const CustomerIntelligenceView: React.FC = () => {
           unitLabel="users"
           icon={Users}
           contextPill="1 Outlier Isolated"
-          contextVariant="cyan"
+          contextVariant="brass"
           footnote="Excludes 1 extreme browsing outlier account (7,429 views, 0 purchases)"
         />
 
@@ -57,7 +57,7 @@ export const CustomerIntelligenceView: React.FC = () => {
           value="8.29%"
           icon={Sparkles}
           contextPill="250,388 Users"
-          contextVariant="violet"
+          contextVariant="brass"
           footnote="High-intent cluster generating repeated multi-session orders"
         />
 

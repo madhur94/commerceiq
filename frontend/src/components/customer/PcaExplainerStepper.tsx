@@ -113,7 +113,7 @@ export const PcaExplainerStepper: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-violet-light">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brass">
             Section E · Explainable Machine Learning Pipeline
           </span>
           <SectionHeading
@@ -141,7 +141,7 @@ export const PcaExplainerStepper: React.FC = () => {
               className={cn(
                 'p-2.5 rounded-xl text-left border transition-all relative overflow-hidden',
                 isActive
-                  ? 'bg-brand-violet/20 border-brand-violet/50 shadow-glow-violet'
+                  ? 'bg-brass/20 border-brass/50 shadow-glow-brass text-text-primary'
                   : isCompleted
                   ? 'bg-surface-subtle border-hairline hover:bg-surface-elevated/60 text-text-muted'
                   : 'bg-surface-subtle/50 border-hairline/40 text-text-subtle hover:text-text-primary'
@@ -153,7 +153,7 @@ export const PcaExplainerStepper: React.FC = () => {
                   STEP {s.step}
                 </span>
                 {isCompleted && <CheckCircle2 className="w-3.5 h-3.5 text-accent-emerald" />}
-                {isActive && <span className="w-2 h-2 rounded-full bg-brand-cyan animate-ping" />}
+                {isActive && <span className="w-2 h-2 rounded-full bg-brass animate-ping" />}
               </div>
               <div className="text-xs font-semibold text-text-primary truncate">
                 {s.shortName}
@@ -177,7 +177,7 @@ export const PcaExplainerStepper: React.FC = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-brand-cyan">
+                <span className="text-xs font-mono uppercase tracking-wider text-brass">
                   {current.tag}
                 </span>
                 <span className="text-xs font-mono text-text-subtle">
@@ -199,7 +199,7 @@ export const PcaExplainerStepper: React.FC = () => {
                 </span>
                 {current.technicalDetails.map((detail, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-xs text-text-muted">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-violet-light flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brass flex-shrink-0 mt-0.5" />
                     <span>{detail}</span>
                   </div>
                 ))}
@@ -220,7 +220,7 @@ export const PcaExplainerStepper: React.FC = () => {
               <button
                 disabled={activeStep === 6}
                 onClick={() => setActiveStep((prev) => Math.min(prev + 1, 6))}
-                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-brand-violet/20 hover:bg-brand-violet/30 text-brand-cyan hover:text-white disabled:opacity-30 disabled:pointer-events-none transition-colors flex items-center gap-1 border border-brand-violet/30"
+                className="px-3 py-1.5 rounded-lg text-xs font-medium bg-brass/20 hover:bg-brass/30 text-brass hover:text-brass-hover disabled:opacity-30 disabled:pointer-events-none transition-colors flex items-center gap-1 border border-brass/40"
               >
                 <span>Next Step</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -235,7 +235,7 @@ export const PcaExplainerStepper: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-text-muted">
               PCA Scree Plot & Cumulative Retention
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/15 text-brand-violet-light border border-brand-violet/20">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
               7 Principal Components
             </span>
           </div>

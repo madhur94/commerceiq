@@ -95,7 +95,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Sidebar Container */}
       <aside
         className={cn(
-          'fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-surface border-r border-hairline transition-all duration-300 ease-in-out',
+          'fixed top-0 bottom-0 left-0 z-50 flex flex-col bg-forest-sidebar border-r border-hairline transition-all duration-300 ease-in-out',
           'w-64',
           collapsed && 'lg:w-20',
           // Mobile responsive drawer positioning
@@ -105,9 +105,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Brand Header */}
         <div className="h-16 flex items-center justify-between px-4 border-b border-hairline">
           <div className="flex items-center gap-3 overflow-hidden">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-violet to-brand-cyan p-0.5 flex-shrink-0 shadow-glow">
-              <div className="w-full h-full bg-canvas rounded-[10px] flex items-center justify-center">
-                <span className="font-mono font-bold text-base text-brand-cyan">CIQ</span>
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brass-deep to-brass p-0.5 flex-shrink-0 shadow-glow-brass">
+              <div className="w-full h-full bg-forest-bg rounded-[10px] flex items-center justify-center">
+                <span className="font-mono font-bold text-base text-brass">CIQ</span>
               </div>
             </div>
 
@@ -115,7 +115,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <span className="font-bold text-sm text-text-primary tracking-tight font-sans truncate">
                 CommerceIQ
               </span>
-              <span className="text-[10px] text-text-subtle truncate">
+              <span className="text-[10px] text-text-muted truncate">
                 Intelligence Suite
               </span>
             </div>

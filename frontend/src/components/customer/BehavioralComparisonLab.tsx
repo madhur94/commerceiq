@@ -98,7 +98,7 @@ export const BehavioralComparisonLab: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-violet-light">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brass">
             Section C · Behavioral Comparison Lab
           </span>
           <SectionHeading
@@ -121,7 +121,7 @@ export const BehavioralComparisonLab: React.FC = () => {
                 className={cn(
                   'px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                   isSelected
-                    ? 'bg-brand-violet/25 text-brand-cyan shadow-sm border border-brand-violet/40'
+                    ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                     : 'text-text-muted hover:text-text-primary'
                 )}
                 aria-pressed={isSelected}
@@ -161,9 +161,9 @@ export const BehavioralComparisonLab: React.FC = () => {
                   <span className="text-text-subtle mr-1.5">Absolute Delta:</span>
                   <span className="text-accent-emerald font-bold">{current.diffDisplay}</span>
                 </div>
-                <div className="px-3 py-1.5 rounded-lg bg-brand-violet/20 border border-brand-violet/30 text-xs font-mono">
+                <div className="px-3 py-1.5 rounded-lg bg-brass/15 border border-brass/30 text-xs font-mono">
                   <span className="text-text-subtle mr-1.5">Multiple:</span>
-                  <span className="text-brand-cyan font-bold">{current.ratioDisplay}</span>
+                  <span className="text-brass font-bold">{current.ratioDisplay}</span>
                 </div>
               </div>
             </div>
@@ -173,20 +173,20 @@ export const BehavioralComparisonLab: React.FC = () => {
               {/* Cluster 0 Bar */}
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5 font-sans">
-                  <span className="font-bold text-brand-cyan flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-brand-violet inline-block" />
+                  <span className="font-bold text-brass flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-brass inline-block" />
                     <span>Cluster 0 · Commercial Core (8.29%)</span>
                   </span>
                   <span className="font-mono font-bold text-text-primary text-sm">
                     {current.display0}
                   </span>
                 </div>
-                <div className="w-full h-4 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-hairline/60">
+                <div className="w-full h-4 bg-forest-sidebar rounded-full overflow-hidden p-0.5 border border-hairline/60">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${pct0}%` }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-brand-violet to-brand-cyan rounded-full shadow-glow-cyan"
+                    className="h-full bg-gradient-to-r from-brass-deep to-brass rounded-full shadow-glow-brass"
                   />
                 </div>
               </div>
@@ -195,19 +195,19 @@ export const BehavioralComparisonLab: React.FC = () => {
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5 font-sans">
                   <span className="font-bold text-text-muted flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-700 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-forest-border inline-block" />
                     <span>Cluster 1 · Casual Browsers (91.71%)</span>
                   </span>
                   <span className="font-mono font-bold text-text-muted text-sm">
                     {current.display1}
                   </span>
                 </div>
-                <div className="w-full h-4 bg-slate-900 rounded-full overflow-hidden p-0.5 border border-hairline/60">
+                <div className="w-full h-4 bg-forest-sidebar rounded-full overflow-hidden p-0.5 border border-hairline/60">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${pct1}%` }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-slate-700 to-slate-500 rounded-full"
+                    className="h-full bg-gradient-to-r from-forest-elevated to-forest-border rounded-full"
                   />
                 </div>
               </div>

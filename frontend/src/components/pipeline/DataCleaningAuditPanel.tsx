@@ -74,10 +74,10 @@ export const DataCleaningAuditPanel: React.FC = () => {
 
         <div className="p-4 rounded-xl bg-surface-subtle/80 border border-hairline">
           <span className="text-xs text-text-subtle font-sans block mb-1">Unsegregated Remainder</span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-brand-violet-light">
+          <span className="text-lg sm:text-xl font-bold font-mono text-brass">
             {formatInteger(removals_breakdown[1].records_removed)}
           </span>
-          <span className="text-[11px] text-brand-violet-light font-mono block mt-1">
+          <span className="text-[11px] text-brass font-mono block mt-1">
             30.56% of All Removals
           </span>
         </div>
@@ -104,7 +104,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
           />
           <div
             style={{ width: '0.071%' }}
-            className="bg-brand-violet h-full transition-all"
+            className="bg-brass h-full transition-all"
             title="Unsegregated Remainder: 30,217"
           />
         </div>
@@ -119,7 +119,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
             <span>Invalid Price ≤ 0.00 (68,673 rows · 0.162%)</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-brand-violet" />
+            <span className="w-2.5 h-2.5 rounded-full bg-brass" />
             <span>Unsegregated Multi-Condition Remainder (30,217 rows · 0.071%)</span>
           </div>
         </div>
@@ -131,7 +131,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
         <div className="p-5 rounded-xl bg-surface-subtle/60 border border-hairline space-y-4">
           <div className="flex items-center justify-between">
             <h4 className="text-xs font-bold uppercase tracking-wider text-text-primary flex items-center gap-2">
-              <Filter className="w-4 h-4 text-brand-cyan" />
+              <Filter className="w-4 h-4 text-brass" />
               <span>Record Removal Breakdown (98,890 Rows)</span>
             </h4>
           </div>
@@ -141,7 +141,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
               <div key={idx} className="p-3.5 rounded-lg bg-surface/70 border border-hairline/60 space-y-1.5">
                 <div className="flex items-center justify-between text-xs font-mono">
                   <span className="font-bold text-text-primary">{item.cause}</span>
-                  <span className={idx === 0 ? 'text-accent-amber font-bold' : 'text-brand-violet-light font-bold'}>
+                  <span className={idx === 0 ? 'text-accent-amber font-bold' : 'text-brass font-bold'}>
                     -{formatInteger(item.records_removed)}
                   </span>
                 </div>
@@ -169,7 +169,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
         <div className="p-5 rounded-xl bg-surface-subtle/60 border border-hairline space-y-4">
           <div className="flex items-center justify-between">
             <h4 className="text-xs font-bold uppercase tracking-wider text-text-primary flex items-center gap-2">
-              <Tag className="w-4 h-4 text-brand-violet-light" />
+              <Tag className="w-4 h-4 text-brass" />
               <span>Categorical Missingness Disclosures</span>
             </h4>
           </div>
@@ -183,7 +183,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
                     {formatInteger(item.missing_count)} ({item.missing_percent}%)
                   </span>
                 </div>
-                <div className="text-[11px] text-brand-cyan font-mono">
+                <div className="text-[11px] text-brass font-mono">
                   {item.handling_strategy}
                 </div>
                 <p className="text-xs text-text-muted leading-relaxed font-sans pt-1">
@@ -197,7 +197,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
           <div className="p-3.5 rounded-lg bg-surface/70 border border-hairline/60">
             <button
               onClick={() => setShowDeduplicationDetails(!showDeduplicationDetails)}
-              className="w-full flex items-center justify-between text-xs font-bold text-text-primary hover:text-brand-cyan transition-colors"
+              className="w-full flex items-center justify-between text-xs font-bold text-text-primary hover:text-brass transition-colors"
             >
               <div className="flex items-center gap-2">
                 <FileCheck className="w-4 h-4 text-accent-emerald" />
@@ -258,7 +258,7 @@ export const DataCleaningAuditPanel: React.FC = () => {
             <tbody className="divide-y divide-hairline text-[11px]">
               {cleaning_pipeline_stages.map((st) => (
                 <tr key={st.step} className="hover:bg-surface-subtle/40 transition-colors">
-                  <td className="py-2.5 px-4 font-bold text-brand-cyan">0{st.step}</td>
+                  <td className="py-2.5 px-4 font-bold text-brass">0{st.step}</td>
                   <td className="py-2.5 px-4 font-sans text-text-primary font-medium">{st.name}</td>
                   <td className="py-2.5 px-4 text-right text-text-muted">{formatInteger(st.input_count)}</td>
                   <td className="py-2.5 px-4 text-right text-text-primary font-bold">{formatInteger(st.output_count)}</td>

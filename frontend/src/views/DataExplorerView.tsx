@@ -197,12 +197,12 @@ export const DataExplorerView: React.FC = () => {
 
   const renderSortIcon = (field: SortField) => {
     if (sortField !== field) {
-      return <ArrowUpDown className="w-3 h-3 text-slate-500 opacity-60 group-hover:opacity-100" />;
+      return <ArrowUpDown className="w-3 h-3 text-text-subtle opacity-60 group-hover:opacity-100" />;
     }
     return sortDirection === 'asc' ? (
-      <ArrowUp className="w-3 h-3 text-brand-cyan" />
+      <ArrowUp className="w-3 h-3 text-brass" />
     ) : (
-      <ArrowDown className="w-3 h-3 text-brand-cyan" />
+      <ArrowDown className="w-3 h-3 text-brass" />
     );
   };
 
@@ -216,14 +216,14 @@ export const DataExplorerView: React.FC = () => {
 
       {/* Active Connected Drill-Down Filter Notification */}
       {(searchParams.get('brand') || searchParams.get('category') || searchParams.get('tier')) && (
-        <div className="mb-6 p-3.5 rounded-xl bg-brand-violet/15 border border-brand-violet/40 flex items-center justify-between gap-3 text-xs text-text-primary shadow-lg backdrop-blur-md">
+        <div className="mb-6 p-3.5 rounded-xl bg-brass/10 border border-brass/30 flex items-center justify-between gap-3 text-xs text-text-primary shadow-lg backdrop-blur-md">
           <div className="flex items-center gap-2.5">
-            <span className="p-1 rounded-md bg-brand-cyan/20 text-brand-cyan">
+            <span className="p-1 rounded-md bg-brass/20 text-brass">
               <Filter className="w-4 h-4" />
             </span>
             <span>
               Connected Drill-Down from Sales Intelligence:{' '}
-              <span className="font-semibold text-brand-cyan">
+              <span className="font-semibold text-brass">
                 {searchParams.get('brand') ? `Brand “${searchParams.get('brand')}”` : ''}
                 {searchParams.get('category') ? `Category “${searchParams.get('category')}”` : ''}
                 {searchParams.get('tier') ? `Revenue Tier “${searchParams.get('tier')}”` : ''}
@@ -237,7 +237,7 @@ export const DataExplorerView: React.FC = () => {
               setSearchTerm('');
               setTierFilter('all');
             }}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-text-primary text-xs font-medium transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-subtle hover:bg-forest-elevated text-text-primary text-xs font-medium border border-forest-border transition-colors"
           >
             <XCircle className="w-3.5 h-3.5 text-text-subtle" />
             <span>Reset Filter</span>
@@ -252,7 +252,7 @@ export const DataExplorerView: React.FC = () => {
           onClick={() => setActiveTab('brands')}
           className={`flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap ${
             activeTab === 'brands'
-              ? 'bg-brand-violet/20 text-brand-cyan border border-brand-violet/40 shadow-sm'
+              ? 'bg-brass/20 text-brass border border-brass/40 shadow-sm font-bold'
               : 'text-text-muted hover:text-text-primary hover:bg-surface-subtle'
           }`}
         >
@@ -265,7 +265,7 @@ export const DataExplorerView: React.FC = () => {
           onClick={() => setActiveTab('categories')}
           className={`flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap ${
             activeTab === 'categories'
-              ? 'bg-brand-violet/20 text-brand-cyan border border-brand-violet/40 shadow-sm'
+              ? 'bg-brass/20 text-brass border border-brass/40 shadow-sm font-bold'
               : 'text-text-muted hover:text-text-primary hover:bg-surface-subtle'
           }`}
         >
@@ -278,7 +278,7 @@ export const DataExplorerView: React.FC = () => {
           onClick={() => setActiveTab('products')}
           className={`flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap ${
             activeTab === 'products'
-              ? 'bg-brand-violet/20 text-brand-cyan border border-brand-violet/40 shadow-sm'
+              ? 'bg-brass/20 text-brass border border-brass/40 shadow-sm font-bold'
               : 'text-text-muted hover:text-text-primary hover:bg-surface-subtle'
           }`}
         >
@@ -304,7 +304,7 @@ export const DataExplorerView: React.FC = () => {
                     setCurrentPage(1);
                   }}
                   placeholder="Filter by brand name (e.g. apple, sony, bosch)..."
-                  className="w-full bg-slate-900/90 text-sm text-text-primary pl-9 pr-3 py-2 rounded-lg border border-white/10 focus:outline-none focus:ring-1 focus:ring-brand-violet focus:border-brand-violet placeholder:text-text-subtle"
+                  className="w-full bg-forest-sidebar/90 text-sm text-text-primary pl-9 pr-3 py-2 rounded-lg border border-forest-border focus:outline-none focus:ring-1 focus:ring-brass focus:border-brass placeholder:text-text-subtle"
                 />
               </div>
 
@@ -317,7 +317,7 @@ export const DataExplorerView: React.FC = () => {
                     setTierFilter(e.target.value as TierFilter);
                     setCurrentPage(1);
                   }}
-                  className="bg-slate-900/90 text-xs text-text-primary px-3 py-2 rounded-lg border border-white/10 focus:outline-none focus:ring-1 focus:ring-brand-violet"
+                  className="bg-forest-sidebar/90 text-xs text-text-primary px-3 py-2 rounded-lg border border-forest-border focus:outline-none focus:ring-1 focus:ring-brass"
                 >
                   <option value="all">All Revenue Tiers ({brandRevenue.length})</option>
                   <option value="tier1">Tier 1: &gt; 10M units</option>
@@ -331,14 +331,14 @@ export const DataExplorerView: React.FC = () => {
             {/* Export and Record Count */}
             <div className="flex items-center justify-between sm:justify-end gap-3">
               <span className="text-xs font-mono text-text-muted">
-                Showing <strong className="text-brand-cyan">{filteredBrands.length.toLocaleString()}</strong> of {brandRevenue.length.toLocaleString()} brands
+                Showing <strong className="text-brass">{filteredBrands.length.toLocaleString()}</strong> of {brandRevenue.length.toLocaleString()} brands
               </span>
               <button
                 type="button"
                 onClick={handleExportCSV}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-surface-subtle hover:bg-slate-800 text-text-primary border border-white/10 transition-colors shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-forest-surface hover:bg-forest-elevated text-brass border border-forest-border transition-colors shadow-sm"
               >
-                <Download className="w-3.5 h-3.5 text-brand-cyan" />
+                <Download className="w-3.5 h-3.5 text-brass" />
                 <span>Export CSV</span>
               </button>
             </div>
@@ -428,17 +428,17 @@ export const DataExplorerView: React.FC = () => {
                       <td className="py-3 px-4 font-medium text-text-primary capitalize flex items-center gap-2">
                         <span>{b.brand}</span>
                         {b.brand === 'Unknown' && (
-                          <span className="text-[10px] px-1.5 py-0.2 rounded bg-slate-800 text-text-subtle font-normal font-sans">
+                          <span className="text-[10px] px-1.5 py-0.2 rounded bg-forest-sidebar text-text-subtle font-normal font-sans">
                             Unbranded
                           </span>
                         )}
                         {(b.rank ?? 999) <= 5 && (
-                          <span className="text-[9px] font-mono font-bold px-1 rounded bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30">
+                          <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-brass/20 text-brass border border-brass/40">
                             TOP 5
                           </span>
                         )}
                       </td>
-                      <td className="py-3 px-4 text-right font-mono font-semibold text-brand-cyan">
+                      <td className="py-3 px-4 text-right font-mono font-semibold text-brass">
                         {formatMonetaryValue(b.total_revenue, true)}
                       </td>
                       <td className="py-3 px-4 text-right font-mono text-text-muted">
@@ -450,7 +450,7 @@ export const DataExplorerView: React.FC = () => {
                       <td className="py-3 px-4 text-right font-mono text-emerald-400">
                         {b.aov.toFixed(2)} units
                       </td>
-                      <td className="py-3 px-4 text-right font-mono text-brand-violet-light font-medium">
+                      <td className="py-3 px-4 text-right font-mono text-text-primary font-medium">
                         {formatPercent(b.revenue_share_percentage)}
                       </td>
                     </tr>
@@ -470,7 +470,7 @@ export const DataExplorerView: React.FC = () => {
                   setRowsPerPage(Number(e.target.value));
                   setCurrentPage(1);
                 }}
-                className="bg-slate-900 text-xs text-text-primary px-2 py-1 rounded border border-white/10 focus:outline-none"
+                className="bg-forest-sidebar text-xs text-text-primary px-2 py-1 rounded border border-forest-border focus:outline-none focus:border-brass"
               >
                 <option value={15}>15</option>
                 <option value={20}>20</option>
@@ -487,7 +487,7 @@ export const DataExplorerView: React.FC = () => {
                 type="button"
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(1)}
-                className="p-1 rounded hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none"
+                className="p-1 rounded hover:bg-forest-elevated disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 title="First Page"
               >
                 <ChevronsLeft className="w-4 h-4" />
@@ -496,13 +496,13 @@ export const DataExplorerView: React.FC = () => {
                 type="button"
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                className="p-1 rounded hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none"
+                className="p-1 rounded hover:bg-forest-elevated disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 title="Previous Page"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
 
-              <span className="px-3 py-1 font-mono font-medium text-text-primary bg-slate-900 rounded border border-white/10">
+              <span className="px-3 py-1 font-mono font-medium text-brass bg-forest-sidebar rounded border border-forest-border">
                 {currentPage} / {totalPages}
               </span>
 
@@ -510,7 +510,7 @@ export const DataExplorerView: React.FC = () => {
                 type="button"
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                className="p-1 rounded hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none"
+                className="p-1 rounded hover:bg-forest-elevated disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 title="Next Page"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -519,7 +519,7 @@ export const DataExplorerView: React.FC = () => {
                 type="button"
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(totalPages)}
-                className="p-1 rounded hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none"
+                className="p-1 rounded hover:bg-forest-elevated disabled:opacity-30 disabled:pointer-events-none transition-colors"
                 title="Last Page"
               >
                 <ChevronsRight className="w-4 h-4" />
@@ -541,9 +541,9 @@ export const DataExplorerView: React.FC = () => {
             <button
               type="button"
               onClick={handleExportCategoriesCSV}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-surface-subtle hover:bg-slate-800 text-text-primary border border-white/10 transition-colors shadow-sm self-start sm:self-auto"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-forest-surface hover:bg-forest-elevated text-brass border border-forest-border transition-colors shadow-sm self-start sm:self-auto"
             >
-              <Download className="w-3.5 h-3.5 text-brand-cyan" />
+              <Download className="w-3.5 h-3.5 text-brass" />
               <span>Export Categories CSV</span>
             </button>
           </div>
@@ -569,7 +569,7 @@ export const DataExplorerView: React.FC = () => {
                       key={cat.main_category}
                       className={`transition-colors ${
                         searchParams.get('category')?.toLowerCase() === cat.main_category.toLowerCase()
-                          ? 'bg-brand-violet/20 border-l-4 border-l-brand-cyan ring-1 ring-brand-violet/40'
+                          ? 'bg-brass/10 border-l-4 border-l-brass ring-1 ring-brass/30'
                           : 'hover:bg-surface-elevated/40'
                       }`}
                     >
@@ -577,12 +577,12 @@ export const DataExplorerView: React.FC = () => {
                       <td className="py-3 px-4 font-semibold text-text-primary capitalize flex items-center gap-2">
                         <span>{cat.main_category}</span>
                         {idx === 0 && (
-                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/20 text-brand-cyan">
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/20 text-brass border border-brass/30">
                             DOMINANT CATEGORY (76.7%)
                           </span>
                         )}
                       </td>
-                      <td className="py-3 px-4 text-right font-mono font-semibold text-brand-cyan">
+                      <td className="py-3 px-4 text-right font-mono font-semibold text-brass">
                         {formatMonetaryValue(cat.total_revenue, true)}
                       </td>
                       <td className="py-3 px-4 text-right font-mono text-text-muted">
@@ -594,7 +594,7 @@ export const DataExplorerView: React.FC = () => {
                       <td className="py-3 px-4 text-right font-mono text-emerald-400">
                         {aov.toFixed(2)} units
                       </td>
-                      <td className="py-3 px-4 text-right font-mono text-brand-violet-light font-medium">
+                      <td className="py-3 px-4 text-right font-mono text-text-primary font-medium">
                         {formatPercent(cat.revenue_share_percentage)}
                       </td>
                     </tr>
@@ -606,7 +606,7 @@ export const DataExplorerView: React.FC = () => {
 
           <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex items-center justify-between">
             <span>Electronics generates 76.74% of revenue, followed by unclassified category at 9.97%.</span>
-            <span className="font-mono text-brand-cyan">Total: 14 primary product branches</span>
+            <span className="font-mono text-brass">Total: 14 primary product branches</span>
           </div>
         </SurfaceCard>
       )}
@@ -621,13 +621,13 @@ export const DataExplorerView: React.FC = () => {
               subtitle="Comparison of high-value flagship items versus high-velocity volume drivers."
               className="mb-0"
             />
-            <div className="flex items-center gap-1 bg-slate-900 p-0.5 rounded-lg border border-white/5">
+            <div className="flex items-center gap-1 bg-forest-sidebar p-0.5 rounded-lg border border-forest-border">
               <button
                 type="button"
                 onClick={() => setProductSortMode('revenue')}
                 className={`px-3 py-1.5 text-xs font-medium rounded transition-colors ${
                   productSortMode === 'revenue'
-                    ? 'bg-brand-violet/30 text-brand-violet-light border border-brand-violet/40'
+                    ? 'bg-brass/20 text-brass border border-brass/40 font-bold'
                     : 'text-text-muted hover:text-text-primary'
                 }`}
               >
@@ -638,7 +638,7 @@ export const DataExplorerView: React.FC = () => {
                 onClick={() => setProductSortMode('volume')}
                 className={`px-3 py-1.5 text-xs font-medium rounded transition-colors ${
                   productSortMode === 'volume'
-                    ? 'bg-brand-cyan/30 text-brand-cyan border border-brand-cyan/40'
+                    ? 'bg-brass/20 text-brass border border-brass/40 font-bold'
                     : 'text-text-muted hover:text-text-primary'
                 }`}
               >
@@ -664,7 +664,7 @@ export const DataExplorerView: React.FC = () => {
                   {(productSortMode === 'revenue' ? topProducts.by_revenue : topProducts.by_volume).map((p, idx) => (
                     <tr key={p.product_id} className="hover:bg-surface-elevated/40 transition-colors">
                       <td className="py-3 px-4 font-mono text-xs text-text-subtle">#{idx + 1}</td>
-                      <td className="py-3 px-4 font-mono font-bold text-brand-cyan">Product #{p.product_id}</td>
+                      <td className="py-3 px-4 font-mono font-bold text-brass">Product #{p.product_id}</td>
                       <td className="py-3 px-4 text-right font-mono font-semibold text-text-primary">
                         {formatMonetaryValue(p.total_revenue, true)}
                       </td>
@@ -674,7 +674,7 @@ export const DataExplorerView: React.FC = () => {
                       <td className="py-3 px-4 text-right font-mono text-text-muted">
                         {formatInteger(p.unique_buyers)}
                       </td>
-                      <td className="py-3 px-4 text-right font-mono text-brand-violet-light">
+                      <td className="py-3 px-4 text-right font-mono text-text-subtle">
                         {p.average_price.toFixed(2)} units
                       </td>
                     </tr>
@@ -685,7 +685,7 @@ export const DataExplorerView: React.FC = () => {
 
             <div className="mt-4 pt-3 border-t border-hairline/60 text-xs text-text-subtle flex items-center justify-between">
               <span>Product #1005115 generates the highest recorded revenue; Product #1004856 drives the highest order count.</span>
-              <span className="font-mono text-brand-cyan">Source: top_products_summary.csv</span>
+              <span className="font-mono text-brass">Source: top_products_summary.csv</span>
             </div>
           </SurfaceCard>
         </div>

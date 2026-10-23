@@ -41,12 +41,12 @@ export const CustomerSegmentExplorer: React.FC = () => {
   const productMultiple = (c0.unique_products / c1.unique_products).toFixed(1);
 
   return (
-    <SurfaceCard variant="elevated" className="border-brand-violet/30 p-6 sm:p-8 mb-8">
+    <SurfaceCard variant="elevated" className="border-hairline hover:border-brass/30 p-6 sm:p-8 mb-8">
       {/* Header with Segment Toggle & Mode Selector */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-brand-cyan">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brass">
               Section B · Interactive Signature Feature
             </span>
           </div>
@@ -66,12 +66,12 @@ export const CustomerSegmentExplorer: React.FC = () => {
               className={cn(
                 'px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                 selectedSegment === 'both'
-                  ? 'bg-brand-violet/25 text-white shadow-sm border border-brand-violet/40'
+                  ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                   : 'text-text-muted hover:text-text-primary'
               )}
               aria-label="View side-by-side comparison"
             >
-              <ArrowRightLeft className="w-3.5 h-3.5 text-brand-cyan" />
+              <ArrowRightLeft className="w-3.5 h-3.5 text-brass" />
               <span>Side-by-Side</span>
             </button>
             <button
@@ -79,7 +79,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               className={cn(
                 'px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                 selectedSegment === 0
-                  ? 'bg-brand-violet/25 text-brand-cyan shadow-sm border border-brand-violet/40'
+                  ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                   : 'text-text-muted hover:text-text-primary'
               )}
               aria-label="Select Cluster 0 High-Activity Core"
@@ -92,7 +92,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               className={cn(
                 'px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                 selectedSegment === 1
-                  ? 'bg-brand-violet/25 text-brand-cyan shadow-sm border border-brand-violet/40'
+                  ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                   : 'text-text-muted hover:text-text-primary'
               )}
               aria-label="Select Cluster 1 Casual Browsers"
@@ -109,7 +109,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               className={cn(
                 'px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                 displayMode === 'constellation'
-                  ? 'bg-brand-violet/30 text-white shadow-sm border border-brand-violet/50'
+                  ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                   : 'text-text-muted hover:text-text-primary'
               )}
               title="3D Customer Constellation WebGL View"
@@ -117,7 +117,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               role="tab"
               aria-selected={displayMode === 'constellation'}
             >
-              <Orbit className="w-3.5 h-3.5 text-brand-cyan" />
+              <Orbit className="w-3.5 h-3.5 text-brass" />
               <span className="hidden sm:inline">3D Constellation</span>
             </button>
             <button
@@ -125,7 +125,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               className={cn(
                 'px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                 displayMode === 'visual'
-                  ? 'bg-surface-elevated text-brand-cyan shadow-sm border border-brand-cyan/30'
+                  ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                   : 'text-text-muted hover:text-text-primary'
               )}
               title="2D Behavioral Radar Mode"
@@ -133,7 +133,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               role="tab"
               aria-selected={displayMode === 'visual'}
             >
-              <Eye className="w-3.5 h-3.5 text-brand-violet-light" />
+              <Eye className="w-3.5 h-3.5 text-brass" />
               <span className="hidden sm:inline">2D Radar</span>
             </button>
             <button
@@ -141,7 +141,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               className={cn(
                 'px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5',
                 displayMode === 'table'
-                  ? 'bg-surface-elevated text-brand-cyan shadow-sm border border-brand-cyan/30'
+                  ? 'bg-brass/15 text-brass font-semibold shadow-sm border border-brass/40'
                   : 'text-text-muted hover:text-text-primary'
               )}
               title="Detailed Centroid Metrics Table Mode"
@@ -149,7 +149,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
               role="tab"
               aria-selected={displayMode === 'table'}
             >
-              <TableIcon className="w-3.5 h-3.5 text-accent-amber" />
+              <TableIcon className="w-3.5 h-3.5 text-brass" />
               <span className="hidden sm:inline">Data Table</span>
             </button>
           </div>
@@ -221,8 +221,8 @@ export const CustomerSegmentExplorer: React.FC = () => {
               </div>
             </div>
 
-            {/* 3D Customer Constellation WebGL Canvas */}
-            <div className="rounded-xl overflow-hidden border border-brand-violet/30 bg-surface-ground shadow-2xl">
+            {/* 3D Customer Constellation WebGL Canvas (Protected scene internals unchanged) */}
+            <div className="rounded-xl overflow-hidden border border-hairline bg-canvas-deep/90 shadow-2xl">
               <CustomerConstellationScene
                 selectedCluster={selectedSegment}
                 onSelectCluster={setSelectedSegment}
@@ -345,14 +345,14 @@ export const CustomerSegmentExplorer: React.FC = () => {
             className="space-y-6"
           >
             {/* Mobile WebGL Advisory Banner */}
-            <div className="md:hidden flex items-center justify-between p-3 rounded-lg bg-brand-violet/10 border border-brand-violet/20 text-xs">
+            <div className="md:hidden flex items-center justify-between p-3 rounded-lg bg-brass/10 border border-brass/25 text-xs">
               <div className="flex items-center gap-2 text-text-muted">
-                <Smartphone className="w-4 h-4 text-brand-cyan flex-shrink-0" />
+                <Smartphone className="w-4 h-4 text-brass flex-shrink-0" />
                 <span>2D Radar view loaded for mobile battery optimization.</span>
               </div>
               <button
                 onClick={() => setDisplayMode('constellation')}
-                className="px-2.5 py-1 rounded bg-brand-cyan/20 hover:bg-brand-cyan/30 text-brand-cyan font-medium text-[11px] whitespace-nowrap transition-colors"
+                className="px-2.5 py-1 rounded bg-brass text-brass-dark hover:bg-brass-hover font-semibold text-[11px] whitespace-nowrap transition-colors shadow-sm"
               >
                 Launch 3D
               </button>
@@ -422,7 +422,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
                     <span className="text-xs font-bold uppercase tracking-wider text-text-muted">
                       Normalized Behavioral Radar
                     </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/15 text-brand-violet-light border border-brand-violet/20">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/15 text-brass border border-brass/25">
                       Min-Max Scaled [0 - 100]
                     </span>
                   </div>
@@ -438,7 +438,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
 
                 <div className="text-[11px] text-text-subtle border-t border-hairline/60 pt-2.5 mt-2 flex items-center justify-between font-mono">
                   <span>Cluster 0 Peak: 100 (Indexed)</span>
-                  <span className="text-brand-cyan">Cluster 1 Log Revenue: 57.6</span>
+                  <span className="text-brass">Cluster 1 Log Revenue: 57.6</span>
                 </div>
               </div>
 
@@ -632,7 +632,7 @@ export const CustomerSegmentExplorer: React.FC = () => {
             <strong>Aggregation Constraint:</strong> Segment metrics represent cluster centroid means across 3.02M users. Individual customer feature records are not simulated.
           </span>
         </div>
-        <span className="font-mono text-brand-cyan whitespace-nowrap">Source: kmeans_cluster_profiles.csv</span>
+        <span className="font-mono text-brass whitespace-nowrap">Source: kmeans_cluster_profiles.csv</span>
       </div>
     </SurfaceCard>
   );

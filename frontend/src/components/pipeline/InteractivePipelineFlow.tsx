@@ -41,12 +41,12 @@ export const InteractivePipelineFlow: React.FC = () => {
   };
 
   return (
-    <SurfaceCard variant="elevated" id="pipeline-flow" className="border-brand-cyan/20 p-6 sm:p-8 mb-8">
+    <SurfaceCard variant="elevated" id="pipeline-flow" className="border-forest-border p-6 sm:p-8 mb-8">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-brand-cyan">
+            <span className="text-xs font-semibold uppercase tracking-wider text-brass">
               Section A · Distributed Architecture Flow
             </span>
           </div>
@@ -58,7 +58,7 @@ export const InteractivePipelineFlow: React.FC = () => {
         </div>
         <div className="flex items-center gap-2 self-start sm:self-auto">
           <span className="text-xs font-mono px-3 py-1.5 rounded-lg bg-surface-subtle text-text-muted border border-hairline flex items-center gap-1.5">
-            <Layers className="w-3.5 h-3.5 text-brand-cyan" />
+            <Layers className="w-3.5 h-3.5 text-brass" />
             <span>6 Processing Stages</span>
           </span>
         </div>
@@ -82,11 +82,11 @@ export const InteractivePipelineFlow: React.FC = () => {
                 role="tab"
                 tabIndex={0}
                 className={cn(
-                  'relative p-3.5 rounded-xl border transition-all text-left flex flex-col justify-between group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan',
+                  'relative p-3.5 rounded-xl border transition-all text-left flex flex-col justify-between group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass',
                   isSelected
-                    ? 'bg-brand-cyan/15 border-brand-cyan/50 shadow-lg shadow-brand-cyan/10'
+                    ? 'bg-brass/15 border-brass/50 shadow-lg shadow-brass/10'
                     : isPast
-                    ? 'bg-surface-subtle/80 border-hairline/80 hover:border-brand-cyan/30'
+                    ? 'bg-surface-subtle/80 border-hairline/80 hover:border-brass/30'
                     : 'bg-surface/60 border-hairline hover:border-white/20'
                 )}
               >
@@ -96,7 +96,7 @@ export const InteractivePipelineFlow: React.FC = () => {
                       className={cn(
                         'text-[10px] font-mono px-1.5 py-0.5 rounded font-bold',
                         isSelected
-                          ? 'bg-brand-cyan text-brand-midnight font-bold'
+                          ? 'bg-brass text-forest-sidebar font-bold'
                           : 'bg-surface text-text-subtle border border-hairline/60'
                       )}
                     >
@@ -105,14 +105,14 @@ export const InteractivePipelineFlow: React.FC = () => {
                     <Icon
                       className={cn(
                         'w-4 h-4 transition-colors',
-                        isSelected ? 'text-brand-cyan' : 'text-text-muted group-hover:text-text-primary'
+                        isSelected ? 'text-brass' : 'text-text-muted group-hover:text-text-primary'
                       )}
                     />
                   </div>
                   <h4
                     className={cn(
                       'text-xs font-bold tracking-tight mb-1 line-clamp-1',
-                      isSelected ? 'text-white' : 'text-text-secondary group-hover:text-text-primary'
+                      isSelected ? 'text-brass font-bold' : 'text-text-secondary group-hover:text-text-primary'
                     )}
                   >
                     {stage.short_name}
@@ -126,7 +126,7 @@ export const InteractivePipelineFlow: React.FC = () => {
                 {isSelected && (
                   <motion.div
                     layoutId="activePipelineGlow"
-                    className="absolute -bottom-[1px] left-2 right-2 h-[2px] bg-gradient-to-r from-brand-cyan to-brand-violet rounded-full"
+                    className="absolute -bottom-[1px] left-2 right-2 h-[2px] bg-brass rounded-full"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -148,7 +148,7 @@ export const InteractivePipelineFlow: React.FC = () => {
                 className={cn(
                   'flex-shrink-0 px-3 py-2 rounded-lg border text-xs font-medium flex items-center gap-2 transition-all',
                   isSelected
-                    ? 'bg-brand-cyan/20 text-brand-cyan border-brand-cyan/40 font-bold'
+                    ? 'bg-brass/20 text-brass border-brass/40 font-bold'
                     : 'bg-surface-subtle text-text-muted border-hairline'
                 )}
               >
@@ -173,15 +173,15 @@ export const InteractivePipelineFlow: React.FC = () => {
           {/* Top Bar: Stage Title, Phase, Technology */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-hairline">
             <div className="flex items-start sm:items-center gap-3">
-              <div className="p-3 rounded-xl bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan flex-shrink-0">
+              <div className="p-3 rounded-xl bg-brass/15 border border-brass/30 text-brass flex-shrink-0">
                 <CurrentIcon className="w-6 h-6" />
               </div>
               <div>
                 <div className="flex items-center gap-2 flex-wrap mb-1">
-                  <span className="text-[11px] font-mono font-bold text-brand-cyan uppercase tracking-wider">
+                  <span className="text-[11px] font-mono font-bold text-brass uppercase tracking-wider">
                     Stage {currentStage.stage_id} · {currentStage.phase}
                   </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-violet/20 text-brand-violet-light border border-brand-violet/30">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-brass/20 text-brass border border-brass/30">
                     {currentStage.technology}
                   </span>
                 </div>
@@ -201,7 +201,7 @@ export const InteractivePipelineFlow: React.FC = () => {
               </div>
               <div className="p-2.5 rounded-lg bg-surface/80 border border-hairline/60">
                 <span className="text-[10px] text-text-subtle font-sans block">Storage Footprint</span>
-                <span className="font-bold text-brand-cyan">{currentStage.byte_size}</span>
+                <span className="font-bold text-brass">{currentStage.byte_size}</span>
               </div>
               <div className="p-2.5 rounded-lg bg-surface/80 border border-hairline/60 col-span-2 sm:col-span-1">
                 <span className="text-[10px] text-text-subtle font-sans block">Distributed Splits</span>
@@ -247,7 +247,7 @@ export const InteractivePipelineFlow: React.FC = () => {
                 </div>
                 <div className="pt-2 border-t border-hairline/40">
                   <span className="text-[10px] text-text-subtle font-sans block">Output Target:</span>
-                  <span className="text-brand-cyan break-all">{currentStage.output_target}</span>
+                  <span className="text-brass break-all">{currentStage.output_target}</span>
                 </div>
               </div>
 
@@ -272,7 +272,7 @@ export const InteractivePipelineFlow: React.FC = () => {
               <div className="pt-2">
                 <Link
                   to={currentStage.related_view}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-cyan hover:text-white transition-colors p-2 rounded-lg bg-brand-cyan/10 border border-brand-cyan/20 hover:border-brand-cyan/40"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-brass hover:text-brass-hover transition-colors p-2 rounded-lg bg-brass/10 border border-brass/30 hover:border-brass/50"
                 >
                   <span>Explore output in {currentStage.related_view.replace('/', '').replace('-', ' ')}</span>
                   <ExternalLink className="w-3.5 h-3.5" />

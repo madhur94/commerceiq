@@ -5,67 +5,84 @@
 @layer base {
   :root {
     color-scheme: dark;
+    --commerce-bg: #091B19;
+    --commerce-sidebar: #102622;
+    --commerce-header: #10241F;
+    --commerce-card: #18342D;
+    --commerce-card-elevated: #204137;
+    --commerce-card-subtle: #122621;
+    --commerce-text: #F2EEE0;
+    --commerce-text-muted: #AABCAF;
+    --commerce-text-subtle: #7E9685;
+    --commerce-border: #325347;
+    --commerce-border-prominent: #43695B;
+    --commerce-divider: #29493E;
+    --commerce-brass: #DBB474;
+    --commerce-brass-hover: #EDCC91;
+    --commerce-brass-deep: #A9854C;
+    --commerce-brass-dark: #14241F;
+    --commerce-disabled: #263C34;
   }
 
   body {
-    background-color: #070A13;
-    color: #F1F5F9;
+    background-color: #091B19;
+    color: #F2EEE0;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
-  /* Custom scrollbar */
+  /* Custom scrollbar in Forest & Brass palette */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #070A13;
+    background: #091B19;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1E293B;
+    background: #204137;
     border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    background: #325347;
   }
 
-  /* Focus ring accessibility */
+  /* Architectural brass focus ring for accessibility */
   *:focus-visible {
-    outline: 2px solid #8B5CF6;
+    outline: 2px solid #DBB474;
     outline-offset: 2px;
   }
 }
 
 @layer utilities {
-  /* Subtle glass effects */
+  /* Architectural glass effects in Forest tones */
   .glass-header {
-    background: rgba(11, 15, 25, 0.75);
+    background: rgba(16, 36, 31, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid #325347;
   }
 
   .glass-card {
-    background: rgba(17, 24, 39, 0.7);
+    background: rgba(24, 52, 45, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid #325347;
   }
 
-  /* Background grid pattern */
+  /* Architectural subtle grid pattern */
   .bg-grid-pattern {
     background-size: 40px 40px;
     background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      linear-gradient(to right, rgba(219, 180, 116, 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(219, 180, 116, 0.025) 1px, transparent 1px);
   }
 
-  /* Ambient radial gradient highlight */
+  /* Restrained ambient brass-forest radial glow */
   .radial-glow {
-    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 0%, rgba(219, 180, 116, 0.05) 0%, transparent 70%);
   }
 }
 

@@ -33,9 +33,9 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
       {onRetry && (
         <button
           onClick={onRetry}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-elevated hover:bg-slate-800 text-sm font-medium text-text-primary border border-hairline hover:border-brand-violet/40 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-elevated hover:bg-forest-elevated text-sm font-medium text-text-primary border border-hairline hover:border-brass/40 transition-colors"
         >
-          <RefreshCw className="w-4 h-4" />
+          <RefreshCw className="w-4 h-4 text-brass" />
           <span>Retry Operation</span>
         </button>
       )}

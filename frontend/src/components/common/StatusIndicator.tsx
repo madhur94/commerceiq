@@ -21,8 +21,8 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
       defaultLabel: 'Verified',
     },
     ready: {
-      dot: 'bg-brand-cyan',
-      pill: 'bg-brand-cyan/10 text-brand-cyan border-brand-cyan/20',
+      dot: 'bg-brass',
+      pill: 'bg-brass/10 text-brass border-brass/25',
       defaultLabel: 'Ready',
     },
     caution: {
@@ -31,13 +31,13 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
       defaultLabel: 'Caution / Outlier',
     },
     'in-progress': {
-      dot: 'bg-brand-violet',
-      pill: 'bg-brand-violet/10 text-brand-violet-light border-brand-violet/20',
+      dot: 'bg-brass-deep',
+      pill: 'bg-brass-deep/15 text-brass-hover border-brass-deep/30',
       defaultLabel: 'In Progress',
     },
     info: {
-      dot: 'bg-slate-400',
-      pill: 'bg-slate-800/40 text-slate-300 border-slate-700/40',
+      dot: 'bg-text-subtle',
+      pill: 'bg-surface-subtle text-text-muted border-hairline',
       defaultLabel: 'Info',
     },
   };

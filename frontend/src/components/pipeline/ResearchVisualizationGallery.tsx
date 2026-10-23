@@ -90,7 +90,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-violet-light">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brass">
             Section D · Empirical Visualization Gallery
           </span>
           <SectionHeading
@@ -101,7 +101,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
         </div>
         <div className="flex items-center gap-2 self-start sm:self-auto">
           <span className="text-xs font-mono px-3 py-1.5 rounded-lg bg-surface-subtle text-text-muted border border-hairline flex items-center gap-1.5">
-            <ImageIcon className="w-3.5 h-3.5 text-brand-violet-light" />
+            <ImageIcon className="w-3.5 h-3.5 text-brass" />
             <span>29 Research Visualizations</span>
           </span>
         </div>
@@ -124,7 +124,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
                 className={cn(
                   'px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex items-center gap-1.5 flex-shrink-0',
                   selectedCategory === cat
-                    ? 'bg-brand-violet/25 text-white font-bold border border-brand-violet/40 shadow-sm'
+                    ? 'bg-brass/20 text-brass font-bold border border-brass/40 shadow-sm'
                     : 'bg-surface-subtle text-text-muted hover:text-text-primary border border-hairline'
                 )}
               >
@@ -143,7 +143,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
             placeholder="Search plots..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 rounded-xl bg-surface-subtle border border-hairline text-xs text-text-primary placeholder:text-text-subtle focus:outline-none focus:border-brand-violet/50"
+            className="w-full pl-9 pr-3 py-1.5 rounded-xl bg-surface-subtle border border-hairline text-xs text-text-primary placeholder:text-text-subtle focus:outline-none focus:border-brass"
           />
         </div>
       </div>
@@ -162,11 +162,11 @@ export const ResearchVisualizationGallery: React.FC = () => {
                 setActiveItem(item);
               }
             }}
-            className="group relative p-3.5 rounded-xl bg-surface-subtle/70 border border-hairline hover:border-brand-violet/40 hover:bg-surface-subtle transition-all cursor-pointer flex flex-col justify-between focus:outline-none focus:ring-1 focus:ring-brand-cyan"
+            className="group relative p-3.5 rounded-xl bg-surface-subtle/70 border border-hairline hover:border-brass/40 hover:bg-surface-elevated/40 transition-all cursor-pointer flex flex-col justify-between focus:outline-none focus:ring-1 focus:ring-brass"
           >
             <div>
               {/* Thumbnail Container */}
-              <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden bg-brand-midnight/80 border border-hairline/60 mb-3 flex items-center justify-center">
+              <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden bg-forest-sidebar border border-hairline/60 mb-3 flex items-center justify-center">
                 <img
                   src={item.image_url}
                   alt={item.title}
@@ -177,9 +177,9 @@ export const ResearchVisualizationGallery: React.FC = () => {
                     (e.target as HTMLElement).style.display = 'none';
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-midnight/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5">
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-canvas/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5">
                   <span className="text-[10px] font-medium text-white flex items-center gap-1 bg-surface-subtle/80 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">
-                    <Maximize2 className="w-3 h-3 text-brand-cyan" />
+                    <Maximize2 className="w-3 h-3 text-brass" />
                     <span>Expand Figure</span>
                   </span>
                 </div>
@@ -187,14 +187,14 @@ export const ResearchVisualizationGallery: React.FC = () => {
 
               {/* Badges */}
               <div className="flex items-center justify-between gap-1 mb-1.5">
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brand-violet/15 text-brand-violet-light border border-brand-violet/30">
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-brass/15 text-brass border border-brass/30">
                   {item.category}
                 </span>
                 <span className="text-[10px] font-mono text-text-subtle">{item.plot_type}</span>
               </div>
 
               {/* Title */}
-              <h4 className="text-xs font-bold text-text-primary group-hover:text-brand-cyan transition-colors line-clamp-1 mb-1">
+              <h4 className="text-xs font-bold text-text-primary group-hover:text-brass transition-colors line-clamp-1 mb-1">
                 {item.title}
               </h4>
 
@@ -206,7 +206,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
 
             <div className="pt-2.5 mt-2 border-t border-hairline/60 flex items-center justify-between text-[10px] text-text-subtle font-mono">
               <span>{item.phase}</span>
-              <span className="text-brand-cyan group-hover:underline">Inspect →</span>
+              <span className="text-brass group-hover:underline">Inspect →</span>
             </div>
           </div>
         ))}
@@ -230,19 +230,19 @@ export const ResearchVisualizationGallery: React.FC = () => {
                 onClick={(e) => {
                   if (e.target === e.currentTarget) handleClose();
                 }}
-                className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/85 backdrop-blur-md"
+                className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#091B19]/90 backdrop-blur-md"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.15 }}
-                  className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-2xl bg-surface-elevated border border-brand-violet/30 shadow-2xl flex flex-col z-10"
+                  className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto rounded-2xl bg-forest-card border border-brass/30 shadow-2xl flex flex-col z-10"
                 >
               {/* Modal Top Header */}
-              <div className="sticky top-0 z-20 flex items-center justify-between p-4 px-6 bg-surface/95 backdrop-blur-md border-b border-hairline">
+              <div className="sticky top-0 z-20 flex items-center justify-between p-4 px-6 bg-forest-sidebar/95 backdrop-blur-md border-b border-hairline">
                 <div className="flex items-center gap-3">
-                  <span className="text-xs font-mono px-2 py-0.5 rounded bg-brand-violet/20 text-brand-violet-light font-bold border border-brand-violet/30">
+                  <span className="text-xs font-mono px-2 py-0.5 rounded bg-brass/20 text-brass font-bold border border-brass/30">
                     {activeItem.phase}
                   </span>
                   <h3 id="lightbox-title" className="text-sm sm:text-base font-bold text-text-primary truncate">
@@ -284,7 +284,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
               {/* Modal Body: Large Image on Top, Metadata Below */}
               <div className="p-6 space-y-6">
                 {/* Image Stage with Prev/Next Controls */}
-                <div className="relative rounded-xl bg-brand-midnight/90 border border-hairline p-4 min-h-[340px] max-h-[520px] flex items-center justify-center overflow-hidden">
+                <div className="relative rounded-xl bg-forest-sidebar border border-hairline p-4 min-h-[340px] max-h-[520px] flex items-center justify-center overflow-hidden">
                   <img
                     src={activeItem.image_url}
                     alt={activeItem.title}
@@ -296,7 +296,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
                   {currentIndex > 0 && (
                     <button
                       onClick={handlePrev}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-surface/80 text-white hover:bg-brand-cyan hover:text-brand-midnight border border-hairline shadow-lg transition-colors"
+                      className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-surface/80 text-white hover:bg-brass hover:text-forest-sidebar border border-hairline shadow-lg transition-colors"
                       aria-label="Previous visualization"
                     >
                       <ChevronLeft className="w-5 h-5" />
@@ -307,7 +307,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
                   {currentIndex < filteredItems.length - 1 && (
                     <button
                       onClick={handleNext}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-surface/80 text-white hover:bg-brand-cyan hover:text-brand-midnight border border-hairline shadow-lg transition-colors"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-surface/80 text-white hover:bg-brass hover:text-forest-sidebar border border-hairline shadow-lg transition-colors"
                       aria-label="Next visualization"
                     >
                       <ChevronRight className="w-5 h-5" />
@@ -343,7 +343,7 @@ export const ResearchVisualizationGallery: React.FC = () => {
                     <div className="p-3.5 rounded-xl bg-surface-subtle/80 border border-hairline text-xs font-mono space-y-2">
                       <div>
                         <span className="text-[10px] text-text-subtle font-sans block">Category:</span>
-                        <span className="text-brand-cyan">{activeItem.category}</span>
+                        <span className="text-brass">{activeItem.category}</span>
                       </div>
                       <div className="pt-1.5 border-t border-hairline/60">
                         <span className="text-[10px] text-text-subtle font-sans block">Plot Type:</span>

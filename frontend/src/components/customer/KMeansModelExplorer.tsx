@@ -14,7 +14,7 @@ export const KMeansModelExplorer: React.FC = () => {
 
   const getScoreVerdict = (score: number) => {
     if (score >= 0.8) return { label: 'Strong Separation (Literature Heuristic)', color: 'text-accent-emerald bg-accent-emerald/20 border-accent-emerald/30' };
-    if (score >= 0.5) return { label: 'Moderate Cluster Structure', color: 'text-brand-cyan bg-brand-cyan/20 border-brand-cyan/30' };
+    if (score >= 0.5) return { label: 'Moderate Cluster Structure', color: 'text-brass bg-brass/20 border-brass/30' };
     return { label: 'Weak Cluster Boundary', color: 'text-accent-amber bg-accent-amber/20 border-accent-amber/30' };
   };
 
@@ -25,7 +25,7 @@ export const KMeansModelExplorer: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-cyan">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brass">
             Section F · Cluster Quality & Sensitivity Analysis
           </span>
           <SectionHeading
@@ -49,7 +49,7 @@ export const KMeansModelExplorer: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-text-muted">
               Silhouette Scores Across Sensitivity Trials
             </span>
-            <span className="text-[10px] font-mono text-brand-cyan">
+            <span className="text-[10px] font-mono text-brass">
               Click bar to inspect trial
             </span>
           </div>
@@ -83,7 +83,7 @@ export const KMeansModelExplorer: React.FC = () => {
             <div className="space-y-2 mt-4 text-xs font-mono">
               <div className="p-2.5 rounded-lg bg-surface/60 border border-hairline/60 flex justify-between items-center">
                 <span className="text-text-subtle font-sans">Silhouette Score:</span>
-                <span className="text-sm font-bold text-brand-cyan">{currentExp.silhouette_score.toFixed(5)}</span>
+                <span className="text-sm font-bold text-brass">{currentExp.silhouette_score.toFixed(5)}</span>
               </div>
               <div className="p-2.5 rounded-lg bg-surface/60 border border-hairline/60 flex justify-between items-center">
                 <span className="text-text-subtle font-sans">Cluster Count (K):</span>
@@ -117,7 +117,7 @@ export const KMeansModelExplorer: React.FC = () => {
                 className={cn(
                   'px-2.5 py-1 rounded-lg text-[11px] font-mono transition-all',
                   selectedExperiment === exp.experiment_name
-                    ? 'bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 font-bold'
+                    ? 'bg-brass/20 text-brass border border-brass/50 font-bold'
                     : 'bg-surface-subtle text-text-muted hover:text-text-primary border border-hairline'
                 )}
               >
@@ -132,7 +132,7 @@ export const KMeansModelExplorer: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 pt-5 border-t border-hairline/60 text-xs">
         <div className="p-3.5 rounded-xl bg-surface-subtle/50 border border-hairline/60">
           <div className="flex items-center gap-1.5 font-bold text-text-primary mb-1">
-            <Sliders className="w-3.5 h-3.5 text-brand-violet-light" />
+            <Sliders className="w-3.5 h-3.5 text-brass" />
             <span>Centroid Centers</span>
           </div>
           <p className="text-text-subtle text-[11px] leading-relaxed">
@@ -142,7 +142,7 @@ export const KMeansModelExplorer: React.FC = () => {
 
         <div className="p-3.5 rounded-xl bg-surface-subtle/50 border border-hairline/60">
           <div className="flex items-center gap-1.5 font-bold text-text-primary mb-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-brand-cyan" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-brass" />
             <span>Silhouette Metric</span>
           </div>
           <p className="text-text-subtle text-[11px] leading-relaxed">
